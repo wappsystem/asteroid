@@ -1,27 +1,18 @@
 <div id=D__ID>
 	<div class='text-center' style='max-width:800px;margin-left:auto;margin-right:auto;'>
-		<img style="width:100%" src="images/logo_large.png"><br><br>
-		<h5>Welcome to the Asteroid Research Study</h5>
-		We invite you to take part in an exciting new research study that will assess the effect of light exposure on night-time sleep and daytime activity and alertness.
+		<!--<img style="width:100%" src="images/logo_large.png"><br><br>-->
+		Welcome to the digital health survey to explore digital health preferences and needs for older adults with poor sleep. Your responses to this will help us decide the most important requirements for the optimisation of our new sleep therapy app for this population. 
+        <br><br>
+        You are eligible to complete the survey if you are:<br>
+                1. Over 60 years<br>
+                2. have insomnia symptoms or meet criteria for a poor sleeper<br><br>
+
+		All answers are anonymous and absolutely no identifiable data will be collected.
 		<br><br>
-		<h5>Eligibility</h5>
-		You may be eligible to participate in this study if you:<br>
-		•	Are aged 50 or older<br>
-		•	Have difficulties with sleep<br>
-		•	Are living in metropolitan Sydney<br><br>
-		<br><br>
-		This research study is a laboratory-based study over 3 days and nights on two separate occasions.
-		<br><br>
-		The <b>Clever Lights</b> used in this study have been designed to emit specific wavelengths of light that regulate your circadian clock and your sleep. We are examining if using these lights will improve daytime alertness and night-time sleep.
-		<br><br>
-		If eligible for this research study, you will be invited to come to the Woolcock Institute of Medical Research in Glebe, NSW where you will stay in one of our sleep suites. Participants who are eligible for this study will be reimbursed $500 for their time provided they complete the study.
-		<br><br>
-		Your participation in this study is voluntary.<br><br>
-		Eligible participants will be contacted and invited to continue the screening process.<br><br>
-		<h5>I agree on completing a number of screening questionnaires to determine if I am suitable for the study.</h5>
-		<br>
-		<button id="yes__ID"  class="btn btn-success btn-lg">I agree</button>
-		&nbsp;&nbsp;&nbsp;&nbsp;<button id="no__ID"  class="btn btn-outline-secondary">No thanks</button><br><br>
+        To establish whether you are eligible to complete the survey, proceed to the screening questionnaires by clicking "Next"
+        <br><br>
+		<button id="yes__ID"  class="btn btn-success btn-lg">Next</button>
+        <br><br>
 		<div class=row style='background-color: white;padding: 5px;border-radius: 50px;'>
 			<div class="col-sm">
 				<a target="_blank" style="color:#000" href="https://www.sydney.edu.au/"><img src='__CURRENT_PATH__/../../images/university-of-sydney-logo.png' ></a>
@@ -36,7 +27,7 @@
 		function F__ID(){
 			var m=$vm.module_list['__MODULE__'];
 			if(m.prefix==undefined) m.prefix="";
-			$('#yes__ID').on('click',function(){	$vm.load_module(m.prefix+'recruitment-form','',{});	})
+			$('#yes__ID').on('click',function(){	$vm.load_module(m.prefix+'survey-form','',{});	})
 			$('#no__ID').on('click',function(){		$vm.alert("Completing questionnaires is necessary to be part of the study.") })
 		}
 		$vm.home_ready=1;
@@ -57,18 +48,11 @@
 			width:180px;height:60px;
 			font-family: Arial, Helvetica, sans-serif
 		}
-		#no__ID{
+		#yes__ID:hover{
 			border-radius:2rem;
-			width:180px;
-			height:60px;
-			font-size:1.2rem;
-			font-family: Arial, Helvetica, sans-serif;
-			border-width: 2px;
-			border-color: #fff;
-			color:#fff;
-		}
-		#no__ID:hover{
-			background-color: rgb(0,0,0,0);
+			background-color: #022c08;
+			width:180px;height:60px;
+			font-family: Arial, Helvetica, sans-serif
 		}
 	    @media screen and (max-width: 992px) {
 	        #D__ID{

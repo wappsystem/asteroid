@@ -5,7 +5,7 @@
                 <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;">
                     <div class="col-lg-1 col-sm-0 "></div>
                     <div class="col-lg-9 col-sm-12 text-center">
-                        <span style="color:#888">1 of 4 </span> <b>Asteroid Pre-screening questions</b>
+                        <span style="color:#888">1 of 3 </span> <b>SCREENING QUESTIONS</b>
                     </div>
                     <div class="col-lg-1 col-sm-0 "></div>
                 </div>
@@ -13,43 +13,19 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h4>1. Do you live in Sydney, NSW (including outer suburbs)?
-                                </h4>
+                                <h4>1. What is your age?</h4>
                             </div>
                         </div>
                         <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="location" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="location" value="N">
-                                    <span class="checkmark"></span>No </label>
+                            <fieldset>
+                                <input class='form-control' type="number" min=18 max=99 name="age"  required>
                             </fieldset>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h4>2. Are you aged over 50 years?
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="age" value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="age" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h4>3. Are you fluent in English?
+                                <h4>2. Are you fluent in English?
                                 </h4>
                             </div>
                         </div>
@@ -67,27 +43,17 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h4>4. Are you currently working?
+                                <h4>3. Do you have a smartphone?
                                 </h4>
                             </div>
                         </div>
                         <div class="questiongroup">
                             <fieldset class="pl-4">
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="working" value="Y" required>
+                                    <input type="radio" name="smartphone" value="Y" required>
                                     <span class="checkmark"></span>Yes</label>
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="working" value="N">
-                                    <span class="checkmark"></span>No </label>
-                            </fieldset>
-                        </div>
-                        <div id=q4-1__ID class="questiongroup">4.1 If yes, do you work different shifts?
-                            <fieldset class="pl-4">
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="shift" id=shift__ID value="Y" required>
-                                    <span class="checkmark"></span>Yes</label>
-                                <label class="radiobuttons ">
-                                    <input type="radio" name="shift" value="N">
+                                    <input type="radio" name="smartphone" value="N">
                                     <span class="checkmark"></span>No </label>
                             </fieldset>
                         </div>
@@ -95,8 +61,34 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h4>5. Have you travelled to a destination with a time difference of more than 2 hours
-                                    in the past month?
+                                <h4>4. Are you a shift-worker (in a regular work week)? Choose from</h4>
+                            </div>
+                        </div>
+                        <div class="questiongroup">
+                            <fieldset class="pl-4">
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="shiftworker" value="1" required>
+                                    <span class="checkmark"></span>No
+                                </label><br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="shiftworker" value="2">
+                                    <span class="checkmark"></span>Yes, I am on rotating shifts 
+                                </label><br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="shiftworker" value="3">
+                                    <span class="checkmark"></span>Yes, I am on shifts between hours of 8am – 8pm
+                                </label><br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="shiftworker" value="4">
+                                    <span class="checkmark"></span>Yes, I am on shifts outside hours of 8am – 8pm 
+                                </label><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm control-group">
+                                <h4>5. Have you travelled to a destination with 2 hours time difference last 30 days?
                                 </h4>
                             </div>
                         </div>
@@ -110,186 +102,76 @@
                                     <span class="checkmark"></span>No </label>
                             </fieldset>
                         </div>
-                        <div style="text-align:right">
-                            <button type="submit" d=1
-                                style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif"
-                                class="btn btn-success btn-lg">Next</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id=S2__ID>                
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;">
-                    <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center">
-                        <span style="color:#888">2 of 4 </span> <b>Insomnia Severity Index</b>
-                    </div>
-                    <div class="col-lg-1 col-sm-0 "></div>
-                </div>
-                <div id=quest2__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group">
-                        <h4>1. Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s).</h4>
-                        <div class="questiongroup ">
-                            <fieldset class="subquestions">
-                                <legend>A. Difficulty falling asleep</legend>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="0" required>
-                                    <span class="checkmark no-dot">0</span> None</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="1">
-                                    <span class="checkmark no-dot">1</span> Mild</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="2">
-                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="3">
-                                    <span class="checkmark no-dot">3</span> Severe</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1a" value="4">
-                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
-                            </fieldset>
-                            <fieldset class="subquestions">
-                                <legend>B. Difficulty staying asleep</legend>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="0" required>
-                                    <span class="checkmark no-dot">0</span> None</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="1">
-                                    <span class="checkmark no-dot">1</span> Mild</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="2">
-                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="3">
-                                    <span class="checkmark no-dot">3</span> Severe</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1b" value="4">
-                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
-                            </fieldset>
-                            <fieldset class="subquestions">
-                                <legend>C. Problem waking up too early</legend>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="0" required>
-                                    <span class="checkmark no-dot">0</span> None</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="1">
-                                    <span class="checkmark no-dot">1</span> Mild</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="2">
-                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="3">
-                                    <span class="checkmark no-dot">3</span> Severe</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_1c" value="4">
-                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
-                            </fieldset>
-                        </div>
                     </div>
                     <div class="form-group">
-                        <h4>2. How SATISFIED/DISSATISFIED are you with your CURRENT sleep pattern?</h4>
+                        <div class="row">
+                            <div class="col-sm control-group">
+                                <h4>6. Have you been diagnosed with any one or more of the following medical and/or psychiatric illnesses/disorders?
+                                </h4>
+                            </div>
+                        </div>
                         <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="0" required>
-                                    <span class="checkmark no-dot">0</span> Very satisfied</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="1">
-                                    <span class="checkmark no-dot">1</span> Satisfied</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="2">
-                                    <span class="checkmark no-dot">2</span> Neutral</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="3">
-                                    <span class="checkmark no-dot">3</span> Dissatisfied</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_2" value="4">
-                                    <span class="checkmark no-dot">4</span> Very dissatisfied</label><br>
+                            <fieldset class="pl-4 p-1">Major Depressive Disorder<br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="depression" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="depression" value="N">
+                                    <span class="checkmark"></span>No </label>
                             </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h4>3. To what extent do you consider your sleep problem to INTERFERE with your daily
-                            functioning (e.g. daytime fatigue, mood, ability to function at work/daily chores,
-                            concentration, memory, mood, etc.) CURRENTLY?</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="0" required>
-                                    <span class="checkmark no-dot">0</span> Not at all interfering</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="1">
-                                    <span class="checkmark no-dot">1</span> A little</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="2">
-                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="3">
-                                    <span class="checkmark no-dot">3</span> Much</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_3" value="4">
-                                    <span class="checkmark no-dot">4</span> Very much interfering</label><br>
+                            <fieldset class="pl-4 p-1">Heart failure<br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="heart_failure" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="heart_failure" value="N">
+                                    <span class="checkmark"></span>No </label>
                             </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h4>4. How NOTICEABLE to others do you think your sleep problem is in terms of impairing the
-                            quality of your life?</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="0" required>
-                                    <span class="checkmark no-dot">0</span> Not at all noticeable</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="1">
-                                    <span class="checkmark no-dot">1</span> A little</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="2">
-                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="3">
-                                    <span class="checkmark no-dot">3</span> Much</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_4" value="4">
-                                    <span class="checkmark no-dot">4</span> Very much noticeable</label><br>
+                            <fieldset class="pl-4 p-1">Epilepsy<br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="epilepsy" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="epilepsy" value="N">
+                                    <span class="checkmark"></span>No </label>
                             </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h4>5. How WORRIED/DISTRESSED are you about your current sleep problem?</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="0" required>
-                                    <span class="checkmark no-dot">0</span> Not at all worried</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="1">
-                                    <span class="checkmark no-dot">1</span> A little</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="2">
-                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="3">
-                                    <span class="checkmark no-dot">3</span> Much</label><br>
-                                <label class="radiobuttons">
-                                    <input type="radio" name="ISI_5" value="4">
-                                    <span class="checkmark no-dot">4</span> Very much worried</label><br>
+                            <fieldset class="pl-4 p-1">Bi-polar disorder<br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="bipolar" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="bipolar" value="N">
+                                    <span class="checkmark"></span>No </label>
+                            </fieldset>
+                            <fieldset class="pl-4 p-1">Dementia<br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="dementia" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="dementia" value="N">
+                                    <span class="checkmark"></span>No </label>
+                            </fieldset>
+                            <fieldset class="pl-4 p-1">Mild Cognitive Impairment<br>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="cognitive_impairment" value="Y" required>
+                                    <span class="checkmark"></span>Yes</label>
+                                <label class="radiobuttons ">
+                                    <input type="radio" name="cognitive_impairment" value="N">
+                                    <span class="checkmark"></span>No </label>
                             </fieldset>
                         </div>
                     </div>
                     <div style="text-align:right">
-                        <button type="submit" d=1
-                            style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif"
-                            class="btn btn-success btn-lg">Next</button>
+                        <button type="submit" d=1 class="btn btn-success btn-lg button">Next</button>
                     </div>
                 </div>
             </div>
-            <div id=S3__ID>
+            <div id=S2__ID>                
                 <div id=page3__ID class="row  mr-0 ml-0 p-4" >
                     <div class="col-lg-1 col-sm-0 ">
                     </div>
                     <div class="col-lg-10 col-sm-12 text-center">
-                        <span style="color:#888">3 of 4 </span> <b>Pittsburgh Sleep Quality Index</b>
+                        <span style="color:#888">2 of 3 </span> <b>Pittsburgh Sleep Quality Index</b>
                     </div>
                     <div class="col-lg-1 col-sm-0 ">
                     </div>
@@ -1081,226 +963,341 @@
                         </div>
                     </div>
                     <div style="text-align:right">
-                        <button type="submit" d=1
-                            style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif"
-                            class="btn btn-success btn-lg">Next</button>
+                        <button type="submit" d=1 class="btn btn-success btn-lg button">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div id=S3__ID>                
+                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;">
+                    <div class="col-lg-1 col-sm-0 "></div>
+                    <div class="col-lg-9 col-sm-12 text-center">
+                        <span style="color:#888">3 of 3 </span> <b>Insomnia Severity Index</b>
+                    </div>
+                    <div class="col-lg-1 col-sm-0 "></div>
+                </div>
+                <div id=quest2__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                    <div class="form-group">
+                        <h4>1. Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s).</h4>
+                        <div class="questiongroup ">
+                            <fieldset class="subquestions">
+                                <legend>A. Difficulty falling asleep</legend>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1a" value="0" required>
+                                    <span class="checkmark no-dot">0</span> None</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1a" value="1">
+                                    <span class="checkmark no-dot">1</span> Mild</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1a" value="2">
+                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1a" value="3">
+                                    <span class="checkmark no-dot">3</span> Severe</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1a" value="4">
+                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
+                            </fieldset>
+                            <fieldset class="subquestions">
+                                <legend>B. Difficulty staying asleep</legend>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1b" value="0" required>
+                                    <span class="checkmark no-dot">0</span> None</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1b" value="1">
+                                    <span class="checkmark no-dot">1</span> Mild</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1b" value="2">
+                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1b" value="3">
+                                    <span class="checkmark no-dot">3</span> Severe</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1b" value="4">
+                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
+                            </fieldset>
+                            <fieldset class="subquestions">
+                                <legend>C. Problem waking up too early</legend>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1c" value="0" required>
+                                    <span class="checkmark no-dot">0</span> None</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1c" value="1">
+                                    <span class="checkmark no-dot">1</span> Mild</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1c" value="2">
+                                    <span class="checkmark no-dot">2</span> Moderate</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1c" value="3">
+                                    <span class="checkmark no-dot">3</span> Severe</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_1c" value="4">
+                                    <span class="checkmark no-dot">4</span> Very severe</label><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h4>2. How SATISFIED/DISSATISFIED are you with your CURRENT sleep pattern?</h4>
+                        <div class="questiongroup">
+                            <fieldset>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_2" value="0" required>
+                                    <span class="checkmark no-dot">0</span> Very satisfied</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_2" value="1">
+                                    <span class="checkmark no-dot">1</span> Satisfied</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_2" value="2">
+                                    <span class="checkmark no-dot">2</span> Neutral</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_2" value="3">
+                                    <span class="checkmark no-dot">3</span> Dissatisfied</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_2" value="4">
+                                    <span class="checkmark no-dot">4</span> Very dissatisfied</label><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h4>3. To what extent do you consider your sleep problem to INTERFERE with your daily
+                            functioning (e.g. daytime fatigue, mood, ability to function at work/daily chores,
+                            concentration, memory, mood, etc.) CURRENTLY?</h4>
+                        <div class="questiongroup">
+                            <fieldset>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_3" value="0" required>
+                                    <span class="checkmark no-dot">0</span> Not at all interfering</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_3" value="1">
+                                    <span class="checkmark no-dot">1</span> A little</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_3" value="2">
+                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_3" value="3">
+                                    <span class="checkmark no-dot">3</span> Much</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_3" value="4">
+                                    <span class="checkmark no-dot">4</span> Very much interfering</label><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h4>4. How NOTICEABLE to others do you think your sleep problem is in terms of impairing the
+                            quality of your life?</h4>
+                        <div class="questiongroup">
+                            <fieldset>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_4" value="0" required>
+                                    <span class="checkmark no-dot">0</span> Not at all noticeable</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_4" value="1">
+                                    <span class="checkmark no-dot">1</span> A little</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_4" value="2">
+                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_4" value="3">
+                                    <span class="checkmark no-dot">3</span> Much</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_4" value="4">
+                                    <span class="checkmark no-dot">4</span> Very much noticeable</label><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h4>5. How WORRIED/DISTRESSED are you about your current sleep problem?</h4>
+                        <div class="questiongroup">
+                            <fieldset>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_5" value="0" required>
+                                    <span class="checkmark no-dot">0</span> Not at all worried</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_5" value="1">
+                                    <span class="checkmark no-dot">1</span> A little</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_5" value="2">
+                                    <span class="checkmark no-dot">2</span> Somewhat</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_5" value="3">
+                                    <span class="checkmark no-dot">3</span> Much</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="ISI_5" value="4">
+                                    <span class="checkmark no-dot">4</span> Very much worried</label><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div style="text-align:right">
+                        <button type="submit" d=1 class="btn btn-success btn-lg button">Next</button>
                     </div>
                 </div>
             </div>
             <div id=S4__ID>
-                <div id=page4__ID class="row  mr-0 ml-0 p-4" >
-                    <div class="col-lg-1 col-sm-0 ">
+                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;">
+                    <div class="col-lg-1 col-sm-0 "></div>
+                    <div class="col-lg-9 col-sm-12 text-center">
+                        <span style="color:#888"></span> <b>Eligible for survey</b>
                     </div>
-                    <div class="col-lg-10 col-sm-12 text-center">
-                        <span style="color:#888">4 of 4 </span> <b>Multivariable Apnea Predictor Questionnaire</b>
-                    </div>
-                    <div class="col-lg-1 col-sm-0 ">
-                    </div>
+                    <div class="col-lg-1 col-sm-0 "></div>
                 </div>
-                <div id=quest4__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
                     <div class="form-group">
-                        <div class="questiongroup ">
-                            <fieldset class="">
-                                <label ><span class="">Age (years)</span>
-                                    <input class="form-control" type="number" min=50 max=100 name="map_age" placeholder=""  required >
-                                </label>
-                            </fieldset>
-                            <label ><span class="">Gender</span>
-                            </label><br>
-                            <label class="radiobuttons">
-                            <input type="radio" name="gender" value="Male" required >
-                            <span class="checkmark"></span> Male</label>
-                            <label class="radiobuttons">
-                            <input type="radio" name="gender" value="Female">
-                            <span class="checkmark"></span> Female</label>
+                        <div class="row">
+                            <div class="col-sm text-center bg-white"><br>
+                                <h4>You are ELIGIBLE to complete the online survey exploring digital health preferences and
+                                    needs for older adults with poor sleep.<br><br>
+                                    Please read the information sheet and tick the box for consent before proceeding.<br><br>
+                                    The survey will begin on the next page.
+                                </h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                        <fieldset class="subquestions">
-                            <label ><span class="">Weight (kg)</span>
-                                <input class="form-control" type="number" min=30 max=250 name="weight" id=weight__ID placeholder="" required >
-                            </label><br>
-                            <label ><span class="">Height (cm)</span>
-                                <input class="form-control" type="number" name="height" id=height__ID min=100 max=250 placeholder="" required >
-                            </label><br>
-                            </fieldset>
+                        <div class="row">
+                            <div class="col-sm text-center bg-white"><br>
+                                <h5><b>App-delivered Sleep ThERapy for Older IndiviDuals with insomnia (ASTEROID Study)<br><br>
+                                        PART A - ONLINE SURVEY<br><br>
+                                        <u>PARTICIPANT INFORMATION SHEET AND CONSENT FORM</u></b><br><br>
+                                </h5>
+                                <div class='text-left'>
+                                    <b>Introduction</b><br><br>
+                                    You are invited to take part in a survey for people with insomnia or poor sleep. In this
+                                    study, we aim to determine the digital health preferences and user experience needs in
+                                    relation to a new mobile application to improve sleep.<br><br>
+                                    You have been invited to participate in this study because you have insomnia or have poor
+                                    sleep. This Participant Information Statement (PIS) tells you about the research study.
+                                    Knowing what is involved will help you decide if you want to take part in the research.
+                                    Please read this carefully and ask questions about anything that you don’t understand or
+                                    want to know more about.<br><br>
+                                    Participation in this research is voluntary. If you do not wish to take part, you do not
+                                    have to and without consequence. If you decide you want to take part in the research study
+                                    and continue to the survey, it is assumed you consent to the details in this
+                                    document.<br><br>
+                                    <b>What is the purpose of this research?</b><br><br>
+                                    The purpose of this research is to determine the digital behaviours and User Experience (UX)
+                                    needs for a mobile sleep app in older adults from the community aged 60 years or over.
+                                    SleepFix is one such app that has been developed as a digital tool by the Woolcock Institute
+                                    to deliver digital brief behavioural therapy for insomnia (dBBTi) in adults. However, this
+                                    app has not yet been tested in or optimised for an older population. This survey will be
+                                    completed online and distributed nation-wide. It will be a key resource in optimising the
+                                    SleepFix app for the successful treatment of insomnia and poor sleep within this
+                                    population.<br><br>
+                                    The study is sponsored by the Woolcock Institute of Medical Research, supported by a grant
+                                    from the Cooperative Research Centre (CRC) for Alertness Safety and Productivity.<br><br>
+                                    <b>Who can take part in the study?</b><br><br>
+                                    You can complete the survey if you have insomnia, poor sleep and if you are aged 60 or
+                                    over.<br><br>
+                                    <b>What does participation in this research involve?</b><br><br>
+                                    This study is entirely online and anonymous. If you agree to participate, you are simply
+                                    required to fill out the online questionnaires through the secure online platform
+                                    (www.sleepsurvey.com.au). You will first be asked to complete two short questionnaires
+                                    assessing insomnia symptoms and poor sleep (5 minutes). If eligible, you will then be asked
+                                    to read this participant information sheet and give your consent by digitally ticking the “I
+                                    consent to taking part in the study” checkbox. This will allow you to progress to the online
+                                    survey (10-15 minutes). The survey consists of 22 questions about your phone usage,
+                                    preferences relating to sleep mobile application features and previous experiences with
+                                    health mobile applications. The questions will be a mix of multi-part questions, Likert-type
+                                    scale questions, yes-no and ‘select all that apply’ questions as well as some open-ended
+                                    questions. Absolutely no identifiable data will be collected.<br><br>
+                                    <b>Can I withdraw from the study once I've started?</b><br><br>
+                                    Participation in this study is entirely voluntary. You do not have to take part in it. Your
+                                    decision whether to participate will not affect your current or future relationship with the
+                                    researchers or anyone else at The University of Sydney or Woolcock Institute of Medical
+                                    Research.<br><br>
+                                    Submitting your completed questionnaire is an indication of your consent to participate in
+                                    the study. You can withdraw your responses any time before you have submitted the
+                                    questionnaire. Once you have submitted it, your responses cannot be withdrawn because they
+                                    are anonymous and therefore we will not be able to tell what data is yours.<br><br>
+                                    <b>What are the side-effects and/or risks associated with this study?</b><br><br>
+                                    Aside from giving up your time, we do not expect that there will be any risks or costs
+                                    associated with taking part in this study.<br><br>
+                                    <b>What are the benefits associated with being in the study?</b><br><br>
+                                    It is hoped that by taking part in this research, you will be providing valuable information
+                                    regarding sleep health app usage and behaviours of older adults who are poor sleepers. This
+                                    may aid in the development of a mobile application that may be effective at treating poor
+                                    sleep in this population.<br><br>
+                                    We are also offering participants who complete the survey, the opportunity to take part in a
+                                    prize draw for 1 of 3 eGift Cards valued at $200 each.<br><br>
+                                    If you wish to take part in the prize draw, you will need to provide a mobile number
+                                    following completion of the survey (on the last page). Your mobile number will then go into
+                                    a draw with the other participants who completed the survey. When the survey completion time
+                                    closes, a random draw of supplied mobile numbers will be undertaken by a researcher who is
+                                    not involved in the study. The successful participant will be notified by a telephone call
+                                    to the mobile number. Please note, participation in the prize draw is voluntary.<br><br>
+                                    <b>How do I access the results of the study?</b><br><br>
+                                    You have a right to receive feedback about the overall results of this study. You can tell
+                                    us that you wish to receive feedback by providing your contact details in the survey. This
+                                    feedback will be in the form of a summary of the project’s findings. You will receive this
+                                    feedback after the study is finished.<br><br>
+                                    <b>What will happen to the data I enter?</b><br><br>
+                                    All information obtained during this study is anonymous as we collect no personal
+                                    identification. By providing consent, you are agreeing to these conditions and understand
+                                    that any data published in scientific journals will not identify you.<br><br>
+                                    All questionnaire and survey data will be captured on an encrypted web-based database
+                                    connected through the backend of the public-facing study website (www.sleepsurvey.com.au)
+                                    via a securely encrypted link. The database is stored securely using password protection
+                                    that only authorised research members have access to.<br><br>
+                                    Any contact details you enter for either the prize draw, or to receive study outcome
+                                    information will be collated in a separate file on the database that will not be attached to
+                                    your survey responses. These files will be permanently deleted once their purpose has been
+                                    fulfilled.<br><br>
+                                    <b>Contact Information</b><br><br>
+                                    If you still have questions or require more information after reading this document, Dr
+                                    Christopher Gordon and his team are available at Telephone: +61 2 9114 0481 or email:
+                                    SleepFix@woolcock.org.au<br><br>
+                                    <b>Ethics approval and complaints</b><br><br>
+                                    The ethical aspects of this research project have been approved by the Sydney Local Health
+                                    District (SLHD) Health Research Ethics Committee (HREC). This project will be carried out
+                                    according to the National Statement on Ethical Conduct in Human Research (2007, updated
+                                    2018). This statement has been developed to protect the interests of people who agree to
+                                    participate in human research studies. Should you wish to discuss the study or view a copy
+                                    of the Complaint procedure with someone not directly involved, particularly in relation to
+                                    matters concerning policies, information or
+                                    complaints about the conduct of the study or your rights as a participant, you may contact
+                                    the HREC Executive Officer, Merela Ghazal, on 02 9515 6766 or email
+                                    SLHD-RPAEthics@health.nsw.gov.au
+                                    <hr>
+                                    <b>In giving my consent, I state that:</b><br><br>
+                                    I have read and understood the Online Survey Participant Information Sheet Version 1.0
+                                    (July, 2021) for the above named research study.
+                                    <ul>
+                                        <li>I am aware that there is minimal risk with the procedures involved in this study.
+                                        </li>
+                                        <li>The researchers have answered any questions that I had about the study, and I am
+                                            happy with the answers.</li>
+                                        <li>I freely choose to participate in this study and understand that I can withdraw at
+                                            any time up until I submit the completed survey.</li>
+                                        <li>I understand that the research survey is strictly confidential, and my answers are
+                                            anonymous.</li>
+                                    </ul>
+                                    By ticking this box, I hereby agree to participate in all aspects of this research
+                                    study.<br><br>
+        
+                                </div>
+                                <div class="form-group text-left container">
+                                    <div class="questiongroup">
+                                        <fieldset>
+                                            <label class="checkboxes">
+                                                <input type="checkbox" name="Consent" id=consent__ID>
+                                                <span class="check_checkmark"></span> I consent to taking part in the study.
+                                            </label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-sm-12" id=pdfs__ID>
+                                    <a href="m/Online Survey PISCF.pdf" target="_blank">
+                                        <div class="downloads text-left">
+                                            <div class="col-lg-12 col-sm-12 pl-0 pr-0"> <img src="images/pdf-icon.png"
+                                                    width="48" height="auto" alt="download pdf" />
+                                                <h5>Participant's Information Sheet</h5>
+                                                <p>Click here to download this document as a PDF</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <fieldset class="subquestions">
-                            <h4>During the last month, on how many nights or days per week have you been told you had the following? <br>
-                            Show the frequency by clicking the circle. </h4>
-                        </fieldset>
-                    </div>
-                    <div class="form-group sticky-top shadow-sm bg-light">
-                        <div id=legend__ID class="questiongroup " >
-                            <fieldset class="">
-                                <label class="radiobuttons" style='cursor:default!important'>
-                                    <span class="checkmark no-dot">0</span>= Never
-                                </label><br>
-                                <label class="radiobuttons" style='cursor:default!important'>
-                                    <span class="checkmark no-dot">1</span>= Rarely (less than once a week)
-                                </label><br>
-                                <label class="radiobuttons" style='cursor:default!important'>
-                                    <span class="checkmark no-dot">2</span>= Sometimes (1-2 /week)
-                                </label><br>
-                                <label class="radiobuttons" style='cursor:default!important'>
-                                    <span class="checkmark no-dot">3</span>= Frequently (3-4/week)
-                                </label><br>
-                                <label class="radiobuttons" style='cursor:default!important'>
-                                    <span class="checkmark no-dot">4</span>= Always (5-7/week)
-                                </label><br>
-                                <label class="radiobuttons" style='cursor:default!important'>
-                                    <span class="checkmark no-dot">DK</span>= Don’t Know
-                                </label><br>
-                            </fieldset>
+                        <div style="text-align:right">
+                            <button type="submit" id=submit1__ID d=1 class="btn btn-success btn-lg button">Next</button>
                         </div>
-                        <button type="button" id="btn_legend__ID" class="btn btn-primary mb-1 mt-0 mx-0 p-1">Hide legend</button>
-                    </div>
-                    <div class="form-group">
-                        <h4>1. Snorting or gasping</h4>
-                            <div class="questiongroup">
-                            <fieldset class="subquestions">
-                                <label class="radiobuttons" title="Never">
-                                    <input type="radio" name="MAP_1" value="0" required >
-                                    <span class="checkmark no-dot">0</span></label>
-                                <label class="radiobuttons" title="Rarely (less than once a week)">
-                                    <input type="radio" name="MAP_1" value="1">
-                                    <span class="checkmark no-dot">1</span></label>
-                                <label class="radiobuttons" title="Sometimes (1-2 /week)">
-                                    <input type="radio" name="MAP_1" value="2">
-                                    <span class="checkmark no-dot">2</span></label>
-                                <label class="radiobuttons" title="Frequently (3-4/week)">
-                                    <input type="radio" name="MAP_1" value="3">
-                                    <span class="checkmark no-dot">3</span></label>
-                                <label class="radiobuttons" title="Always (5-7/week)">
-                                    <input type="radio" name="MAP_1" value="4">
-                                    <span class="checkmark no-dot">4</span></label>
-                                <label class="radiobuttons" title="Don’t Know">
-                                    <input type="radio" name="MAP_1" value="DK">
-                                    <span class="checkmark no-dot">DK</span></label>
-                            </fieldset>
-                            <label id=MAP_sel_1>&nbsp;</label>
-                        </div>
-                        </div>
-                    <div class="form-group">
-                        <h4>2. Loud snoring</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons" title="Never">
-                                <input type="radio" name="MAP_2" value="0"  required >
-                                <span class="checkmark no-dot">0</span></label>
-                                <label class="radiobuttons" title="Rarely (less than once a week)">
-                                <input type="radio" name="MAP_2" value="1">
-                                <span class="checkmark no-dot">1</span></label>
-                                <label class="radiobuttons" title="Sometimes (1-2 /week)">
-                                <input type="radio" name="MAP_2" value="2">
-                                <span class="checkmark no-dot">2</span></label>
-                                <label class="radiobuttons" title="Frequently (3-4/week)">
-                                <input type="radio" name="MAP_2" value="3">
-                                <span class="checkmark no-dot">3</span></label>
-                                <label class="radiobuttons" title="Always (5-7/week)">
-                                <input type="radio" name="MAP_2" value="4">
-                                <span class="checkmark no-dot">4</span></label>
-                                <label class="radiobuttons" title="Don’t Know">
-                                <input type="radio" name="MAP_2" value="DK">
-                                <span class="checkmark no-dot">DK</span></label>
-                            </fieldset>
-                            <label id=MAP_sel_2>&nbsp;</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h4>3. Breathing stops, choke, or struggle for breath</h4>
-                        <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons" title="Never">
-                                <input type="radio" name="MAP_3" value="0" required >
-                                <span class="checkmark no-dot">0</span></label>
-                                <label class="radiobuttons" title="Rarely (less than once a week)">
-                                <input type="radio" name="MAP_3" value="1">
-                                <span class="checkmark no-dot">1</span></label>
-                                <label class="radiobuttons" title="Sometimes (1-2 /week)">
-                                <input type="radio" name="MAP_3" value="2">
-                                <span class="checkmark no-dot">2</span></label>
-                                <label class="radiobuttons" title="Frequently (3-4/week)">
-                                <input type="radio" name="MAP_3" value="3">
-                                <span class="checkmark no-dot">3</span></label>
-                                <label class="radiobuttons" title="Always (5-7/week)">
-                                <input type="radio" name="MAP_3" value="4">
-                                <span class="checkmark no-dot">4</span></label>
-                                <label class="radiobuttons" title="Don’t Know">
-                                <input type="radio" name="MAP_3" value="DK">
-                                <span class="checkmark no-dot">DK</span></label>
-                            </fieldset>
-                            <label id=MAP_sel_3>&nbsp;</label>
-                        </div>
-                    </div>
-                    <div style="text-align:right">
-                        <button type="submit" d=1
-                            style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif"
-                            class="btn btn-success btn-lg">Next</button>
-                    </div>
-                </div>
-            </div>
-            <div id=S5__ID>
-                <div id=page5__ID class="row mr-0 ml-0 p-3" style="background-color:#efefef;">
-                    <div class="col-lg-4 col-sm-0 text-center"></div>
-                    <div class="col-lg-4 col-sm-12 text-center">
-                        <span style="color:#888">Thank you for completing these questions. Based on the responses you
-                            have provided you <b>may be eligible</b> for the research study. <br>We will need to contact
-                            you to discuss this over the telephone. Please provide your phone number and e-mail address
-                            and we will contact you shortly.</b>
-                    </div>
-                    <div class="col-lg-4 col-sm-0 text-center"></div>
-                </div>
-                <div id=quest5__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <fieldset class="subquestions">
-                                <label><span class="">First name</span>
-                                    <input class="form-control" type="text" name="first_name">
-                                </label><br>
-                                <label><span class="">Last name</span>
-                                    <input class="form-control" type="text" name="last_name">
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <fieldset class="subquestions">
-                                <label style="width:100%"><span class="">Email Address</span>
-                                    <input class="form-control" type="email" name="email">
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="questiongroup ">
-                            <fieldset class="subquestions">
-                                <label><span class="">Phone number</span>
-                                    <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required
-                                        placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div style="text-align:right">
-                        <button type="submit" id=submit1__ID d=1
-                            style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif"
-                            class="btn btn-success btn-lg">Submit</button>
-                    </div>
-                    <br>
-                    <hr>
-                    <div class="text-center">
-                        Contact Us
-                        <br><br>
-                        Phone: (02) 9114 0421<br>
-                        Email: woolcock.asteroid@sydney.edu.au<br><br>
-                        Thanks you for your time and effort,<br>
-                        <b>The Clever Lights Research Team</b><br>
-                    </div>
+                    </div>        
                 </div>
             </div>
         </form>
@@ -1309,28 +1306,10 @@
         function F__ID() {
             VmInclude: __COMPONENT__/f/form.01.js
             //---------------------------------------
-            var N = 5;
+            var N = 4;
             var current_I = 1;
             //---------------------------------------
             m.before_submit = function (data, index) {
-                    //MAP-------------------
-                    data.MAP=scores.MAP;
-                    //MAP-------------------
-                    //ISI-------------------
-                    data.ISI=scores.ISI;
-                    data.ISI_1=scores.ISI_1;
-                    //ISI-------------------
-                    //PSQI-------------------
-                    data.PSQIDURAT=scores.PSQIDURAT;
-                    data.PSQIDISTB=scores.PSQIDISTB;
-                    data.PSQILATEN=scores.PSQILATEN;
-                    data.PSQIDAYDYS=scores.PSQIDAYDYS;
-                    data.PSQIHSE=scores.PSQIHSE;
-                    data.PSQISLPQUAL=scores.PSQISLPQUAL;
-                    data.PSQIMEDS=scores.PSQIMEDS;
-                    data.PSQI=( parseInt(scores.PSQIDURAT)+ parseInt(scores.PSQIDISTB)+ parseInt(scores.PSQILATEN)+ parseInt(scores.PSQIDAYDYS)+  parseInt(scores.PSQIHSE)+  parseInt(scores.PSQISLPQUAL)+ parseInt(scores.PSQIMEDS)).toString();
-                    //PSQI-------------------
-                //-------------------------------------
                 return true;
             }
             //---------------------------------------
@@ -1340,11 +1319,6 @@
                 $('#q4-1__ID').hide();
                 $('#shift__ID').removeAttr('required');
                 show_section(1);
-                //-- MAP ---------------------------
-                for(var i=0;i<8;i++){
-                  set_selected_text(i+1)
-                }
-                $('#D__ID').css('overflow','visible');
                 //-- PSQI ---------------------------             
                 if($("input[name='PSQI5j']").val()!=''){
                     $('#PSQI5ji__ID').prop('required', true);
@@ -1481,78 +1455,9 @@
                     $('#mobileNumber__ID').val(mn.substring(0, 4) + '-' + mn.substring(4, 7) + '-' + mn.substring(7, 10))
                 }
             })
-            // MAP
-            $('#btn_legend__ID').on('click',function(){
-                if($('#btn_legend__ID').text()=='Hide legend'){
-                    $('#btn_legend__ID').text('Show legend');
-                    $('#legend__ID').hide();
-                }
-                else {
-                    $('#btn_legend__ID').text('Hide legend');
-                    $('#legend__ID').show();
-                }
-            });
-            $("#D__ID input[name=MAP_1]").on('click',function(){
-                set_selected_text(1)
-            })
-            $("#D__ID input[name=MAP_2]").on('click',function(){
-                set_selected_text(2)
-            })
-            $("#D__ID input[name=MAP_3]").on('click',function(){
-                set_selected_text(3)
-            })
-            //-------------------------------------
-            var set_selected_text=function(i){
-                $("#MAP_sel_"+i+"").css('padding-top','10px').css('color','#EA7859');
-                switch ($("#D__ID input[name=MAP_"+i+"]:checked").val()) {
-                    case '0':
-                        $("#MAP_sel_"+i+"").text("Never");
-                    break;
-                    case '1':
-                        $("#MAP_sel_"+i+"").text("Rarely (less than once a week)");
-                    break;
-                    case '2':
-                        $("#MAP_sel_"+i+"").text("Sometimes (1-2 /week)");
-                    break;
-                    case '3':
-                        $("#MAP_sel_"+i+"").text("Frequently (3-4/week)");
-                    break;
-                    case '4':
-                        $("#MAP_sel_"+i+"").text("Always (5-7/week)");
-                    break;
-                    case 'DK':
-                        $("#MAP_sel_"+i+"").text("Don’t Know");
-                    break;
-                    default:
-                        /*$("#MAP_sel_"+i+"").text("");*/
-                    break;
-                }
-            }
             var scores={};
             //---------------------------------------
             var calc_scores=function(){
-                //MAP-------------------
-                var age='';age=$("#D__ID input[name=map_age]").val();
-                var height='';height=$("#D__ID input[name=height]").val();
-                var weight='';weight=$("#D__ID input[name=weight]").val();
-                var sex=''; sex=$("#D__ID input[name=gender]:checked").val()
-                var answ=0;
-                var v1=0;
-                var v2=0;
-                var v3=0;
-                if($("#D__ID input[name=MAP_1]:checked").val()!=='DK') { v1=parseInt($("#D__ID input[name=MAP_1]:checked").val());answ++;}
-                if($("#D__ID input[name=MAP_2]:checked").val()!=='DK') { v2=parseInt($("#D__ID input[name=MAP_2]:checked").val());answ++;}
-                if($("#D__ID input[name=MAP_3]:checked").val()!=='DK') { v3=parseInt($("#D__ID input[name=MAP_3]:checked").val());answ++;}
-                if(sex=='Male') sex=1; else sex=0;
-                age=parseFloat(age);
-                height=parseFloat(height);
-                weight=parseFloat(weight);
-                var map_index=1;
-                if(answ>0){map_index=(v1+v2+v3)/answ;}
-                var bmi=weight/height/height*100*100;
-                console.log(map_index+ ' - '+bmi+ ' - '+age+ ' - '+sex)
-                var x=-8.160+1.229*map_index+0.163*bmi-0.028*map_index*bmi+0.032*age+1.278*sex;
-                scores.MAP=(Math.exp(x)/(1+Math.exp(x))).toFixed(2);
                 //ISI-------------------
                 scores.ISI=(
                     parseInt($("input[name='ISI_2']:checked").val())+
@@ -1663,20 +1568,43 @@
                 //PSQI-------------------
             }
             //---------------------------------------
+            m.before_submit = function (data, index) {
+                //ISI-------------------
+                data.ISI=scores.ISI;
+                data.ISI_1=scores.ISI_1;
+                //ISI-------------------
+                //PSQI-------------------
+                data.PSQIDURAT=scores.PSQIDURAT;
+                data.PSQIDISTB=scores.PSQIDISTB;
+                data.PSQILATEN=scores.PSQILATEN;
+                data.PSQIDAYDYS=scores.PSQIDAYDYS;
+                data.PSQIHSE=scores.PSQIHSE;
+                data.PSQISLPQUAL=scores.PSQISLPQUAL;
+                data.PSQIMEDS=scores.PSQIMEDS;
+                data.PSQI=( parseInt(data.PSQIDURAT)+ parseInt(data.PSQIDISTB)+ parseInt(data.PSQILATEN)+ parseInt(data.PSQIDAYDYS)+  parseInt(data.PSQIHSE)+  parseInt(data.PSQISLPQUAL)+ parseInt(data.PSQIMEDS)).toString();
+                //PSQI-------------------
+            }
+            //---------------------------------------
             var old_submit = m.submit;
             m.submit = function (event) {
                 event.preventDefault();
-                if (current_I == N - 1) {
+                if (current_I == N-1) {
                     calc_scores();
                     console.log("All scores: "+ JSON.stringify(scores))
-                    if ($("input[name='location']:checked").val() == 'N' ||
-                        $("input[name='age']:checked").val() == 'N' ||
-                        $("input[name='shift']:checked").val() == 'Y' ||
+                    if (parseInt($("input[name='age']").val()) < 60 ||
+                        $("input[name='fluent']:checked").val() == 'N' ||
+                        $("input[name='smartphone']:checked").val() == 'N' ||
+                        parseInt($("input[name='shiftworker']:checked").val()) > 1 ||
                         $("input[name='fluent']:checked").val() == 'N' ||
                         $("input[name='travel']:checked").val() == 'Y' ||
-                        scores.ISI >=15 ||
-                        scores.PSQI <=5 ||
-                        scores.MAP >0.5 ) {
+                        $("input[name='depression']:checked").val() == 'Y' ||
+                        $("input[name='heart_failure']:checked").val() == 'Y' ||
+                        $("input[name='epilepsy']:checked").val() == 'Y' ||
+                        $("input[name='bipolar']:checked").val() == 'Y' ||
+                        $("input[name='dementia']:checked").val() == 'Y' ||
+                        $("input[name='cognitive_impairment']:checked").val() == 'Y' ||
+                        scores.ISI < 10 ||
+                        scores.PSQI < 6 ) {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
@@ -1684,18 +1612,31 @@
                     }
                     else {
                         show_section(current_I + 1);
-                        $("input[name='first_name']").prop('required', 'true')
-                        $("input[name='last_name']").prop('required', 'true')
-                        $("input[name='email']").prop('required', 'true')
-                        $("input[name='phone']").prop('required', 'true')
                     }
                 }
                 else if (current_I == N) {
-                    $('#F__ID *').removeAttr('disabled');
-                    $('#submit1__ID').hide();
-                    old_submit(event);
+                    if (consented) {
+                        $('#F__ID *').removeAttr('disabled');
+                        $('#submit1__ID').hide();
+                        old_submit(event);
+                    }
+                    else {
+                        $vm.alert("You must tick the consent box to be able to continue.")
+                    }
                 }
                 else show_section(current_I + 1);
+            }
+            var consented = false;
+            $('#consent__ID').on('change', function () {
+                if ($(this).is(":checked")) consented = true;
+                else consented = false;
+            })
+            //---------------------------
+            m.after_insert=function(data,res){
+                console.log("AAA: "+JSON.stringify(res.result.ops[0].UID));
+                var uid=res.result.ops[0].UID;
+                if (m.prefix == undefined) { $vm.load_module('dsa-survey-form', '', {entry_id:uid}); }
+                else $vm.load_module(m.prefix + 'dsa-survey-form', '', {entry_id:uid});
             }
         }
     </script>
@@ -1704,8 +1645,55 @@
             font-family: 'Roboto Slab';
             animation: vm_module_fadein 1.0s;
             color: #000;
-            background-color: #FFF;
+            background-color: rgb(255,255,255,0.8);
             min-height: 800px;
+        }
+        #D__ID button{
+            border-radius:2rem;
+            background-color: #13B51F;
+            width:180px;height:60px;
+        }
+        #D__ID button:hover{
+            border-radius:2rem;
+            background-color: #013604;
+            width:180px;height:60px;
+        }
+        #D__ID .downloads {
+            border-top-style: solid;
+            border-top-color: white;
+            border-top-width: 1px;
+            display: inline-block;
+            width: 100%;
+            padding-top: 10px;
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+
+        #D__ID .downloads:hover {
+            opacity: 0.95;
+        }
+
+        #D__ID .downloads h5 {
+            font-family: 'Roboto Slab';
+            font-size: 22px;
+            color: #45496A;
+            letter-spacing: 0;
+        }
+
+        #D__ID .downloads h5:hover {
+            text-decoration: underline;
+        }
+
+        #D__ID .downloads p {
+            font-family: 'Nunito Sans';
+            font-size: 14px;
+            color: #000;
+            letter-spacing: 0;
+        }
+
+        #D__ID .downloads img {
+            float: right;
+            margin-left: 5px
         }
 
         VmInclude:__CURRENT_PATH__/wappsystem-form.css

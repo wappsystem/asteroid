@@ -1,10 +1,17 @@
 <div id=D__ID>
     <div>
+        <!-- mobile -->
         <div class=vm-mobile>
-            <div class=vm-logo-image-small></div>
+            <span id=vm-mobile_title class=vm-mobile-title>Sleep Survey</span>
+            <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fa fa-bars"></i></a>
         </div>
+        <!---------->
+
+        <!-- desktop -->
         <div class=vm-desk-logo>
-            <div class=vm-logo-image></div>
+        <!--            <div class=vm-logo-image></div> -->
+            <span id=vm-logo-label-A>Sleep Survey</span><br>
+        <!--            <span style=color:white> Only to be used for testing</span> -->
         </div>
     </div>
     <script>
@@ -67,14 +74,14 @@
             /*z-index:20;*/
         }
         #vm-logo-label-A{
-            font-family: Arial, sans-serif;
+            text-transform: uppercase;
+            font-family: 'Roboto Slab';
             color:#fff;
             font-size: 200%;
-            line-height:10px;
             display:inline-block;
         }
         #vm-logo-label-B{
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto Slab';
             color:#fff;
             font-size: 93%;
             line-height:80%;
@@ -154,7 +161,7 @@
         .vm-mobile{
             display:none;
         }
-        #header{ background-image: url(__CURRENT_PATH__/../../images/desktop_banner.png);
+        #header{ background-image: url();
             opacity: 0.8;}
         /*----------------------*/
         @media screen and (max-width: 1200px) {
@@ -162,7 +169,7 @@
                 display:block;
             }
             #header{ 
-                background-image: url(__CURRENT_PATH__/../../images/mobile_banner.jpg);
+                background-image: url();
              }
             .vm-mobile-title{
                 color:var(--mobile-title-color);
