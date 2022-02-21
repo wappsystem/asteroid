@@ -374,6 +374,7 @@ h1 {
 #D__ID input[type="email"],
 #D__ID input[type="tel"],
 #D__ID input[type="text"],
+#D__ID input[type="password"],
 #D__ID textarea {
     transition: border-color 0.35s cubic-bezier(0.3, 0.86, 0.36, 0.95);
     padding: 16px;
@@ -646,7 +647,7 @@ textarea {
     padding: 58px 0;
     color: #fff;
     background-color: #1c2350;
-    /*background-image: url(../images/bg-04.png);*/
+    /*background-image: url(../assets/images/bg-04.png);*/
     background-repeat: no-repeat;
     background-position: 93% bottom;
     letter-spacing: 0.1px;
@@ -691,6 +692,38 @@ textarea {
 }
 #D__ID .btn.disabled,
 #D__ID .btn:disabled {
+    background-color: rgba(173, 93, 129, 0.2);
+    color: #fff;
+    pointer-events: none;
+}
+#D__ID .qbtn {
+    justify-content: center;
+    min-width: 400px;
+    display: inline-flex;
+    padding: 5px 6px;
+    border-radius: 4px;
+    background-color: #ad5d81;
+    border: 0;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.2;
+    cursor: pointer;
+    margin-top: 3px;
+}
+#D__ID .qbtn.hover,
+#D__ID .qbtn:hover {
+    background-color: #be7f9b;
+    color: #fff;
+}
+#D__ID .qbtn.active,
+#D__ID .qbtn:active {
+    background-color: #8f4868;
+    color: #fff;
+}
+#D__ID .qbtn.disabled,
+#D__ID .qbtn:disabled {
     background-color: rgba(173, 93, 129, 0.2);
     color: #fff;
     pointer-events: none;

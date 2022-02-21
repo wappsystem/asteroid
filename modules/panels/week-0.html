@@ -1,4 +1,20 @@
-<div id=page__ID>
+<div id=page__ID style="background-image: url(assets/images/bg-02.png)">
+    <div class="container">
+        <div class="cta-inner" style="background-image: url(assets/images/bg-03.png)">
+          <div class="cta-text"><img src="assets/images/logo.png" alt="SleepFix">
+            <h2>Questionnaire Portal</h2>
+            <p class="text-transparent text-lead">
+            </p>
+    		<h4 class= "">Please complete each of the following questionnaires.<br><br></h4>
+            <div id=items__ID  class= ""></div><h4></h4>
+            <h4 class= "">
+                Once they are completed please click on ‘sign-out’ below, to exit the system. <br>Thank you!<br><br>
+            </h4>
+            <a name=signinout onclick="$vm.signout();" class="btn btn-primary" style='cursor:pointer'>Sign out</a>
+          </div>
+        </div>
+      </div>
+<!--
 	<div id=panel__ID class="container-fluid" style='max-width:800px'>
 		<div class="text-center panel__ID form-group">
 			<h2><br>Questionnaire Portal</h2>
@@ -10,7 +26,7 @@
             </h4>
             <a name=signinout onclick="$vm.signout();" class="btn btn-primary" style='cursor:pointer'>Sign out</a>
     	</div>
-	</div>
+	</div>-->
 </div>
 <!-- <div id=panel__ID>
     Please answer the following questionnaires. Follow the instruction on each of them.<br><br>
@@ -54,7 +70,7 @@
 					task_name=mm.task_name;
 					status[m].Table=mm.Table;
 				}
-				txt+="<li m="+m+">"+task_name+"</li>";
+				txt+="<li m="+m+">"+task_name+"</li><br>";
 		    }
             txt+"</ul>";
 		    $('#items__ID').html(txt);
@@ -62,7 +78,7 @@
 			$('#items__ID li').each(function(){
 		        var $li=$(this);
 				$li.removeClass('li_allowed__ID')
-				$li.addClass('li_not_allowed__ID')
+				$li.addClass('li_not_allowed__ID qbtn')
 			})
 			//----------------------------------
 			$('#items__ID li').each(function(){
@@ -157,6 +173,7 @@
 		color:#000!Important;
 		cursor:pointer!Important;
 	}
+    /*VmInclude:__HOST__/assets/css/style.css*/
     /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
 
 </style>
