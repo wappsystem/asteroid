@@ -15,10 +15,9 @@
                             */
     };                                    
     //m[p+"participant-form"]={url:"$H/m/survey-form.html",Table:"canact-survey"},
-
-    m[p+"main-panel"]       ={url:H+"/panels/main.html", };
+    m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
     m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"demo-asteroid-partb-screening",router:1 };
-    m[p+"week-0-panel"]     ={url:H+"/panels/week-0.html",router:1 };
+    m[p+"week-0-panel"]     ={url:H+"/panels/week-0.html"};
     m[p+"ffs-form"]         ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"demo-asteroid-partb-ffs", task_name:"FFS" };
     m[p+"phq-form"]         ={url:H+"/form-grid/questionnaires/phq-form.html",Table:"demo-asteroid-partb-phq", task_name:"PHQ" };
 

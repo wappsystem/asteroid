@@ -3,8 +3,8 @@
         <div id=left__ID style='margin:auto 10px'>
             <a id=desk_logo__ID href="home" style='color:#fff;text-decoration: none;'>
                 <div id=logo>
-                    <span id=logo_a>Business</span><br>
-                    <span id=logo_b>Micro Application</span>
+                    <span id=logo_a>Asteroid</span><br>
+                    <span id=logo_b>Backend</span>
                 </div>
             </a>
         </div>
@@ -15,7 +15,7 @@
             <div id=menu__ID>
                 <ul>
                     <li><a href="?/home"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="?/main-panel"><i class="fas fa-project-diagram"></i> Data</a></li>
+                    <li><a href="?/backend-panel"><i class="fas fa-list-ul"></i> Dashboard</a></li>
                     <li><a href="" id=signin__ID onclick=$vm.auth_signin() ><i class="fa fa-user"></i> Sign In</a></li>
                     <li><a href="" id=signout__ID onclick=$vm.auth_signout() ><i class="fa fa-user"></i> Sign Out</a></li>
                 </ul>
@@ -154,16 +154,15 @@
         }
         #logo_a{
             font-family: Arial, sans-serif;
-            color: #fff;
+            color: rgb(255, 255, 255);
             font-size: 200%;
             line-height: 10px;
             display: inline-block;
             font-weight: bold;
-            text-shadow: 2px 2px 2px #000
         }
         #logo_b{
             font-family: Arial, sans-serif;
-            color: #b8e6de;
+            color: #ffffff;
             font-size: 117%;
             line-height: 80%;
             display: inline-block;
@@ -171,7 +170,7 @@
         #g_nav{
             height:25px;
             padding:1px 0 5px 10px;
-            background-color: #e5e9ec;
+            background-color: #b4b4b4;
             font-size:13px;
         }
         #top_right_corner__ID{
@@ -234,14 +233,12 @@
         #menu__ID a{
             display: inline-block;
             padding:6px 10px;
-            color:#fff;
-            text-shadow: 2px 2px 2px #000;
+            color:#fafafa;
         }
         #menu__ID a:hover {
-            background-color: #555;
-            color: #29eca6;
+            background-color: rgb(190, 190, 190);
+            color: #ad5d81;
             border-radius:4px;
-            text-decoration: none;
         }
         @media screen and (max-width: 768px) {
             #menu__ID{
