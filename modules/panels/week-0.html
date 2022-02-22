@@ -1,5 +1,5 @@
 <div id=page__ID style="background-image: url(assets/images/bg-02.png)">
-    <div class="container">
+    <div class="container" style="padding-bottom:30px">
         <div class="cta-inner" style="background-image: url(assets/images/bg-03.png)">
           <div class="cta-text"><img src="assets/images/logo.png" alt="SleepFix">
             <h2>Questionnaire Portal</h2>
@@ -44,7 +44,7 @@
 		//--------------------------------------------------------
 		$('#D__ID').on('show',function(){
             var record=$vm.vm['__ID'].input.record;
-			id_list='demographic-form,phq-form,ffs-form'//record.Data.List;
+			id_list='demographic-form,psqi-w0-form,gad7-w0-form,ffs-w0-form,ess-w0-form,bc-cci-w0-form,eq-5d-w0-form,eheals-w0-form'
             if(id_list==undefined){
                 alert("No questionnaire was found");
                 return;
@@ -57,7 +57,7 @@
 		var setup_panel=function(){
 			//----------------------------------
 		    var ids=id_list.split(',');
-		    var txt="<ul>";
+		    var txt="" //"<ul>";
 		    //----------------------------------
 		    for(var i=0;i<ids.length;i++){
 				var m=ids[i];
@@ -72,7 +72,7 @@
 				}
 				txt+="<li m="+m+">"+task_name+"</li><br>";
 		    }
-            txt+"</ul>";
+            txt+""; //"</ul>";
 		    $('#items__ID').html(txt);
 		    //----------------------------------
 			$('#items__ID li').each(function(){

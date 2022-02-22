@@ -1,18 +1,10 @@
 //-------------------------------------
-var participant_name=function(record){ 
-    return record.UID;
-    /*
-    if(record.Data.Intervention_Group!=undefined && record.Data.Randomisation_number!=undefined  && record.Data.Randomisation_number!='') return record.Data.Randomisation_number+' - '+record.Data.Intervention_Group; else return $vm.alert("Please enter Randomisation Number and selected an Intervention Group for the Participant "
-    );
-    */
-}
+var participant_name=function(record){ return record.UID;}
 //-------------------------------------
 //auto select particpant
-/*
-var part_id1=$vm.module_list['participant-data'].participant_id.field1;
-var part_id2=$vm.module_list['participant-data'].participant_id.field2;
-var part_id3=$vm.module_list['participant-data'].participant_id.field3;
-*/
+//var part_id1=$vm.module_list['participant-data'].participant_id.field1;
+//var part_id2=$vm.module_list['participant-data'].participant_id.field2;
+//var part_id3=$vm.module_list['participant-data'].participant_id.field3;
 var autocomplete_req_p={cmd:"find",table:$vm.module_list['participant-data'].Table,options:{},skip:0,limit:10}
 var autocomplete_callback_p=function(items){ $("#F__ID input[name=Participant_uid]").val(items["UID"]);}
 var autocomplete_list_p=function(records){
@@ -44,6 +36,7 @@ m.load=function(){
     if($vm.online_questionnaire==1) {
         $('#pdf__ID').hide();
         $('#participant_div__ID').hide();
+        console.log("BBBBBBBB")
     }
 //--------------------------
     if(m.input!=undefined && m.input.participant_record!=undefined){

@@ -20,19 +20,26 @@
     m[p+"online-questionnaire"] ={url:I+"/participant.html"},
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
     m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"demo-asteroid-partb-screening",router:1 };
-    m[p+"week-0-panel"]     ={url:H+"/panels/week-0.html",router:1};
-    m[p+"ffs-form"]         ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"demo-asteroid-partb-ffs", task_name:"FFS" };
-    m[p+"phq-form"]         ={url:H+"/form-grid/questionnaires/phq-form.html",Table:"demo-asteroid-partb-phq", task_name:"PHQ" };
+    m[p+"week-0-panel"]     ={url:H+"/panels/week-0.html"};
     m[p+"demographic-data"] ={url:H+"/form-grid/questionnaires/demographic-data.html",Table:"demo-asteroid-partb-demographic",form_module:"demographic-form", task_name:"Demographics" };
     m[p+"demographic-form"] ={url:H+"/form-grid/questionnaires/demographic-form.html",Table:"demo-asteroid-partb-demographic", task_name:"Demographics" };
+    m[p+"psqi-w0-data"]      ={url:H+"/form-grid/questionnaires/psqi-data.html",Table:"demo-asteroid-partb-psqi-w0",form_module:"psqi-w0-form", task_name:"Pittsburgh Sleep Quality Index" };
+    m[p+"psqi-w0-form"]      ={url:H+"/form-grid/questionnaires/psqi-form.html",Table:"demo-asteroid-partb-psqi-w0", task_name:"Pittsburgh Sleep Quality Index" };
+    m[p+"gad7-w0-data"]      ={url:H+"/form-grid/questionnaires/gad7-data.html",Table:"demo-asteroid-partb-gad7-w0",form_module:"gad7-w0-form", task_name:"Generalized Anxiety Disorder" };
+    m[p+"gad7-w0-form"]      ={url:H+"/form-grid/questionnaires/gad7-form.html",Table:"demo-asteroid-partb-gad7-w0", task_name:"Generalized Anxiety Disorder" };
+    m[p+"ffs-w0-data"]      ={url:H+"/form-grid/questionnaires/ffs-data.html",Table:"demo-asteroid-partb-ffs-w0",form_module:"ffs-w0-form", task_name:"Flinders Fatigue Scale" };
+    m[p+"ffs-w0-form"]      ={url:H+"/form-grid/questionnaires/ffs-form.html",Table:"demo-asteroid-partb-ffs-w0", task_name:"Flinders Fatigue Scale" };
+    m[p+"ess-w0-data"]      ={url:H+"/form-grid/questionnaires/ess-data.html",Table:"demo-asteroid-partb-ess-w0",form_module:"ess-w0-form", task_name:"Epworth Sleepiness Scale" };
+    m[p+"ess-w0-form"]      ={url:H+"/form-grid/questionnaires/ess-form.html",Table:"demo-asteroid-partb-ess-w0", task_name:"Epworth Sleepiness Scale" };
+    m[p+"bc-cci-w0-data"]      ={url:H+"/form-grid/questionnaires/bc-cci-data.html",Table:"demo-asteroid-partb-bc-cci-w0",form_module:"bc-cci-w0-form", task_name:"British Columbia Cognitive Complaints Inventory" };
+    m[p+"bc-cci-w0-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"demo-asteroid-partb-bc-cci-w0", task_name:"British Columbia Cognitive Complaints Inventory" };
+    m[p+"eq-5d-w0-data"]      ={url:H+"/form-grid/questionnaires/eq-5d-data.html",Table:"demo-asteroid-partb-eq-5d-w0",form_module:"eq-5d-w0-form", task_name:"European Quality of Life" };
+    m[p+"eq-5d-w0-form"]      ={url:H+"/form-grid/questionnaires/eq-5d-form.html",Table:"demo-asteroid-partb-eq-5d-w0", task_name:"European Quality of Life" };
+    m[p+"eheals-w0-data"]      ={url:H+"/form-grid/questionnaires/eheals-data.html",Table:"demo-asteroid-partb-eheals-w0",form_module:"eheals-w0-form", task_name:"eHealth Literacy Scale" };
+    m[p+"eheals-w0-form"]      ={url:H+"/form-grid/questionnaires/eheals-form.html",Table:"demo-asteroid-partb-eheals-w0", task_name:"eHealth Literacy Scale" };
+    m[p+"phq-w8-form"]      ={url:H+"/form-grid/questionnaires/phq-form.html",Table:"demo-asteroid-partb-phq-w8", task_name:"Patient Health Questionnaire" };
 
-    /*
-    m[p+"roster-data"]      ={url:H+"/form-grid/roster/data.html",       Table:"staff-roster",  form_module:"roster-form"},
-    m[p+"roster-form"]      ={url:H+"/form-grid/roster/form.html",       Table:"staff-roster"}
-    m[p+"month"]            ={url:H+"/form-grid/calendar/month.html",    Table:"staff-roster","booking":p+"roster-form",router:1};
-    m[p+"week"]             ={url:H+"/form-grid/calendar/week.html",     Table:"staff-roster","booking":p+"roster-form","booking2":p+"roster-form-2",router:1};
-    m[p+"day"]              ={url:H+"/form-grid/calendar/day.html",      Table:"staff-roster","booking":p+"roster-form",router:1};
-    */
+
     if(window.location.toString().indexOf('tb=demo')!=-1){
         for(p in $vm.module_list){
             $vm.module_list[p].Table="demo-"+$vm.module_list[p].Table;

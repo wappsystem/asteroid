@@ -698,7 +698,7 @@ textarea {
 }
 #D__ID .qbtn {
     justify-content: center;
-    min-width: 400px;
+    min-width: 300px;
     display: inline-flex;
     padding: 5px 6px;
     border-radius: 4px;

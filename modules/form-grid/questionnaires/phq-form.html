@@ -1,240 +1,236 @@
 <div id=D__ID>
-
-<!--third html start -->
-    <div class="container mt-95 mb-3">
-      <div class="row" >
-        <!-- form container start -->
-        <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
-          <div class="row">
-            <div class="col-12">
-              <!-- form start -->
-              <form id="F__ID">
-                  <h3>PHQ</h3>
-                  <!-- participant name and study id -->
-                  <div id="participant_div__ID">
-                      <div class="form-group">
-                         <fieldset class="subquestions">
-                             <label ><span class="">Participant</span>
-                                 <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant"/>
-                             </label><br>
-                             <label ><span class="">Participant ID</span>
-                                 <input type=text name="Participant_uid" class=form-control readonly />
-                             </label>
-                          </fieldset>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <fieldset class="subquestions">
-                          <h4>Over the last <u>2 weeks</u>, how often have you been bothered by the following problems?</h4>
-                      </fieldset>
-                  </div>
-                  <div class="form-group sticky-top shadow-sm bg-light">
-                      <div id=legend__ID class="questiongroup " >
-                          <fieldset class="">
-                              <label class="radiobuttons" style='cursor:default!important'>
-                                  <span class="checkmark no-dot">0</span>= Not at all
-                              </label><br>
-                              <label class="radiobuttons" style='cursor:default!important'>
-                                  <span class="checkmark no-dot">1</span>= Several days
-                              </label><br>
-                              <label class="radiobuttons" style='cursor:default!important'>
-                                  <span class="checkmark no-dot">2</span>= More than half the days
-                              </label><br>
-                              <label class="radiobuttons" style='cursor:default!important'>
-                                  <span class="checkmark no-dot">3</span>= Nearly every day
-                              </label><br>
-                           </fieldset>
-                       </div>
-                       <button type="button" id="btn_legend__ID" class="btn btn-primary mb-1 mt-0 mx-0 p-1">Hide legend</button>
-                  </div>
-                  <div class="form-group">
-                      <h4>1. Little interest or pleasure in doing things</h4>
-      				  <div class="questiongroup">
-                          <fieldset class="subquestions">
-                              <label class="radiobuttons" title="Not at all">
-                                <input type="radio" name="PHQ_1" value="0" required>
-                                <span class="checkmark no-dot">0</span></label>
-                              <label class="radiobuttons" title="Several days">
-                                <input type="radio" name="PHQ_1" value="1">
-                                <span class="checkmark no-dot">1</span></label>
-                              <label class="radiobuttons" title="More than half the days">
-                                <input type="radio" name="PHQ_1" value="2">
-                                <span class="checkmark no-dot">2</span></label>
-                              <label class="radiobuttons" title="Nearly every day">
-                                <input type="radio" name="PHQ_1" value="3">
-                                <span class="checkmark no-dot">3</span></label>
-                          </fieldset>
-                          <label id=phq_sel_1>&nbsp;</label>
-                     </div>
-      		      </div>
-                  <div class="form-group">
-                     <h4>2. Feeling down, depressed, or hopeless</h4>
-                     <div class="questiongroup">
-                         <fieldset>
-                             <label class="radiobuttons" title="Not at all">
-                               <input type="radio" name="PHQ_2" value="0" required>
-                               <span class="checkmark no-dot">0</span></label>
-                             <label class="radiobuttons" title="Several days">
-                               <input type="radio" name="PHQ_2" value="1">
-                               <span class="checkmark no-dot">1</span></label>
-                             <label class="radiobuttons" title="More than half the days">
-                               <input type="radio" name="PHQ_2" value="2">
-                               <span class="checkmark no-dot">2</span></label>
-                             <label class="radiobuttons" title="Nearly every day">
-                               <input type="radio" name="PHQ_2" value="3">
-                               <span class="checkmark no-dot">3</span></label>
-                         </fieldset>
-                         <label id=phq_sel_2>&nbsp;</label>
+    <div class="bg-light">
+        <form id=F__ID>
+            <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div id="participant_div__ID">
+                    <div class="form-group box">
+                        <fieldset class="subquestions">
+                            <label><span class="">Participant</span>
+                                <input type=text name="Participant" class=form-control id=Participant__ID
+                                    data-id="Participant" />
+                            </label><br><br>
+                            <label><span class="">Participant ID</span>
+                                <input type=text name="Participant_uid" class=form-control readonly />
+                            </label><br>
+                        </fieldset>
                     </div>
-                  </div>
-                  <div class="form-group">
-                     <h4>3. Trouble falling or staying asleep, sleeping too much</h4>
-                     <div class="questiongroup">
+                </div>
+                <div class="form-group box">
+                    <h2 id="title__ID">9-Item Patient Health Questionnaire (PHQ-9)</h2>
+                </div>
+                <div class="form-group box">
+                    <fieldset class="subquestions">
+                        <h4>Over the last <u>2 weeks</u>, how often have you been bothered by the following problems?</h4>
+                    </fieldset>
+                </div>
+                <div class="form-group sticky-top shadow-sm bg-light">
+                    <div id=legend__ID class="questiongroup " >
+                        <fieldset class="">
+                            <label class="radiobuttons" style='cursor:default!important'>
+                                <span class="checkmark no-dot">0</span>= Not at all
+                            </label><br>
+                            <label class="radiobuttons" style='cursor:default!important'>
+                                <span class="checkmark no-dot">1</span>= Several days
+                            </label><br>
+                            <label class="radiobuttons" style='cursor:default!important'>
+                                <span class="checkmark no-dot">2</span>= More than half the days
+                            </label><br>
+                            <label class="radiobuttons" style='cursor:default!important'>
+                                <span class="checkmark no-dot">3</span>= Nearly every day
+                            </label><br>
+                        </fieldset>
+                    </div>
+                    <button type="button" id="btn_legend__ID" class="btn btn-primary mb-1 mt-0 mx-0 p-1">Hide legend</button>
+                </div>
+                <div class="form-group box">
+                    <h4>1. Little interest or pleasure in doing things</h4>
+                    <div class="questiongroup">
+                        <fieldset class="subquestions">
+                            <label class="radiobuttons" title="Not at all">
+                            <input type="radio" name="PHQ_1" value="0" required>
+                            <span class="checkmark no-dot">0</span></label>
+                            <label class="radiobuttons" title="Several days">
+                            <input type="radio" name="PHQ_1" value="1">
+                            <span class="checkmark no-dot">1</span></label>
+                            <label class="radiobuttons" title="More than half the days">
+                            <input type="radio" name="PHQ_1" value="2">
+                            <span class="checkmark no-dot">2</span></label>
+                            <label class="radiobuttons" title="Nearly every day">
+                            <input type="radio" name="PHQ_1" value="3">
+                            <span class="checkmark no-dot">3</span></label>
+                        </fieldset>
+                        <label id=phq_sel_1>&nbsp;</label>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h4>2. Feeling down, depressed, or hopeless</h4>
+                    <div class="questiongroup">
                         <fieldset>
                             <label class="radiobuttons" title="Not at all">
-                              <input type="radio" name="PHQ_3" value="0" required>
-                              <span class="checkmark no-dot">0</span></label>
+                            <input type="radio" name="PHQ_2" value="0" required>
+                            <span class="checkmark no-dot">0</span></label>
                             <label class="radiobuttons" title="Several days">
-                              <input type="radio" name="PHQ_3" value="1">
-                              <span class="checkmark no-dot">1</span></label>
+                            <input type="radio" name="PHQ_2" value="1">
+                            <span class="checkmark no-dot">1</span></label>
                             <label class="radiobuttons" title="More than half the days">
-                              <input type="radio" name="PHQ_3" value="2">
-                              <span class="checkmark no-dot">2</span></label>
+                            <input type="radio" name="PHQ_2" value="2">
+                            <span class="checkmark no-dot">2</span></label>
                             <label class="radiobuttons" title="Nearly every day">
-                              <input type="radio" name="PHQ_3" value="3">
-                              <span class="checkmark no-dot">3</span></label>
+                            <input type="radio" name="PHQ_2" value="3">
+                            <span class="checkmark no-dot">3</span></label>
                         </fieldset>
-                        <label id=phq_sel_3>&nbsp;</label>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                       <h4>4. Feeling tired or having little energy</h4>
-                     <div class="questiongroup">
-                           <fieldset>
-                               <label class="radiobuttons" title="Not at all">
-                                 <input type="radio" name="PHQ_4" value="0" required>
-                                 <span class="checkmark no-dot">0</span></label>
-                               <label class="radiobuttons" title="Several days">
-                                 <input type="radio" name="PHQ_4" value="1">
-                                 <span class="checkmark no-dot">1</span></label>
-                               <label class="radiobuttons" title="More than half the days">
-                                 <input type="radio" name="PHQ_4" value="2">
-                                 <span class="checkmark no-dot">2</span></label>
-                               <label class="radiobuttons" title="Nearly every day">
-                                 <input type="radio" name="PHQ_4" value="3">
-                                 <span class="checkmark no-dot">3</span></label>
-                           </fieldset>
-                           <label id=phq_sel_4>&nbsp;</label>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <h4>5. Poor appetite or overeating</h4>
+                        <label id=phq_sel_2>&nbsp;</label>
+                </div>
+                </div>
+                <div class="form-group box">
+                    <h4>3. Trouble falling or staying asleep, sleeping too much</h4>
                     <div class="questiongroup">
-                          <fieldset>
-                              <label class="radiobuttons" title="Not at all">
-                                <input type="radio" name="PHQ_5" value="0" required>
-                                <span class="checkmark no-dot">0</span></label>
-                              <label class="radiobuttons" title="Several days">
-                                <input type="radio" name="PHQ_5" value="1">
-                                <span class="checkmark no-dot">1</span></label>
-                              <label class="radiobuttons" title="More than half the days">
-                                <input type="radio" name="PHQ_5" value="2">
-                                <span class="checkmark no-dot">2</span></label>
-                              <label class="radiobuttons" title="Nearly every day">
-                                <input type="radio" name="PHQ_5" value="3">
-                                <span class="checkmark no-dot">3</span></label>
-                          </fieldset>
-                          <label id=phq_sel_5>&nbsp;</label>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <h4>6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down</h4>
-                   <div class="questiongroup">
-                         <fieldset>
-                             <label class="radiobuttons" title="Not at all">
-                               <input type="radio" name="PHQ_6" value="0" required>
-                               <span class="checkmark no-dot">0</span></label>
-                             <label class="radiobuttons" title="Several days">
-                               <input type="radio" name="PHQ_6" value="1">
-                               <span class="checkmark no-dot">1</span></label>
-                             <label class="radiobuttons" title="More than half the days">
-                               <input type="radio" name="PHQ_6" value="2">
-                               <span class="checkmark no-dot">2</span></label>
-                             <label class="radiobuttons" title="Nearly every day">
-                               <input type="radio" name="PHQ_6" value="3">
-                               <span class="checkmark no-dot">3</span></label>
-                         </fieldset>
-                         <label id=phq_sel_6>&nbsp;</label>
+                    <fieldset>
+                        <label class="radiobuttons" title="Not at all">
+                            <input type="radio" name="PHQ_3" value="0" required>
+                            <span class="checkmark no-dot">0</span></label>
+                        <label class="radiobuttons" title="Several days">
+                            <input type="radio" name="PHQ_3" value="1">
+                            <span class="checkmark no-dot">1</span></label>
+                        <label class="radiobuttons" title="More than half the days">
+                            <input type="radio" name="PHQ_3" value="2">
+                            <span class="checkmark no-dot">2</span></label>
+                        <label class="radiobuttons" title="Nearly every day">
+                            <input type="radio" name="PHQ_3" value="3">
+                            <span class="checkmark no-dot">3</span></label>
+                    </fieldset>
+                    <label id=phq_sel_3>&nbsp;</label>
                     </div>
-                  </div>
-                  <div class="form-group">
-                      <h4>7. Trouble concentrating on things, such as reading the newspaper or watching television</h4>
-                      <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons" title="Not at all">
-                                  <input type="radio" name="PHQ_7" value="0" required>
-                                  <span class="checkmark no-dot">0</span></label>
-                                <label class="radiobuttons" title="Several days">
-                                  <input type="radio" name="PHQ_7" value="1">
-                                  <span class="checkmark no-dot">1</span></label>
-                                <label class="radiobuttons" title="More than half the days">
-                                  <input type="radio" name="PHQ_7" value="2">
-                                  <span class="checkmark no-dot">2</span></label>
-                                <label class="radiobuttons" title="Nearly every day">
-                                  <input type="radio" name="PHQ_7" value="3">
-                                  <span class="checkmark no-dot">3</span></label>
-                            </fieldset>
-                            <label id=phq_sel_7>&nbsp;</label>
-                       </div>
-                   </div>
-                  <div class="form-group">
-                        <h4>8. Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual </h4>
-                      <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons" title="Not at all">
-                                  <input type="radio" name="PHQ_8" value="0" required>
-                                  <span class="checkmark no-dot">0</span></label>
-                                <label class="radiobuttons" title="Several days">
-                                  <input type="radio" name="PHQ_8" value="1">
-                                  <span class="checkmark no-dot">1</span></label>
-                                <label class="radiobuttons" title="More than half the days">
-                                  <input type="radio" name="PHQ_8" value="2">
-                                  <span class="checkmark no-dot">2</span></label>
-                                <label class="radiobuttons" title="Nearly every day">
-                                  <input type="radio" name="PHQ_8" value="3">
-                                  <span class="checkmark no-dot">3</span></label>
-                            </fieldset>
-                            <label id=phq_sel_8>&nbsp;</label>
-                       </div>
-                  </div>
-                  <div class="form-group">
-                        <h4>9. Thoughts that you would be better off dead or of hurting yourself in some way </h4>
-                      <div class="questiongroup">
-                            <fieldset>
-                                <label class="radiobuttons" title="Not at all">
-                                  <input type="radio" name="PHQ_9" value="0" required>
-                                  <span class="checkmark no-dot">0</span></label>
-                                <label class="radiobuttons" title="Several days">
-                                  <input type="radio" name="PHQ_9" value="1">
-                                  <span class="checkmark no-dot">1</span></label>
-                                <label class="radiobuttons" title="More than half the days">
-                                  <input type="radio" name="PHQ_9" value="2">
-                                  <span class="checkmark no-dot">2</span></label>
-                                <label class="radiobuttons" title="Nearly every day">
-                                  <input type="radio" name="PHQ_9" value="3">
-                                  <span class="checkmark no-dot">3</span></label>
-                            </fieldset>
-                            <label id=phq_sel_9>&nbsp;</label>
-                       </div>
-                  </div>
-                  <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
-              </form>
+                </div>
+                <div class="form-group box">
+                    <h4>4. Feeling tired or having little energy</h4>
+                    <div class="questiongroup">
+                        <fieldset>
+                            <label class="radiobuttons" title="Not at all">
+                                <input type="radio" name="PHQ_4" value="0" required>
+                                <span class="checkmark no-dot">0</span></label>
+                            <label class="radiobuttons" title="Several days">
+                                <input type="radio" name="PHQ_4" value="1">
+                                <span class="checkmark no-dot">1</span></label>
+                            <label class="radiobuttons" title="More than half the days">
+                                <input type="radio" name="PHQ_4" value="2">
+                                <span class="checkmark no-dot">2</span></label>
+                            <label class="radiobuttons" title="Nearly every day">
+                                <input type="radio" name="PHQ_4" value="3">
+                                <span class="checkmark no-dot">3</span></label>
+                        </fieldset>
+                        <label id=phq_sel_4>&nbsp;</label>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h4>5. Poor appetite or overeating</h4>
+                <div class="questiongroup">
+                        <fieldset>
+                            <label class="radiobuttons" title="Not at all">
+                            <input type="radio" name="PHQ_5" value="0" required>
+                            <span class="checkmark no-dot">0</span></label>
+                            <label class="radiobuttons" title="Several days">
+                            <input type="radio" name="PHQ_5" value="1">
+                            <span class="checkmark no-dot">1</span></label>
+                            <label class="radiobuttons" title="More than half the days">
+                            <input type="radio" name="PHQ_5" value="2">
+                            <span class="checkmark no-dot">2</span></label>
+                            <label class="radiobuttons" title="Nearly every day">
+                            <input type="radio" name="PHQ_5" value="3">
+                            <span class="checkmark no-dot">3</span></label>
+                        </fieldset>
+                        <label id=phq_sel_5>&nbsp;</label>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h4>6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down</h4>
+                <div class="questiongroup">
+                        <fieldset>
+                            <label class="radiobuttons" title="Not at all">
+                            <input type="radio" name="PHQ_6" value="0" required>
+                            <span class="checkmark no-dot">0</span></label>
+                            <label class="radiobuttons" title="Several days">
+                            <input type="radio" name="PHQ_6" value="1">
+                            <span class="checkmark no-dot">1</span></label>
+                            <label class="radiobuttons" title="More than half the days">
+                            <input type="radio" name="PHQ_6" value="2">
+                            <span class="checkmark no-dot">2</span></label>
+                            <label class="radiobuttons" title="Nearly every day">
+                            <input type="radio" name="PHQ_6" value="3">
+                            <span class="checkmark no-dot">3</span></label>
+                        </fieldset>
+                        <label id=phq_sel_6>&nbsp;</label>
+                </div>
+                </div>
+                <div class="form-group box">
+                    <h4>7. Trouble concentrating on things, such as reading the newspaper or watching television</h4>
+                    <div class="questiongroup">
+                        <fieldset>
+                            <label class="radiobuttons" title="Not at all">
+                                <input type="radio" name="PHQ_7" value="0" required>
+                                <span class="checkmark no-dot">0</span></label>
+                            <label class="radiobuttons" title="Several days">
+                                <input type="radio" name="PHQ_7" value="1">
+                                <span class="checkmark no-dot">1</span></label>
+                            <label class="radiobuttons" title="More than half the days">
+                                <input type="radio" name="PHQ_7" value="2">
+                                <span class="checkmark no-dot">2</span></label>
+                            <label class="radiobuttons" title="Nearly every day">
+                                <input type="radio" name="PHQ_7" value="3">
+                                <span class="checkmark no-dot">3</span></label>
+                        </fieldset>
+                        <label id=phq_sel_7>&nbsp;</label>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h4>8. Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual </h4>
+                    <div class="questiongroup">
+                        <fieldset>
+                            <label class="radiobuttons" title="Not at all">
+                                <input type="radio" name="PHQ_8" value="0" required>
+                                <span class="checkmark no-dot">0</span></label>
+                            <label class="radiobuttons" title="Several days">
+                                <input type="radio" name="PHQ_8" value="1">
+                                <span class="checkmark no-dot">1</span></label>
+                            <label class="radiobuttons" title="More than half the days">
+                                <input type="radio" name="PHQ_8" value="2">
+                                <span class="checkmark no-dot">2</span></label>
+                            <label class="radiobuttons" title="Nearly every day">
+                                <input type="radio" name="PHQ_8" value="3">
+                                <span class="checkmark no-dot">3</span></label>
+                        </fieldset>
+                        <label id=phq_sel_8>&nbsp;</label>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h4>9. Thoughts that you would be better off dead or of hurting yourself in some way </h4>
+                    <div class="questiongroup">
+                        <fieldset>
+                            <label class="radiobuttons" title="Not at all">
+                                <input type="radio" name="PHQ_9" value="0" required>
+                                <span class="checkmark no-dot">0</span></label>
+                            <label class="radiobuttons" title="Several days">
+                                <input type="radio" name="PHQ_9" value="1">
+                                <span class="checkmark no-dot">1</span></label>
+                            <label class="radiobuttons" title="More than half the days">
+                                <input type="radio" name="PHQ_9" value="2">
+                                <span class="checkmark no-dot">2</span></label>
+                            <label class="radiobuttons" title="Nearly every day">
+                                <input type="radio" name="PHQ_9" value="3">
+                                <span class="checkmark no-dot">3</span></label>
+                        </fieldset>
+                        <label id=phq_sel_9>&nbsp;</label>
+                    </div>
+                </div>
+                <div class="box" style="text-align:right">
+                    <div class="box-item">
+                        <button type="submit" id="submit1__ID" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </div>
             </div>
-         </div>
-        </div>
-      </div>
-  </div>
-  <script>
+        </form>
+    </div>
+    <script>
       function F__ID(){
           //-------------------------------------
           /*VmInclude:__COMPONENT__/f/form.01.js*/
@@ -317,9 +313,10 @@
       }
   </script>
   <style>
-    #D__ID .mt-95 {
-    max-width:600px;
+    #submit_box__ID {
+        text-align: right;
     }
     /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
-  </style>
+    /*VmInclude:__HOST__/assets/css/style.css*/
+</style>
 </div>
