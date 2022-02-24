@@ -6,7 +6,11 @@
     var m=$vm.module_list;
     var api="wapp";
     //-------------------------------------------------------------------------------------
-    
+    m[p+"not_elig1"]         ={url:H+"/form-grid/screening/not_elig1.html"},
+    m[p+"not_eligphq9"]         ={url:H+"/form-grid/screening/not_eligphq9.html"},
+    m[p+"not_elig2"]         ={url:H+"/form-grid/screening/not_elig2.html"},
+    m[p+"not_elig3"]         ={url:H+"/form-grid/screening/not_elig3.html"},
+
     m[p+"participant-data"] ={url:H+"/form-grid/participant/participant-data.html",Table:"demo-asteroid-partb-screening"
                             ,form_module:"participant-form",
                             child_panel:"panel-child",
@@ -21,6 +25,11 @@
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
     m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"demo-asteroid-partb-screening",router:1 };
     m[p+"week-0-panel"]     ={url:H+"/panels/week-0.html"};
+
+    m[p+"adverse-event-data"] ={url:H+"/form-grid/unscheduled/adverse-event-data.html",Table:"demo-asteroid-partb-adverse-event",form_module:"adverse-event-form", task_name:"Adverse event" };
+    m[p+"adverse-event-form"] ={url:H+"/form-grid/unscheduled/adverse-event-form.html",Table:"demo-asteroid-partb-adverse-event", task_name:"Adverse event" };
+
+    
     m[p+"demographic-data"] ={url:H+"/form-grid/questionnaires/demographic-data.html",Table:"demo-asteroid-partb-demographic",form_module:"demographic-form", task_name:"Demographics" };
     m[p+"demographic-form"] ={url:H+"/form-grid/questionnaires/demographic-form.html",Table:"demo-asteroid-partb-demographic", task_name:"Demographics" };
     m[p+"isi-w0-data"]      ={url:H+"/form-grid/questionnaires/isi-data.html",Table:"demo-asteroid-partb-screening",form_module:"isi-w0-form", task_name:"Insomnia Severity Index" };
@@ -42,8 +51,8 @@
     m[p+"eheals-w0-data"]      ={url:H+"/form-grid/questionnaires/eheals-data.html",Table:"demo-asteroid-partb-eheals-w0",form_module:"eheals-w0-form", task_name:"eHealth Literacy Scale" };
     m[p+"eheals-w0-form"]      ={url:H+"/form-grid/questionnaires/eheals-form.html",Table:"demo-asteroid-partb-eheals-w0", task_name:"eHealth Literacy Scale" };
 
-    m[p+"adverse-event-w3-data"]      ={url:H+"/form-grid/questionnaires/adverse-event-data.html",Table:"demo-asteroid-partb-adverse-event-w3",form_module:"adverse-event-w3-form", task_name:"Adverse Event Check-in" };
-    m[p+"adverse-event-w3-form"]      ={url:H+"/form-grid/questionnaires/adverse-event-form.html",Table:"demo-asteroid-partb-adverse-event-w3", task_name:"Adverse Event Check-in" };
+    m[p+"adverse-event-w3-data"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-data.html",Table:"demo-asteroid-partb-adverse-event-w3",form_module:"adverse-event-w3-form", task_name:"Adverse Event Check-in" };
+    m[p+"adverse-event-w3-form"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-form.html",Table:"demo-asteroid-partb-adverse-event-w3", task_name:"Adverse Event Check-in" };
 
     m[p+"isi-w8-data"]      ={url:H+"/form-grid/questionnaires/isi-data.html",Table:"demo-asteroid-partb-isi-w8",form_module:"isi-w8-form", task_name:"Insomnia Severity Index" };
     m[p+"isi-w8-form"]      ={url:H+"/form-grid/questionnaires/isi-form.html",Table:"demo-asteroid-partb-isi-w8", task_name:"Insomnia Severity Index" };
@@ -61,8 +70,8 @@
     m[p+"bc-cci-w8-form"]      ={url:H+"/form-grid/questionnaires/bc-cci-form.html",Table:"demo-asteroid-partb-bc-cci-w8", task_name:"British Columbia Cognitive Complaints Inventory" };
     m[p+"eq-5d-w8-data"]      ={url:H+"/form-grid/questionnaires/eq-5d-data.html",Table:"demo-asteroid-partb-eq-5d-w8",form_module:"eq-5d-w8-form", task_name:"European Quality of Life" };
     m[p+"eq-5d-w8-form"]      ={url:H+"/form-grid/questionnaires/eq-5d-form.html",Table:"demo-asteroid-partb-eq-5d-w8", task_name:"European Quality of Life" };
-    m[p+"adverse-event-w8-data"]      ={url:H+"/form-grid/questionnaires/adverse-event-data.html",Table:"demo-asteroid-partb-adverse-event-w8",form_module:"adverse-event-w3-form", task_name:"Adverse Event Check-in" };
-    m[p+"adverse-event-w8-form"]      ={url:H+"/form-grid/questionnaires/adverse-event-form.html",Table:"demo-asteroid-partb-adverse-event-w8", task_name:"Adverse Event Check-in" };
+    m[p+"adverse-event-w8-data"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-data.html",Table:"demo-asteroid-partb-adverse-event-w8",form_module:"adverse-event-w3-form", task_name:"Adverse Event Check-in" };
+    m[p+"adverse-event-w8-form"]      ={url:H+"/form-grid/questionnaires/adverse-event-cbti-form.html",Table:"demo-asteroid-partb-adverse-event-w8", task_name:"Adverse Event Check-in" };
 
     m[p+"isi-w16-data"]      ={url:H+"/form-grid/questionnaires/isi-data.html",Table:"demo-asteroid-partb-isi-w16",form_module:"isi-w16-form", task_name:"Insomnia Severity Index" };
     m[p+"isi-w16-form"]      ={url:H+"/form-grid/questionnaires/isi-form.html",Table:"demo-asteroid-partb-isi-w16", task_name:"Insomnia Severity Index" };

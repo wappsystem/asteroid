@@ -5,7 +5,7 @@
                 <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
                     <div class="col-lg-1 col-sm-0 "></div>
                     <div class="col-lg-9 col-sm-12 text-center text-white">
-                        <span style="color:#888">1 of 4 </span>
+                        <span style="color:#888">1 of 3 </span>
                         <h2>Asteroid Screening Question</h2>
                     </div>
                     <div class="col-lg-1 col-sm-0 "></div>
@@ -64,7 +64,7 @@
                         <div class="questiongroup">
                             <fieldset class="pl-4">
                                 <label class="radiobuttons ">
-                                    <input type="radio" name="shiftworker" value="No" required>
+                                    <input type="radio" name="shiftworker" value="N" required>
                                     <span class="checkmark"></span>No
                                 </label><br>
                                 <label class="radiobuttons ">
@@ -170,9 +170,6 @@
                             <div class="col-sm control-group">
                                 <h3>9. Does your job require you to regularly drive or operate heavy machinery?
                                 </h3>
-                                <h4>Obstructive Sleep Apnoea, Sleep Behaviour Disorder (i.e sleep talking/walking, REM),
-                                    Circadian Rhythm Disorder, Restless leg syndrome, Narcolepsy or Bruxism (teeth
-                                    grinding)</h4>
                             </div>
                         </div>
                         <div class="questiongroup">
@@ -205,6 +202,44 @@
                             </fieldset>
                         </div>
                     </div>
+\                    <div class="form-group box">
+                        <fieldset class="subquestions">
+                            <h4>Over the last <u>2 weeks</u>, how often have you been bothered by the following problem?</h4>
+                        </fieldset>
+                        <h3>11. Thoughts that you would be better off dead or of hurting yourself in some way</h3>
+                        <div class="questiongroup">
+                            <fieldset class="subquestions">
+                                <label class="radiobuttons">Not at all
+                                    <input type="radio" name="PHQ_9" value="0" required>
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label class="radiobuttons">Several days
+                                    <input type="radio" name="PHQ_9" value="1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label class="radiobuttons">More than half the days
+                                    <input type="radio" name="PHQ_9" value="2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label class="radiobuttons">Nearly every day
+                                    <input type="radio" name="PHQ_9" value="3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div id=phq9__ID>
+                        <div class="form-group box">
+                            <h4 style='color:red;text-align: center;'>If you are feeling depressed, anxious, or suicidal
+                                please do not hesitate to contact mental wellbeing
+                                support services.<br>
+                                Lifeline Australia | 13 11 14 | <a href='https://lifeline.org.au'
+                                    target=_blank>lifeline.org.au</a><br>
+                                Beyond Blue | 1300 22 4636 | <a href='https://beyondblue.org.au'
+                                    target=_blank>beyondblue.org.au</a><br>
+                                If you or someone you know needs immediate help, please call 000</h4>
+                        </div>
+                    </div>
                     <div class="box" style="text-align:right">
                         <div class="box-item">
                             <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
@@ -216,242 +251,7 @@
                 <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
                     <div class="col-lg-1 col-sm-0 "></div>
                     <div class="col-lg-9 col-sm-12 text-center text-white">
-                        <span style="color:#888">2 of 4 </span>
-                        <h2>Asteroid Screening Question</h2>
-                    </div>
-                    <div class="col-lg-1 col-sm-0 "></div>
-                </div>
-                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <div class="form-group box">
-                        <div class="row">
-                            <div class="col-sm control-group">
-                                <h3>1. Little interest or pleasure in doing things</h3>
-                            </div>
-                        </div>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_1" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_1" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_1" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_1" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>2. Feeling down, depressed, or hopeless</h3>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_2" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_2" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_2" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_2" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>3. Trouble falling or staying asleep, sleeping too much</h3>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_3" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_3" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_3" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_3" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>4. Feeling tired or having little energy</h3>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_4" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_4" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_4" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_4" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>5. Poor appetite or overeating</h3>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_5" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_5" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_5" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_5" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>6. Feeling bad about yourself - or that you are a failure or have let yourself or your
-                            family down</h3>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_6" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_6" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_6" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_6" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>7. Trouble concentrating on things, such as reading the newspaper or watching television
-                        </h3>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_7" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_7" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_7" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_7" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>8. Moving or speaking so slowly that other people could have noticed? Or the opposite -
-                            being so fidgety or restless that you have been moving around a lot more than usual</h3>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_8" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_8" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_8" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_8" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="form-group box">
-                        <h3>9. Thoughts that you would be better off dead or of hurting yourself in some way</h3>
-                        <div class="questiongroup">
-                            <fieldset class="subquestions">
-                                <label class="radiobuttons">Not at all
-                                    <input type="radio" name="PHQ_9" value="0" required>
-                                    <span class="checkmark">0</span>
-                                </label><br>
-                                <label class="radiobuttons">Several days
-                                    <input type="radio" name="PHQ_9" value="1">
-                                    <span class="checkmark">1</span>
-                                </label><br>
-                                <label class="radiobuttons">More than half the days
-                                    <input type="radio" name="PHQ_9" value="2">
-                                    <span class="checkmark">2</span>
-                                </label><br>
-                                <label class="radiobuttons">Nearly every day
-                                    <input type="radio" name="PHQ_9" value="3">
-                                    <span class="checkmark">3</span>
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="box" >
-                        <div class="box-item" style="text-align:right">
-                            <button type="submit" d=1 class="btn btn-primary btn-lg">Next</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id=S3__ID>
-                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
-                    <div class="col-lg-1 col-sm-0 "></div>
-                    <div class="col-lg-9 col-sm-12 text-center text-white">
-                        <span style="color:#888">3 of 4 </span>
+                        <span style="color:#888">2 of 3 </span>
                         <h2>Asteroid Screening Question</h2>
                     </div>
                     <div class="col-lg-1 col-sm-0 "></div>
@@ -614,12 +414,12 @@
                     </div>
                 </div>
             </div>
-            <div id=S4__ID>
+            <div id=S3__ID>
                 <div id=page4__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
                     <div class="col-lg-1 col-sm-0 ">
                     </div>
                     <div class="col-lg-10 col-sm-12 text-center">
-                        <span style="color:#888">4 of 4 </span>
+                        <span style="color:#888">3 of 3 </span>
                         <h2 style="color:#fff">Asteroid Screening Question</h2>
                     </div>
                     <div class="col-lg-1 col-sm-0 ">
@@ -1039,7 +839,7 @@
                     </div>
                 </div>
             </div>
-            <div id=S5__ID>
+            <div id=S4__ID>
                 <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
                     <div class="col-lg-1 col-sm-0 "></div>
                     <div class="col-lg-9 col-sm-12 text-center text-white">
@@ -1052,8 +852,8 @@
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>You are eligible to participate!
-                                </h3>
+                                <h3>Thank you for completing these questions.</h3>
+                                <h4>Your responses indicate that you are eligible to participate in the study. Please proceed by clicking next to read the Participant Information Sheet carefully and at your own pace, and if you would like to consent to the study please tick the box and digitally sign the consent form at the end. </h4>
                             </div>
                         </div> 
                     </div>                     
@@ -1198,20 +998,12 @@
         function F__ID() {
             VmInclude: '__COMPONENT__/f/form.01.js'
             //---------------------------------------
-            var N = 5;
+            var N = 4;
             var current_I = 1;
             //---------------------------------------
             m.before_submit = function (data, index) {
-                //PHQ9-------------------
-                data.PHQ9 = scores.PHQ9;
-                //PHQ9-------------------
-                //ISI-------------------
                 data.ISI = scores.ISI;
                 data.ISI_1 = scores.ISI_1;
-                //ISI-------------------
-                //SB-------------------
-                data.SB = scores.SB;
-                //SB-------------------
                 //-------------------------------------
                 return true;
             }
@@ -1220,6 +1012,7 @@
 
                 //$('#header').css('opacity', '1');
                 $('#s4q1__ID').hide();
+                $('#phq9__ID').hide();
                 $('#sleep_attacks__ID').removeAttr('required');
                 $('#muscle_weakness__ID').removeAttr('required');
                 $('#hallucinations__ID').removeAttr('required');
@@ -1327,6 +1120,15 @@
                 }
             });
             //---------------------------------------
+            $("#D__ID input[name=PHQ_9]").on('change', function () {
+                if ($("#D__ID input[name=PHQ_9]:checked").val() != '0') {
+                    $('#phq9__ID').show();
+                }
+                else {
+                    $('#phq9__ID').hide();
+                }
+            });
+            //---------------------------------------
             $('#F__ID button').on('click', function (event) {
                 var d = $(this).attr("d");
                 d = parseInt(d);
@@ -1358,18 +1160,6 @@
             var scores = {};
             //---------------------------------------
             var calc_scores = function () {
-                //PHQ9-------------------
-                scores.PHQ = (
-                    parseInt($('input[name=PHQ_1]:checked').val())+
-                    parseInt($('input[name=PHQ_2]:checked').val())+
-                    parseInt($('input[name=PHQ_3]:checked').val())+
-                    parseInt($('input[name=PHQ_4]:checked').val())+
-                    parseInt($('input[name=PHQ_5]:checked').val())+
-                    parseInt($('input[name=PHQ_6]:checked').val())+
-                    parseInt($('input[name=PHQ_7]:checked').val())+
-                    parseInt($('input[name=PHQ_8]:checked').val())+
-                    parseInt($('input[name=PHQ_9]:checked').val())).toString();
-                //PHQ9-------------------
                 //ISI-------------------
                 scores.ISI = (
                     parseInt($("input[name='ISI_2']:checked").val()) +
@@ -1391,20 +1181,75 @@
             var old_submit = m.submit;
             m.submit = function (event) {
                 event.preventDefault();
-                if (current_I == N - 1) {
-                    calc_scores();
+                if (current_I == 1) {
+                    //calc_scores();
+                    //console.log("All scores: " + JSON.stringify(scores))
                     console.log("All scores: " + JSON.stringify(scores))
-                    if ($("input[name='location']:checked").val() == 'N' ||
-                        $("input[name='age']:checked").val() == 'N' ||
-                        $("input[name='shift']:checked").val() == 'Y' ||
-                        $("input[name='fluent']:checked").val() == 'N' ||
-                        $("input[name='travel']:checked").val() == 'Y' ||
-                        scores.ISI >= 15 ||
-                        scores.PHQ9 > 0.5) {
+                    if (parseInt($("input[name='age']").val()) < 60 ||
+                        $("input[name='englishfluency']:checked").val() == 'N' ||
+                        $("input[name='smartphone']:checked").val() == 'N' ||
+                        $("input[name='shiftworker']:checked").val() != 'N' ||
+                        $("input[name='travel2hours']:checked").val() == 'Y' ||
+                        $("input[name='disorders']:checked").val() == 'Y' ||
+                        $("input[name='sleep_disorders']:checked").val() == 'Y' ||
+                        $("input[name='medications']:checked").val() == 'Y' ||
+                        $("input[name='heavy_machinery']:checked").val() == 'Y' ||
+                        $("input[name='cbt']:checked").val() == 'Y' ||
+                        $("input[name='PHQ_9']:checked").val() != '0')
+                        {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
-                        if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
-                        else $vm.load_module(m.prefix + 'not_elig', '', {});
+                        if (m.prefix == undefined) { 
+                            if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
+                            else $vm.load_module('not_elig1', '', {});
+                            }
+                        else{ 
+                            if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
+                            else $vm.load_module(m.prefix + 'not_elig1', '', {})
+                        } 
+                    }
+                    else {
+                        show_section(current_I + 1);
+                    }
+                }
+                else if (current_I == 2) {
+                    calc_scores();
+                    //console.log("All scores: " + JSON.stringify(scores))
+                    if ((parseFloat(scores.ISI) < 10)) {
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                        if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                    }
+                    else {
+                        show_section(current_I + 1);
+                    }
+                }
+                else if (current_I == N - 1) {
+                    calc_scores();
+                    //console.log("All scores: " + JSON.stringify(scores))
+                    if (($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='sleep_attacks']:checked").val() =='Y' ) ||
+                    ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='muscle_weakness']:checked").val() =='Y' ) ||
+                    ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='hallucinations']:checked").val() =='Y' ) ||
+                    ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='paralyzed']:checked").val() =='Y' ) ||
+                    ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='stop_breathing']:checked").val() =='Y' ) ||
+                    ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='gasping']:checked").val() =='Y' ) ||
+                    ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='sleepy']:checked").val() =='Y' ) ||
+                    ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='muscle_jerks']:checked").val() =='Y' ) ||
+                    ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='wake_leg_jerk']:checked").val() =='Y' ) ||
+                    ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='pace_around']:checked").val() =='Y' ) ||
+                    ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='stay_up_late']:checked").val() =='Y' ) ||
+                    ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='sleep_longer']:checked").val() =='Y' ) ||
+                    ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='bed_early']:checked").val() =='Y' ) ||
+                    ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='wake_early']:checked").val() =='Y' ) ||
+                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='sleepwalk']:checked").val() =='Y' ) ||
+                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='night_terrors']:checked").val() =='Y' ) ||
+                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='act_out']:checked").val() =='Y' ) ||
+                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='nightmares']:checked").val() =='Y' )) {
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                        if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {});
                     }
                     else {
                         show_section(current_I + 1);
@@ -1437,7 +1282,7 @@
                 $('#id__ID').text(index.result.ops[0].UID);
                 $('#password__ID').text($('#F__ID input[name=_Password').val());
                 //console.log(JSON.stringify(m))
-                var q_url=$vm.hosting_path+"/week-0.html"+u+db+d+p;
+                var q_url=$vm.hosting_path+"/participant.html"+u+db+d+p;
                 $('#refnum__ID').text(q_url);
                 $('#asteroind_registration__ID').attr("href",q_url)
                 console.log($('#refnum__ID').text());
