@@ -18,12 +18,17 @@
                         </div>
                     </div>
                     <div class='row px-4'>
-                        <div class="col-sm-12 col-lg-6 row_participant__ID">
+                        <div class="col-sm-12 col-lg-4 row_participant__ID">
                             <label class=''><span class=''>Randomisation Number</span>
                                 <input type=text class=form-control name=Randomisation_Number readonly placeholder='click here to randomise'>
                             </label>
                         </div>
-                        <div class="col-sm-12 col-lg-6 row_participant__ID">
+                        <div class="col-sm-12 col-lg-4 row_participant__ID">
+                            <label class=''><span class=''>Group</span>
+                                <input type=text class=form-control name=Group readonly>
+                            </label>
+                        </div>
+                        <div class="col-sm-12 col-lg-4 row_participant__ID">
                             <label class=''><span class=''>Randomised by</span>
                                 <input type=text class=form-control name=Randomised_by readonly>
                             </label>
@@ -79,6 +84,19 @@
 				var I1 = $('#F__ID input[name=Randomisation_Number').val(); if (I1 != '' && I1 != '-') index.I1 = parseInt(I1);
 				var nd=new Date()
 				index.I2=nd.getFullYear()+"-"+$vm.pad(nd.getMonth()+1,2)+"-"+$vm.pad(nd.getDate(),2);
+                jQuery.ajaxSetup({ async: false });
+                    var tb = $vm.module_list["randomisation-table-data"].Table;
+                    var query={UID:index.I1}
+                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                        if (res.result.length != 0) {
+                            //console.log(JSON.stringify(res.result[0].Data.Group))
+                            data.Group=res.result[0].Data.Group;
+                            index.I3=res.result[0].Data.Group;
+                            if(index.I3=="Control") data.Start_Date=index.I2;
+                        }
+                    });
+                jQuery.ajaxSetup({ async: true });
+
 			}
 			//-------------------------------------
 		}

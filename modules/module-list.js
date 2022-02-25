@@ -109,12 +109,16 @@
     m[p+"eq-5d-w26-data"]      ={url:H+"/form-grid/questionnaires/eq-5d-data.html",Table:"demo-asteroid-partb-eq-5d-w26",form_module:"eq-5d-w26-form", task_name:"Week 26 - European Quality of Life" };
     m[p+"eq-5d-w26-form"]      ={url:H+"/form-grid/questionnaires/eq-5d-form.html",Table:"demo-asteroid-partb-eq-5d-w26", task_name:"Week 26 - European Quality of Life" };
 
+    m[p+"randomisation-table-data"]      ={url:H+"/form-grid/backend/randomisation-table-data.html",   Table:"demo-asteroid-partb-randomisation",form_module:"randomisation-table-form",task_name:"Randomisation Table"};
+    m[p+"randomisation-table-form"]      ={url:H+"/form-grid/backend/randomisation-table-form.html",Table:"demo-asteroid-partb-randomisation", task_name:"Randomisation Table" };
+    
+    
     m[p+"progress-report"]      ={url:H+"/form-grid/backend/progress-data.html",   Table:"demo-asteroid-partb-login",task_name:"Progress report"};
     m[p+"start-date"]      ={url:H+"/form-grid/backend/date-start-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Start Date"};
     m[p+"reminder-1-date"]      ={url:H+"/form-grid/backend/date-reminder-1-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Access Code Reminder 1 Date"};
     m[p+"reminder-2-date"]      ={url:H+"/form-grid/backend/date-reminder-2-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Access Code Reminder 2 Date"};
-    m[p+"send-email-control-data"]      ={url:H+"/form-grid/backend/send-email-control-data.html",   Table:"demo-asteroid-partb-control-contact", form_module:"send-email-control-form",task_name:"email"};
-    m[p+"send-email-control-form"]      ={url:H+"/form-grid/backend/send-email-control-form.html",   Table:"demo-asteroid-partb-cntrol-contact", task_name:"send email"};
+    m[p+"send-email-control-data"]      ={url:H+"/form-grid/backend/send-email-control-data.html",   Table:"demo-asteroid-partb-screening"};
+    m[p+"send-email"]      ={url:H+"/form-grid/backend/send-email-form.html",   Table:"demo-asteroid-partb-screening", task_name:"send email"};
     m[p+"fitbit-sent-date"]      ={url:H+"/form-grid/backend/fitbit-sent-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Fitbit Sent"};
 
     if(window.location.toString().indexOf('tb=demo')!=-1){

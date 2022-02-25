@@ -12,11 +12,13 @@
 							<!-- participant name and study id -->
 							<div id="participant_div__ID">
 								<div class="form-group">
-									<fieldset class="subquestions">
-										<label><span class="">Participant ID</span>
-											<input type=text name="Participant_uid" class=form-control readonly />
-										</label>
-									</fieldset>
+                                    <div class="questiongroup ">
+                                        <fieldset class="subquestions">
+                                            <label><span class="">Participant ID</span>
+                                                <input type=text name="Participant_uid" class=form-control readonly />
+                                            </label>
+                                        </fieldset>
+                                    </div>
 								</div>
 							</div>
 							<div class="form-group">
@@ -37,17 +39,19 @@
 	</div>
 	<script>
 		function F__ID() {
-			//-------------------------------------
-			VmInclude: __COMPONENT__/f/form.01.js
-			VmInclude: __CURRENT_PATH__/shared-form.js
-			//-------------------------------------
-            m.default_load = m.load;
+          //-------------------------------------
+          /*VmInclude:__COMPONENT__/f/form.01.js*/
+          /*VmInclude:__HOST__/assets/js/shared-form.js*/
+          //-------------------------------------
+          m.default_load = m.load;
             m.load = function () {
 				$('#emaildate__ID').attr('name',m.input.email);
 				m.default_load();
 				m.input.goback = 1;
 				$('#emaildate__ID').val(get_now_date())
 				$('#title__ID').text(m.input.title)
+                console.log(JSON.stringify(m.input.record.UID))
+                $('#F__ID input[name=Participant_uid]').val(m.input.record.UID)
 
             }
             //-------------------------------------
@@ -79,9 +83,10 @@
 				var url='';
 				var sms_url='';
 				switch(m.input.email){
-                    case 'Email_Access_Code':
-					 	url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/eed1e940d1e84fc6a0c85b23aeeba2b1/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5qT-10hModS8fCHpn3k1iZ-ojRi75rI1xI1fj7i0TpQ';
-					 	sms_url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/d97fd9ca20144b8d8a8faee0ca2d1693/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_WljPgPFdsbYx1nr3SM9ifRcKZ0VHleW-b-Gj-EI-dA';
+                    case 'Email_W0':
+                        $vm.alert('Send Sleep Health Education Module Email')
+					 	//url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/eed1e940d1e84fc6a0c85b23aeeba2b1/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5qT-10hModS8fCHpn3k1iZ-ojRi75rI1xI1fj7i0TpQ';
+					 	//sms_url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/d97fd9ca20144b8d8a8faee0ca2d1693/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_WljPgPFdsbYx1nr3SM9ifRcKZ0VHleW-b-Gj-EI-dA';
                     break;
                     case 'Reminder_1_Access_Code':
 					 	url='https://prod-16.australiasoutheast.logic.azure.com:443/workflows/aa091facf4184e8bbe50379ced010bad/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_sfkcdVWQNIBT-Oka0oWuUZeCOL8RMr405pxD1q_-H4';
@@ -192,6 +197,6 @@
 			max-width: 600px;
 		}
 
-		/*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
-	</style>
+    /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+</style>
 </div>
