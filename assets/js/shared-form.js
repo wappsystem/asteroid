@@ -92,8 +92,12 @@ var status_of_data=function(data){
         }
     }
     var status="#FFCC00";
-    if(N1==N2) 		    status='#FF0000';
-    else if(N1==0)  	status='#00FF00';
+    if($vm.online_questionnaire==1) {
+        status='#00FF00';    }
+    else{
+        if(N1==N2) 		    status='#FF0000';
+        else if(N1==0)  	status='#00FF00';
+    }
     return status;
 }
 //-------------------------------------
