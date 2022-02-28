@@ -147,6 +147,7 @@
     cursor: pointer;
 }
 #D__ID .checkmark {
+    padding-left: 7px;
     position: absolute;
     top: 0;
     left: 0;

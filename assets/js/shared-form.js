@@ -36,7 +36,6 @@ m.load=function(){
     if($vm.online_questionnaire==1) {
         $('#pdf__ID').hide();
         $('#participant_div__ID').hide();
-        console.log("BBBBBBBB")
     }
 //--------------------------
     if(m.input!=undefined && m.input.participant_record!=undefined){

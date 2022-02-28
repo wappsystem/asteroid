@@ -1,0 +1,92 @@
+<div id=D__ID style="display:xnone">
+    <div class="bg-light">
+        <form id=F__ID>
+            <div id="participant_div__ID">
+                <div class="form-group box">
+                    <fieldset class="subquestions">
+                        <label><span class="">Participant</span>
+                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                data-id="Participant" />
+                        </label><br><br>
+                        <label><span class="">Participant ID</span>
+                            <input type=text name="Participant_uid" class=form-control readonly />
+                        </label><br>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="form-group box">
+                    <h2 id="title__ID"></h2>
+            </div>
+            <div class="form-group box">
+                <h3>Progress</h3>
+                <div class="questiongroup">
+                    <fieldset class="pl-4">
+                        <input type="text" name="w0" class="form-control" placeholder="">
+                    </fieldset>
+                </div>
+                <div class="questiongroup">
+                    <fieldset class="pl-4">
+                        <input type="text" name="group" class="form-control" placeholder="">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="box" style="text-align:right">
+                <div class="box-item">
+                    <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </section>
+    <script>
+    	function F__ID(){
+            /*VmInclude: '__HOST__/assets/js/form.01.js'*/
+            /*VmInclude:__HOST__/assets/js/shared-form.js*/
+            
+            var progress="";
+            //-------------------------------------------            
+            m.default_load = m.load;
+            m.load = function () {
+                m.default_load();
+                console.log("Progress: "+JSON.stringify(m.input))
+                console.log("W0: "+JSON.stringify(m.input.progress))
+                progress=m.input.progress
+                if(Object.keys(m.input.record).length === 0) {
+                    console.log("AA")
+                    $('#Participant__ID').val(m.input.participant_record.UID)
+                    $('#F__ID input[name=Participant_uid]').val(m.input.participant_record.UID)
+                }
+                else{
+                    console.log("BB")
+                    $('#F__ID input[name=Participant]').val(m.input.record.Data.Participant)
+                    $('#F__ID input[name=Participant_uid]').val(m.input.record.Data.Participant_uid)
+                }
+
+				$('#submit__ID').click();
+            }
+            //-------------------------------------------
+            m.before_submit = function (data, index) {
+                data.w0=progress;
+                return;
+            }
+            //-------------------------------------------
+            m.after_insert = function (data,index) {
+                if (m.prefix == undefined) { $vm.load_module('week-0-panel', '', {}); }
+                else {$vm.load_module(m.prefix + 'week-0-panel', '', {});}
+            }
+            //-------------------------------------------
+            m.after_update = function (data,index) {
+                if (m.prefix == undefined) { $vm.load_module('week-0-panel', '', {}); }
+                else {$vm.load_module(m.prefix + 'week-0-panel', '', {});}
+            }
+
+
+        }
+    </script>
+    <style>
+        #form_container__ID{
+            max-width:700px;
+        }
+		/*VmInclude:__COMPONENT__/f/form.01.css*/
+    </style>
+</div>

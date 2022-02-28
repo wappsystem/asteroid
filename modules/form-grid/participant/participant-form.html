@@ -36,7 +36,7 @@
                     </div>
                     <div class="box" style="text-align:right">
                         <div class="box-item">
-                            <button type="submit" id="submit1__ID" class="btn btn-primary btn-lg">Submit</button>
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
 	<script>
 		function F__ID() {
 			//-------------------------------------
-			/*VmInclude: __COMPONENT__/f/form.01.js*/
+			/*VmInclude: __HOST__/assets/js/form.01.js*/
 			//-------------------------------------
 			var load = m.load;
 			m.load = function () {
@@ -96,9 +96,48 @@
                         }
                     });
                 jQuery.ajaxSetup({ async: true });
-
 			}
 			//-------------------------------------
+            m.after_update = function (data,index) {
+                console.log('Data: '+JSON.stringify(data));
+                console.log(index.result.UID)
+                var pid=(index.result.UID).toString();
+                var record={};
+                var tb = $vm.module_list["progress-form"].Table;
+                query={'Data.Participant':pid}
+                console.log(query);
+                jQuery.ajaxSetup({async:false});
+                $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                    if(res.permission==false){
+                        alert("No permission");
+                        return;
+                    }
+                    if(res.result.length==0){
+                    }
+                    else{
+                        record=res.result[0]
+                        record.Data.group=data.Group;
+                        console.log(JSON.stringify(record))
+                        $vm.request({cmd:'update',id:record._id,table:tb,data:record.Data},function(res){
+                            //-----------------------------
+                            if(res.status=="lk"){
+                                $vm.alert("This record is locked.");
+                                return;
+                            }
+                            //-----------------------------
+                            if(res.status=="np"){
+                                alert("No permission to update this record.");
+                                return;
+                            }
+                        })
+                    }
+                })
+                jQuery.ajaxSetup({async:true});
+                $vm.refresh=1;
+                m.change_status++;
+                window.history.go(-1);   
+            }
+
 		}
 	</script>
 	<style>

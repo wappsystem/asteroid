@@ -15,7 +15,9 @@
                 </div>
             </div>
             <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;' >
-                <h2>Demographic</h2>
+                <div class="form-group box">
+                    <h2 id="title__ID"></h2>
+                </div>
                 <div class="form-group box">
                     <h3>1. What is your date of birth?</h3>
                     <div class="questiongroup">
@@ -310,7 +312,7 @@
                 </div>
                 <div class="box" style="text-align:right">
                     <div class="box-item">
-                        <button type="submit" id="submit1__ID" class="btn btn-primary btn-lg">Submit</button>
+                        <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
                     </div>
                 </div>
             </div>
@@ -321,6 +323,26 @@
             /*VmInclude: '__COMPONENT__/f/form.01.js'*/
              /*VmInclude:__HOST__/assets/js/shared-form.js*/
             //---------------------------------------
+            m.after_insert = function (data,index) {
+                var record={};
+                jQuery.ajaxSetup({async:false});
+                $vm.request({cmd:"find-s",table:$vm.module_list['progress-data'].Table,options:{}},function(res){
+                    if(res.permission==false){
+                        alert("No permission");
+                        return;
+                    }
+                    if(res.result.length==0){
+                    }
+                    else{
+                        record=res.result[0]
+                    }
+                })
+                var P_record=$vm.vm['__ID'].input.participant_record;
+                if (m.prefix == undefined) { $vm.load_module('progress-form', '', {participant_record:P_record,record:record,progress:'1'}); }
+                else {$vm.load_module(m.prefix + 'progress-form', '', {participant_record:P_record,record:record,progress:'1'});}
+				jQuery.ajaxSetup({async:true});
+
+            }
         }
     </script>
     <style>

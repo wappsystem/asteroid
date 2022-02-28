@@ -9,14 +9,14 @@
             //-------------------------------------
             $('#new__ID').hide();
             //-------------------------------------
-            var fields="First Name|first_name,Last Name|last_name,Email|email,w0,Start_Date,Email_W3,Rem_1_W3,Rem_2_W3,Email_W5,Email_W8,Rem_1_W8,Rem_2_W8,Email_W16,Rem_1_W16,Rem_2_W16,Email_W26,Rem_1_W26,Rem_2_W26,Email_AC|access_code";
+            var fields="Progress|w0,Group";
             m.fields="Participant_ID|Participant_uid,"+fields+"";
             //-------------------------------------
             m.cell_render=function(records,I,field,td){
                 //console.log(JSON.stringify(records[I].Data))
                 switch(field){
-                    case 'progress':
-                        var v=records[I].Data.progress;
+                    case 'w0':
+                        var v=records[I].Data.w0;
                         if(v=='10'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
@@ -30,27 +30,27 @@
                         }
                     break;
                     case 'Group':
-                        html="<u style='cursor:pointer'>Randomise</u>"
-                        td.html(html);
-                        var tables=$vm.module_list["participant-data"].Table;
-                        var uid=parseInt(records[I].Data.Participant_uid);
-                        var query={UID:uid}
-                        var result={};
-                        jQuery.ajaxSetup({ async: false });
-                        $vm.request({cmd:'find',table:tables,query:query,limit:1},function(res){
-                            if (res.result.length != 0) {
-                                result=res.result[0];
-                                console.log(JSON.stringify(result))
-                            }
-                            else $vm.alert("Sorry, something went wrong!")
-                        })
-                        if(result.I3!=''){
-                            console.log(result.I3)
-                            html=result.I3;
-                            td.html(html)
+                        if(records[I].Data.w0=='10' && records[I].Data.group==undefined){
+                            html="<u style='cursor:pointer'>Randomise</u>"
                         }
-                        jQuery.ajaxSetup({ async: true });
+                        else {
+                            html=records[I].Data.group
+                        }
+                        td.html(html);
                         td.find('u').on('click',function(){
+                            var tables=$vm.module_list["participant-data"].Table;
+                            var uid=parseInt(records[I].Data.Participant_uid);
+                            var query={UID:uid}
+                            var result={};
+                            jQuery.ajaxSetup({ async: false });
+                            $vm.request({cmd:'find',table:tables,query:query,limit:1},function(res){
+                                if (res.result.length != 0) {
+                                    result=res.result[0];
+                                    console.log(JSON.stringify(result))
+                                }
+                                else $vm.alert("Sorry, something went wrong!")
+                            })
+                            jQuery.ajaxSetup({ async: true });
                             $vm.load_module_v2('participant-form','',{record:result})
                         });
                     break;

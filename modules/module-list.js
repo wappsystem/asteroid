@@ -11,14 +11,14 @@
     m[p+"not_elig2"]         ={url:H+"/form-grid/screening/not_elig2.html"},
     m[p+"not_elig3"]         ={url:H+"/form-grid/screening/not_elig3.html"},
 
-    m[p+"participant-data"] ={url:H+"/form-grid/participant/participant-data.html",Table:"demo-asteroid-partb-screening"
+    m[p+"participant-data"] ={url:H+"/form-grid/participant/participant-data.html",Table:"demo-asteroid-partb-participant"
                             ,form_module:"participant-form",
                             child_panel:"panel-child",
                             /*questionnaire_setup:"online-questionnaire-setup-canact",*/
                             online_questionnaire:"online-questionnaire"
                             
     };                   
-    m[p+"participant-form"] ={url:H+"/form-grid/participant/participant-form.html",Table:"demo-asteroid-partb-screening"},
+    m[p+"participant-form"] ={url:H+"/form-grid/participant/participant-form.html",Table:"demo-asteroid-partb-participant"},
     m[p+"notes-data"]       ={url:H+"/form-grid/questionnaires/notes-data.html",Table:"demo-asteroid-partb-notes",form_module:"notes-form",router:1},
     m[p+"notes-form"]       ={url:H+"/form-grid/questionnaires/notes-form.html",Table:"demo-asteroid-partb-notes"},
     m[p+"online-questionnaire"] ={url:I+"/participant.html"},
@@ -32,7 +32,7 @@
     
     m[p+"demographic-data"] ={url:H+"/form-grid/questionnaires/demographic-data.html",Table:"demo-asteroid-partb-demographic",form_module:"demographic-form", task_name:"Baseline Demographics" };
     m[p+"demographic-form"] ={url:H+"/form-grid/questionnaires/demographic-form.html",Table:"demo-asteroid-partb-demographic", task_name:"Baseline - Demographics" };
-/*  
+ /* 
     m[p+"isi-w0-data"]      ={url:H+"/form-grid/questionnaires/isi-w0-data.html",Table:"demo-asteroid-partb-screening",form_module:"isi-w0-form", task_name:"Baseline - Insomnia Severity Index" };
     m[p+"isi-w0-form"]      ={url:H+"/form-grid/questionnaires/isi-form.html",Table:"demo-asteroid-partb-screening", task_name:"Baseline - Insomnia Severity Index" };
 */
@@ -112,12 +112,22 @@
     m[p+"randomisation-table-data"]      ={url:H+"/form-grid/backend/randomisation-table-data.html",   Table:"demo-asteroid-partb-randomisation",form_module:"randomisation-table-form",task_name:"Randomisation Table"};
     m[p+"randomisation-table-form"]      ={url:H+"/form-grid/backend/randomisation-table-form.html",Table:"demo-asteroid-partb-randomisation", task_name:"Randomisation Table" };
     
+    m[p+"registration-data"]      ={url:H+"/form-grid/screening/registration-data.html",   Table:"demo-asteroid-partb-participant",form_module:"registration-form",task_name:"Participant"};
+    m[p+"registration-form"]      ={url:H+"/form-grid/screening/registration-form.html",Table:"demo-asteroid-partb-participant",Table2:"demo-asteroid-partb-screening", task_name:"Participant" };
     
     m[p+"progress-report"]      ={url:H+"/form-grid/backend/progress-data.html",   Table:"demo-asteroid-partb-login",task_name:"Progress report"};
+    m[p+"progress-data"]      ={url:H+"/form-grid/backend/progress-data.html",   Table:"demo-asteroid-partb-progress",task_name:"Progress Grid"};
+    m[p+"randomisation-check-data"]      ={url:H+"/form-grid/backend/randomisation-check-data.html",   Table:"demo-asteroid-partb-progress",task_name:"Randomisation Check"};
+    m[p+"progress-form"]      ={url:H+"/form-grid/backend/progress-form.html",   Table:"demo-asteroid-partb-progress",task_name:"Progress form"};
+    m[p+"progress-w3-form"]      ={url:H+"/form-grid/backend/progress-form.html",   Table:"demo-asteroid-partb-progress-w3",task_name:"Progress form"};
+    m[p+"progress-w8-form"]      ={url:H+"/form-grid/backend/progress-form.html",   Table:"demo-asteroid-partb-progress-w8",task_name:"Progress form"};
+    m[p+"progress-w16-form"]      ={url:H+"/form-grid/backend/progress-form.html",   Table:"demo-asteroid-partb-progress-w16",task_name:"Progress form"};
+    m[p+"progress-w26-form"]      ={url:H+"/form-grid/backend/progress-form.html",   Table:"demo-asteroid-partb-progress-w26",task_name:"Progress form"};
+ 
     m[p+"start-date"]      ={url:H+"/form-grid/backend/date-start-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Start Date"};
     m[p+"reminder-1-date"]      ={url:H+"/form-grid/backend/date-reminder-1-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Access Code Reminder 1 Date"};
     m[p+"reminder-2-date"]      ={url:H+"/form-grid/backend/date-reminder-2-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Access Code Reminder 2 Date"};
-    m[p+"send-email-control-data"]      ={url:H+"/form-grid/backend/send-email-control-data.html",   Table:"demo-asteroid-partb-screening"};
+    m[p+"send-email-control-data"]      ={url:H+"/form-grid/backend/send-email-control-data.html",   Table:"demo-asteroid-partb-participant"};
     m[p+"send-email"]      ={url:H+"/form-grid/backend/send-email-form.html",   Table:"demo-asteroid-partb-screening", task_name:"send email"};
     m[p+"fitbit-sent-date"]      ={url:H+"/form-grid/backend/fitbit-sent-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Fitbit Sent"};
 
