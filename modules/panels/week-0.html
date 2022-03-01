@@ -44,8 +44,8 @@
 		//--------------------------------------------------------
 		$('#D__ID').on('show',function(){
             var record=$vm.vm['__ID'].input.record;
-//			id_list='demographic-form,psqi-w0-form,gad7-w0-form,ffs-w0-form,ess-w0-form,bc-cci-w0-form,eq-5d-w0-form,eheals-w0-form'
-			id_list='demographic-form,eheals-w0-form'
+			id_list='demographic-form,psqi-bl-form,gad7-bl-form,ffs-bl-form,ess-bl-form,bc-cci-bl-form,eq-5d-bl-form,eheals-bl-form'
+//			id_list='demographic-form,eheals-bl-form'
             if(id_list==undefined){
                 alert("No questionnaire was found");
                 return;
@@ -86,35 +86,19 @@
 		        var $li=$(this);
 		        var m=$li.attr('m');
 		        if(status[m].rid==0){
-					if($vm.api_type=="sqlserver"){
-						//-----------------
-						var req={cmd:'read-s2',qid:$vm.qid,db_pid:status[m].Table};
-						//-----------------
-						jQuery.ajaxSetup({async:false});
-						$VmAPI.request({data:req,callback:function(res){
-							if(res.records.length==0){
-							}
-							else{
-								status[m].rid=1;
-							}
-						}})
-						jQuery.ajaxSetup({async:true});
-					}
-					else{
-						jQuery.ajaxSetup({async:false});
-						$vm.request({cmd:"find-s",table:$vm.module_list[m].Table,options:{}},function(res){
-							if(res.permission==false){
-								alert("No permission");
-								return;
-							}
-							if(res.result.length==0){
-							}
-							else{
-								status[m].rid=1;
-							}
-						})
-						jQuery.ajaxSetup({async:true});
-					}
+                    jQuery.ajaxSetup({async:false});
+                    $vm.request({cmd:"find-s",table:$vm.module_list[m].Table,options:{}},function(res){
+                        if(res.permission==false){
+                            alert("No permission");
+                            return;
+                        }
+                        if(res.result.length==0){
+                        }
+                        else{
+                            status[m].rid=1;
+                        }
+                    })
+                    jQuery.ajaxSetup({async:true});
 		        }
 		        if(status[m].rid==0){
 					$li.removeClass('li_not_allowed__ID')
@@ -125,6 +109,7 @@
 		            $li.find('u').on('click',function(){
 		                var m=$(this).attr('m');
                         var record=$vm.vm['__ID'].input.record;
+                        console.log("list: "+JSON.stringify(record))
 						$vm.load_module(m,'',{participant_record:record,goback:1});
 		            });
 		            return false; // break out the loop

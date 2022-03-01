@@ -72,6 +72,7 @@ m.load=function(){
 }
 //-------------------------------------
 m.before_submit=function(data){
+    console.log("before submit")
     if ($("#F__ID input[name=Participant]").val()=='' || $("#F__ID input[name=Participant_uid]").val()==''){
         $vm.alert("Please select a participant. Make sure Participant ID has a number.") 
         return false;    
