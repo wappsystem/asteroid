@@ -124,7 +124,7 @@
     m[p+"start-date"]      ={url:H+"/form-grid/backend/date-start-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Start Date"};
     m[p+"reminder-1-date"]      ={url:H+"/form-grid/backend/date-reminder-1-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Access Code Reminder 1 Date"};
     m[p+"reminder-2-date"]      ={url:H+"/form-grid/backend/date-reminder-2-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Access Code Reminder 2 Date"};
-    m[p+"send-email-control-data"]      ={url:H+"/form-grid/backend/send-email-control-data.html",   Table:"demo-asteroid-partb-participant"};
+    m[p+"send-email-control-data"]      ={url:H+"/form-grid/backend/send-email-control-data.html",   Table:"demo-asteroid-partb-progress"};
     m[p+"send-email"]      ={url:H+"/form-grid/backend/send-email-form.html",   Table:"demo-asteroid-partb-screening", task_name:"send email"};
     m[p+"fitbit-sent-date"]      ={url:H+"/form-grid/backend/fitbit-sent-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Fitbit Sent"};
 

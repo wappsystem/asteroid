@@ -45,11 +45,12 @@
 		$('#D__ID').on('show',function(){
             var record=$vm.vm['__ID'].input.record;
 			id_list='demographic-form,psqi-bl-form,gad7-bl-form,ffs-bl-form,ess-bl-form,bc-cci-bl-form,eq-5d-bl-form,eheals-bl-form'
-//			id_list='demographic-form,eheals-bl-form'
+			//id_list='demographic-form,gad7-bl-form,eheals-bl-form'
             if(id_list==undefined){
                 alert("No questionnaire was found");
                 return;
             }
+
 			setup_panel();
 		})
 		//--------------------------------------------------------
@@ -109,7 +110,6 @@
 		            $li.find('u').on('click',function(){
 		                var m=$(this).attr('m');
                         var record=$vm.vm['__ID'].input.record;
-                        console.log("list: "+JSON.stringify(record))
 						$vm.load_module(m,'',{participant_record:record,goback:1});
 		            });
 		            return false; // break out the loop

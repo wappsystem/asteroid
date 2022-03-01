@@ -9,7 +9,7 @@
             //-------------------------------------
             $('#title__ID').text('Participants');            
             //-------------------------------------
-            var fields="_Participant_ID,Randomisation_Number,Group,first_name,last_name,phone,email,contact,_Data_Entry,_Setup,_Questionnaire,_Login_ID,_Password";
+            var fields="_Participant_ID,Randomisation_Number,Group,first_name,last_name,phone,email,contact,Access Code|access_code,_Data_Entry,_Setup,_Questionnaire,_Login_ID,_Password";
             m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
             //-------------------------------------
             m.load=function(){
@@ -18,11 +18,10 @@
             }
             m.cell_render=function(records,I,field,td,set_value,source){
                 switch(field){
-                    case 'DOB':
-                        if(records[I].Data.DOB!=''){
-                            var dob=(records[I].Data.DOB).split('-');
-                            td.html(dob[2]+'/'+dob[1]+'/'+dob[0]);
-                        }
+                    case 'contact':
+                        if(records[I].Data.contact==1) td.html("Text");
+                        else if(records[I].Data.contact==2) td.html("Email");
+                        else if(records[I].Data.contact==3) td.html("Both");
                         break;
                     case '_Participant_ID':
                         td.html(records[I].UID);

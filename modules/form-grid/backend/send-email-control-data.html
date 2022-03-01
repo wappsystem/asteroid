@@ -5,15 +5,15 @@
     <script>
         function F__ID(){
             //-------------------------------------
-            VmInclude:__COMPONENT__/g/grid.01.js       
+            VmInclude:__COMPONENT__/g/grid.01.js     
             //-------------------------------------
             $('#title__ID').text('Participants');            
             //-------------------------------------
-            var fields="_Participant_ID,Randomisation_Number,Group,first_name,last_name,phone,email,contact,access_code,Start_Date,bl,bl_email,w0,w0_email,w0_rem_1,w0_rem_2,w3,w3_email,w3_rem_1,w3_rem_2,w5,w5_email,w8,w8_email,w8_rem_1,w8_rem_2,w16,w16_email,w16_rem_1,w16_rem_2,w26,w26_email,w26_rem_1,w26_rem_2,ac_email";
+            var fields="_Participant_ID|Participant,group,first_name,last_name,phone,email,contact,access_code,Start_Date,bl_email,bl,w3_email,w3_rem_1,w3_rem_2,w3,w5_email,w8_email,w8_rem_1,w8_rem_2,w8,w16_email,w16_rem_1,w16_rem_2,w16,w26_email,w26_rem_1,w26_rem_2,w26,ac_email";
             m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
             //-------------------------------------
             m.load=function(){
-                m.query={"Data.Group": {"$eq" : "Control"}}
+                m.query={"Data.group": {"$eq" : "Control"}}
             }
 
             m.cell_render=function(records,I,field,td){
@@ -37,9 +37,9 @@
                                 //$vm.load_module_v2('start-date','',{record:records[I]})
                             })
                     break;
-                    case 'w0':
-                        var v=records[I].Data.W0;
-                        if(v=='2'){
+                    case 'bl':
+                        var v=records[I].Data.bl;
+                        if(v=='10'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
                         }

@@ -24,6 +24,11 @@
                         <input type="text" name="group" class="form-control" placeholder="">
                     </fieldset>
                 </div>
+                <div class="questiongroup">
+                    <fieldset class="pl-4">
+                        <input type="text" name="Start_Date" class="form-control" placeholder="">
+                    </fieldset>
+                </div>
                 <div class='row px-4'>
                     <div class="col-sm-12 col-lg-3 row_participant__ID">
                         <label class=''><span class=''>bl</span>
@@ -207,11 +212,26 @@
                 return;
             }
             //-------------------------------------------
-            m.after_update = function (data,index) {
-                if (m.prefix == undefined) { $vm.load_module('week-0-panel', '', {}); }
-                else {$vm.load_module(m.prefix + 'week-0-panel', '', {});}
+/* FOR UPDATING PROGRESS 
+            m.after_insert = function (data,index) {
+                var records={};
+                jQuery.ajaxSetup({async:false});
+                $vm.request({cmd:"find-s",table:$vm.module_list['progress-data'].Table,options:{}},function(res){
+                    if(res.permission==false){
+                        alert("No permission");
+                        return;
+                    }
+                    if(res.result.length==0){
+                    }
+                    else{
+                        records=res.result[0]
+                    }
+                })
+                if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'10',time:'bl',goback:1}); }
+                else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'10',time:'bl',goback:1});}
+				jQuery.ajaxSetup({async:true});
             }
-
+*/
 
         }
     </script>
