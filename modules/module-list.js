@@ -14,17 +14,33 @@
     m[p+"participant-data"] ={url:H+"/form-grid/participant/participant-data.html",Table:"demo-asteroid-partb-participant"
                             ,form_module:"participant-form",
                             child_panel:"panel-child",
-                            /*questionnaire_setup:"online-questionnaire-setup-canact",*/
-                            online_questionnaire:"online-questionnaire"
+                            online_questionnaire_bl:"oq-bl",
+                            online_questionnaire_w0:"oq-w0",
+                            online_questionnaire_w3:"oq-w3",
+                            online_questionnaire_w8:"oq-w8",
+                            online_questionnaire_w16:"oq-w16",
+                            online_questionnaire_w26:"oq-w26",
+                            
                             
     };                   
     m[p+"participant-form"] ={url:H+"/form-grid/participant/participant-form.html",Table:"demo-asteroid-partb-participant"},
     m[p+"notes-data"]       ={url:H+"/form-grid/questionnaires/notes-data.html",Table:"demo-asteroid-partb-notes",form_module:"notes-form",router:1},
     m[p+"notes-form"]       ={url:H+"/form-grid/questionnaires/notes-form.html",Table:"demo-asteroid-partb-notes"},
-    m[p+"online-questionnaire"] ={url:I+"/participant.html"},
+    m[p+"oq-bl"] ={url:I+"/bl_quest.html"},
+    m[p+"oq-w0"] ={url:I+"/w0_quest_utd.html"},
+    m[p+"oq-w3"] ={url:I+"/w3_quest_qxe.html"},
+    m[p+"oq-w8"] ={url:I+"/w8_quest_pkn.html"},
+    m[p+"oq-w16"] ={url:I+"/w16_quest_ihs.html"},
+    m[p+"oq-w26"] ={url:I+"/w26_quest_bwj.html"},
+    m[p+"oq"] ={url:I+"/participant.html"},
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
     m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"demo-asteroid-partb-screening",router:1 };
-    m[p+"week-0-panel"]     ={url:H+"/panels/week-0.html"};
+    m[p+"bl-panel"]     ={url:H+"/panels/bl_quest.html"};
+    m[p+"w0-panel"]     ={url:H+"/panels/w0_quest.html"};
+    m[p+"w3-panel"]     ={url:H+"/panels/w3_quest.html"};
+    m[p+"w8-panel"]     ={url:H+"/panels/w8_quest.html"};
+    m[p+"w16-panel"]     ={url:H+"/panels/w16_quest.html"};
+    m[p+"w26-panel"]     ={url:H+"/panels/w26_quest.html"};
 
     m[p+"adverse-event-data"] ={url:H+"/form-grid/unscheduled/adverse-event-data.html",Table:"demo-asteroid-partb-adverse-event",form_module:"adverse-event-form", task_name:"Adverse event" };
     m[p+"adverse-event-form"] ={url:H+"/form-grid/unscheduled/adverse-event-form.html",Table:"demo-asteroid-partb-adverse-event", task_name:"Adverse event" };
@@ -32,7 +48,11 @@
     
     m[p+"demographic-data"] ={url:H+"/form-grid/questionnaires/demographic-data.html",Table:"demo-asteroid-partb-demographic",form_module:"demographic-form", task_name:"Baseline Demographics" };
     m[p+"demographic-form"] ={url:H+"/form-grid/questionnaires/demographic-form.html",Table:"demo-asteroid-partb-demographic", task_name:"Baseline - Demographics" };
- /* 
+
+    m[p+"address-data"] ={url:H+"/form-grid/questionnaires/address-data.html",Table:"demo-asteroid-partb-address",form_module:"address-form", task_name:"Address for sending Fitbit" };
+    m[p+"address-form"] ={url:H+"/form-grid/questionnaires/address-form.html",Table:"demo-asteroid-partb-address", task_name:"Address for sending Fitbit" };
+
+    /* 
     m[p+"isi-bl-data"]      ={url:H+"/form-grid/questionnaires/isi-bl-data.html",Table:"demo-asteroid-partb-screening",form_module:"isi-bl-form", task_name:"Baseline - Insomnia Severity Index" };
     m[p+"isi-bl-form"]      ={url:H+"/form-grid/questionnaires/isi-form.html",Table:"demo-asteroid-partb-screening", task_name:"Baseline - Insomnia Severity Index" };
 */
@@ -115,18 +135,15 @@
     m[p+"registration-data"]      ={url:H+"/form-grid/screening/registration-data.html",   Table:"demo-asteroid-partb-participant",form_module:"registration-form",task_name:"Participant"};
     m[p+"registration-form"]      ={url:H+"/form-grid/screening/registration-form.html",Table:"demo-asteroid-partb-participant",Table2:"demo-asteroid-partb-screening", task_name:"Participant" };
     
-    m[p+"progress-report"]      ={url:H+"/form-grid/backend/progress-data.html",   Table:"demo-asteroid-partb-login",task_name:"Progress report"};
-    m[p+"progress-data"]      ={url:H+"/form-grid/backend/progress-data.html",   Table:"demo-asteroid-partb-progress",task_name:"Progress Grid"};
     m[p+"randomisation-check-data"]      ={url:H+"/form-grid/backend/randomisation-check-data.html",   Table:"demo-asteroid-partb-progress",task_name:"Randomisation Check"};
     m[p+"progress-new-form"]      ={url:H+"/form-grid/backend/progress-new-form.html",   Table:"demo-asteroid-partb-progress",task_name:"Progress form"};
     m[p+"progress-mod-form"]      ={url:H+"/form-grid/backend/progress-mod-form.html",   Table:"demo-asteroid-partb-progress",task_name:"Progress form"};
  
-    m[p+"start-date"]      ={url:H+"/form-grid/backend/date-start-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Start Date"};
-    m[p+"reminder-1-date"]      ={url:H+"/form-grid/backend/date-reminder-1-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Access Code Reminder 1 Date"};
-    m[p+"reminder-2-date"]      ={url:H+"/form-grid/backend/date-reminder-2-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Access Code Reminder 2 Date"};
+    m[p+"start-date"]      ={url:H+"/form-grid/backend/date-start-form.html",   Table:"demo-asteroid-partb-progress", task_name:"Start Date"};
     m[p+"send-email-control-data"]      ={url:H+"/form-grid/backend/send-email-control-data.html",   Table:"demo-asteroid-partb-progress"};
-    m[p+"send-email"]      ={url:H+"/form-grid/backend/send-email-form.html",   Table:"demo-asteroid-partb-screening", task_name:"send email"};
-    m[p+"fitbit-sent-date"]      ={url:H+"/form-grid/backend/fitbit-sent-form.html",   Table:"demo-asteroid-partb-contact", task_name:"Fitbit Sent"};
+    m[p+"send-email-treatment-data"]      ={url:H+"/form-grid/backend/send-email-treatment-data.html",   Table:"demo-asteroid-partb-progress"};
+    m[p+"send-email"]      ={url:H+"/form-grid/backend/send-email-form.html",   Table:"demo-asteroid-partb-progress", task_name:"send email"};
+    m[p+"fitbit-sent"]      ={url:H+"/form-grid/backend/fitbit-sent-form.html",   Table:"demo-asteroid-partb-progress", task_name:"Date - Fitbit Sent"};
 
     if(window.location.toString().indexOf('tb=demo')!=-1){
         for(p in $vm.module_list){

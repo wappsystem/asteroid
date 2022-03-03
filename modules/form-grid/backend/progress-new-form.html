@@ -57,16 +57,16 @@
                             <input type=text class=form-control name=group readonly>
                         </label>
                     </div>
+                    <div class="col-sm-12 col-lg-3 row_participant__ID">
+                        <label class=''><span class=''>Access Code</span>
+                            <input type=text class=form-control name=access_code readonly>
+                        </label>
+                    </div>
                 </div>
                 <div class='row px-4'>
                     <div class="col-sm-12 col-lg-3 row_participant__ID">
                         <label class=''><span class=''>bl</span>
                             <input type=text class=form-control name=bl readonly>
-                        </label>
-                    </div>
-                    <div class="col-sm-12 col-lg-3 row_participant__ID">
-                        <label class=''><span class=''>bl email</span>
-                            <input type=date class=form-control name=bl_email readonly>
                         </label>
                     </div>
                 </div>
@@ -214,33 +214,13 @@
                 $('#F__ID input[name=phone]').val(m.input.participant_record.Data.phone)
                 $('#F__ID input[name=email]').val(m.input.participant_record.Data.email)
                 $('#F__ID input[name=contact]').val(m.input.participant_record.Data.contact)
+                $('#F__ID input[name=bl]').val(m.input.progress)
 				$('#submit__ID').click();
             }
             //-------------------------------------------
-            m.before_submit = function (data, index) {
-                switch(timing){
-                    case 'bl':
-                        data.bl=progress;
-                    break;
-                    case 'w3':
-                        data.w3=progress;
-                    break;
-                    case 'w8':
-                        data.w8=progress;
-                    break;
-                    case 'w16':
-                        data.w16=progress;
-                    break;
-                    case 'w26':
-                        data.w26=progress;
-                    break;
-                }
-                return;
-            }
-            //-------------------------------------------
             m.after_insert = function (data,index) {
-                if (m.prefix == undefined) { $vm.load_module('week-0-panel', '', {}); }
-                else {$vm.load_module(m.prefix + 'week-0-panel', '', {});}
+                if (m.prefix == undefined) { $vm.load_module('bl-panel', '', {}); }
+                else {$vm.load_module(m.prefix + 'bl-panel', '', {});}
             }
 
         }

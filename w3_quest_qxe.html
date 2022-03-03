@@ -36,38 +36,50 @@
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
             $vm.module_list={
-                header:         {url:$vm.hosting_path+"/modules/sites/screening/header.html"},
-                footer:         {url:$vm.hosting_path+"/modules/sites/screening/footer.html"},
-                screening:      {url:$vm.hosting_path+"/modules/form-grid/screening/eligibility-form.html",Table:"demo-asteroid-partb-screening", title:'Asteroid Study - Screening', questionnaires:"$H/m/oq-panel.html"},
+                header:         {url:$vm.hosting_path+"/modules/sites/participant/header.html"},
+                footer:         {url:$vm.hosting_path+"/modules/sites/participant/footer.html"},
+                home:           {url:$vm.hosting_path+"/modules/sites/participant/home_w3.html",Table:"demo-asteroid-partb-participant",router:1},
+                //auth:           {url:$vm.hosting_path+"/modules/system/auth.html"},
                 
+                //query:          {url:$vm.hosting_path+"/modules/system/query.html"},
+                //vmext:          {url:$vm.hosting_path+"/modules/system/vm-extension.html"},
+                //panel:          {url:$vm.hosting_path+"/modules/panels/panel.html"},
+
                 /*
-                auth:           {url:$vm.hosting_path+"/modules/system/auth.html"},
-                vmext:          {url:$vm.hosting_path+"/modules/system/vm-extension.html"},
-                panel:          {url:$vm.hosting_path+"/modules/panels/panel.html"},
+                jsonv:      {url:$vm.hosting_path+"/modules/system/viewer-json.html"},
+                gridv:      {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
+                gridv2:     {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
+                gridv3:     {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
+                arrayv:     {url:$vm.hosting_path+"/modules/system/viewer-array.html"},
                 */
+
             }
             //---------------------------------------------
-            //$vm.first_module='home';
-            $vm.first_module='screening';
+            $vm.first_module='home';
             (function(){ var a=window.location.href.split('?/'); if(a.length==2) $vm.first_module=a[1].split('&')[0].replace(/\//g,'_'); }());
             $vm.ready=function(){
             }
             //---------------------------------------------
         </script>    
+        <style>
+            #header{ height:160px; }
+            @media screen and (max-width:576px){ #header{ height:82px; }}
+        </style>
         <script vm framework code>
             //=================================================
             //VM framework code, do not need to chang the following code in most cases
             var hearder_height=$('#header').height();
             var footer_height=$('#footer').height();
             $vm.min_height=$(window).height()-hearder_height-footer_height;
-            //$('#content').css('min-height',$vm.min_height);
+            $('#content').css('min-height',$vm.min_height);
             $('#content').css('padding-top',hearder_height);
             $vm.root_layout_content_slot='content'
+            $vm.app_id="wapp";
+            $vm.api_default= $vm.app_id;
             $vm.api_addresses={
                 "wapp":"https://api.wappsystem.com"
             }
-            $vm.api_default="wapp";
-            $vm.api_address="https://api.wappsystem.com"
+            $vm.api_address='https://api.wappsystem.com';
             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){ 
                 $vm.localhost=true;
             }
@@ -76,16 +88,15 @@
             $vm.show=function(m_name){
                 var a=window.location.href.split('?/')[0].split('/'); a.pop(); var t=a.pop().replace(/-/g,' ');
                 var title=$vm.module_list[m_name].url.split('/').pop(); document.title=title+" - "+t ;
-                if($vm.module_list[m_name].title!=undefined) document.title=$vm.module_list[m_name].title;
                 var info=$vm.module_list[m_name].description;  if(info==undefined) info="Modular distributed microservices web application."; $("meta[name='description']").attr("content", info);
                 if(m_name!="sys_editor") $vm.active_name=m_name;
                 document.getElementById('layout').scrollTop=$vm.module_list[$vm.active_name].scrollTop;
                 if($vm.sys_nav_path!=undefined) $vm.sys_nav_path();
                 
                 if(m_name!=undefined){ $vm.active_id=$vm.module_list[m_name].id; $vm.active_name=m_name; }
-                //if($vm.active_id!='') $('#D'+$vm.active_id).css('min-height',$vm.min_height+"px");
-                if(m_name=='home') {$("#header").css("background","rgba(0,0,0,0)"); $('#midi_buttons').show(); $('#g_nav').hide(); }
-                else               {$("#header").css("background","rgba(0,0,0,0.8)");  $('#midi_buttons').hide(); $('#g_nav').show();}
+                if($vm.active_id!='') $('#D'+$vm.active_id).css('min-height',$vm.min_height+"px");
+                //if(m_name=='home') {$("#header").css("background","rgba(0,0,0,0)"); $('#midi_buttons').show(); $('#g_nav').hide(); }
+                //else               {$("#header").css("background","rgba(0,0,0,0.8)");  $('#midi_buttons').hide(); $('#g_nav').show();}
             }
             //---------------------------------------------
             document.getElementById('layout').onscroll = function(){
@@ -157,14 +168,11 @@
             $vm.install=function(){
                 //---------------------------------------------
                 $vm.init();
-                //---------------------------------------------
-                //install now
                 $vm.load_component('header','header',{});
                 $vm.load_component('footer','footer',{});
                 //$vm.install_module('auth','',{},function(name,id){});
+                //$vm.install_module('query','',{},function(name,id){});
                 //$vm.install_module('vmext','',{},function(name,id){});
-                //---------------------------------------------
-                //install later
                 var install_one=function(m,t){
                     setTimeout(function (){ 
                         $.ajaxSetup({cache:true}); 
@@ -198,10 +206,9 @@
                 $vm.load_resource("https://use.fontawesome.com/releases/v5.14.0/css/all.css",function(){})
                 $vm.load_resource("https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css",function(){})
                 $vm.load_resource("https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js",function(){})
-                //here to add external resources link
-                //$vm.load_resource("https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js",function(){})
-                //$vm.load_resource("https://sdk.amazonaws.com/js/aws-sdk-2.1.34.min.js",function(){})
-                //$vm.load_resource("https://www.gstatic.com/charts/loader.js",function(){})
+                $vm.load_resource("https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js",function(){})
+                $vm.load_resource("https://sdk.amazonaws.com/js/aws-sdk-2.1.34.min.js",function(){})
+                $vm.load_resource("https://www.gstatic.com/charts/loader.js",function(){})
                 //------------------------------------
                 $vm.show_module($vm.first_module,{})
                 $vm.ready();
@@ -211,13 +218,12 @@
             //---------------------------------------------
             $vm.boot(); //start from here
             //=================================================
-            //background and header style while scrolling
             $(window).on('scroll', function() {
             if($vm.active_name=='home'){
                 var y=-$(window).scrollTop()/3;
                 $('body').css({ 'background-position-y': y+'px'});
                 var r=-y/100; if(r>0.5) r=0.5;
-                $("#header").css("background","rgba(0,0,0,"+r+")");
+                //$("#header").css("background","rgba(0,0,0,"+r+")");
             }
             //=================================================
         });
@@ -237,14 +243,12 @@
                 grid-template-rows: 1fr;
             }
             #header{
-                /*
                 position:fixed;
                 top:0;
                 left:0;
-                */
                 width:100%;
                 background:rgba(0,0,0,0.0);
-                /*z-index:10;*/
+                z-index:10;
             }
             @keyframes vm_module_fadein {
                 from { opacity:0; }
@@ -271,9 +275,8 @@
                     visibility: visible;
                 }
             }
-            body{background-size: cover; background-repeat: repeat-x; background-position: center top; background-attachment: fixed;}
-            /*background image*/
-            /*.body_background_default{ background-image: url(https://images.unsplash.com/photo-1601929448175-41b3228fa3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);}*/
+            /*body{background-size: cover; background-repeat: repeat-x; background-position: center top; background-attachment: fixed;}
+            .body_background_default{ background-image: url(https://images.unsplash.com/photo-1465220183275-1faa863377e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);}*/
         </style>
         <!----------------------------------------------->
     </body>

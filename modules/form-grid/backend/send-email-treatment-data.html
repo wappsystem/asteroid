@@ -9,12 +9,12 @@
             //-------------------------------------
             $('#title__ID').text('Participants');            
             //-------------------------------------
-            var fields="_Participant_ID|Participant,group,first_name,last_name,phone,email,contact,access_code,bl,Start_Date,w0_email,w3_email,w5_email,w8_email,w8,w8_rem_1,w8_rem_2,w16_email,w16,w16_rem_1,w16_rem_2,w26_email,w26,w26_rem_1,w26_rem_2,ac_email";
+            var fields="_Participant_ID|Participant,group,first_name,last_name,phone,email,contact,access_code,bl,ac_email,Fitbit_sent,Start_Date,w0_email,w3_email,w3,w3_rem_1,w3_rem_2,w8_email,w8,w8_rem_1,w8_rem_2,w16_email,w16,w16_rem_1,w16_rem_2,w26_email,w26,w26_rem_1,w26_rem_2";
             m.fields=""+fields+",Submit_date,Submitted_by,_Delete";
             //-------------------------------------
             var today;
             m.load=function(){
-                m.query={"Data.group": {"$eq" : "Control"}}
+                m.query={"Data.group": {"$eq" : "Treatment"}}
                 today = new Date();
             }
 
@@ -41,6 +41,16 @@
                     break;
                     case 'bl':
                         var v=records[I].Data.bl;
+                        if(v=='10'){
+                            td.html("<i class='fa fa-smile'></i>");
+                            td.css('color','green')
+                        }
+                        else{
+                            td.html("")
+                        }
+                    break;
+                    case 'w3':
+                        var v=records[I].Data.w3;
                         if(v=='10'){
                             td.html("<i class='fa fa-smile'></i>");
                             td.css('color','green')
@@ -98,6 +108,21 @@
                                 $vm.load_module_v2('send-email','',{record:records[I],email:'ac_email',title:'Send Access Code'})
                             })
                     break;
+                    case 'Fitbit_sent':
+                    var s=records[I].Data["Fitbit_sent"]
+                        if(s!='' && s!=null && s!=undefined){
+                            s=s.substring(0,10);
+                            var dt1=$vm.date_yyyymmdd_parse(s);
+                            html="<u style='cursor:pointer'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt1))+"</u>";
+                        }
+                        else {
+                            html="<u style='cursor:pointer'>Select Date</u>"
+                        }
+                        td.html(html);
+                            td.find('u').on('click',function(){
+                                $vm.load_module_v2('fitbit-sent','',{record:records[I]})
+                            })
+                    break;
                     case 'w0_email':
                         var s=records[I].Data["Start_Date"]
                         if(s!='' && s!=null && s!=undefined){
@@ -143,14 +168,14 @@
                             })
                         }
                     break;
-                    case 'w5_email':
+                    case 'w3_rem_1':
                         var s=records[I].Data["Start_Date"]
                         if(s!='' && s!=null && s!=undefined){
                             s=s.substring(0,10);
                             var dt1=$vm.date_yyyymmdd_parse(s);
-                            var dt2=$vm.date_add_days(dt1,35);
+                            var dt2=$vm.date_add_days(dt1,61);
                             var color='';
-                            s=records[I].Data['w5_email'];
+                            s=records[I].Data['w3_rem_1'];
                             if(s!='' && s!=null && s!=undefined){
                                 html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
                                 html+=' <i style="color:green;font-weight: 900" class="far fa-check-circle"></i>';
@@ -161,7 +186,29 @@
                             }
                             td.html(html);
                             td.find('u').on('click',function(){
-                                $vm.load_module_v2('send-email','',{record:records[I],email:'w5_email',title:'Week 5'})
+                                $vm.load_module_v2('send-email','',{record:records[I],email:'w3_rem_1',title:'Week 3 Reminder 1'})
+                            })
+                        }
+                    break;
+                    case 'w3_rem_2':
+                        var s=records[I].Data["Start_Date"]
+                        if(s!='' && s!=null && s!=undefined){
+                            s=s.substring(0,10);
+                            var dt1=$vm.date_yyyymmdd_parse(s);
+                            var dt2=$vm.date_add_days(dt1,66);
+                            var color='';
+                            s=records[I].Data['w3_rem_2'];
+                            if(s!='' && s!=null && s!=undefined){
+                                html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                                html+=' <i style="color:green;font-weight: 900" class="far fa-check-circle"></i>';
+                            }
+                            else{
+                                if(dt2 > today) html="<u style='cursor:pointer;color:black'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                                else html="<u style='cursor:pointer;color:red'>"+$vm.yyyymmdd_to_ddmmyyyy($vm.date_to_string_yyyymmdd(dt2))+"</u>";
+                            }
+                            td.html(html);
+                            td.find('u').on('click',function(){
+                                $vm.load_module_v2('send-email','',{record:records[I],email:'w3_rem_2',title:'Week 3 Reminder 2'})
                             })
                         }
                     break;

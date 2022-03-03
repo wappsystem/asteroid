@@ -42,7 +42,7 @@
                             $vm.request({cmd:'find',table:tables,query:query,limit:1},function(res){
                                 if (res.result.length != 0) {
                                     result=res.result[0];
-                                    console.log(JSON.stringify(result))
+                                    //console.log(JSON.stringify(result))
                                 }
                                 else $vm.alert("Sorry, something went wrong!")
                             })

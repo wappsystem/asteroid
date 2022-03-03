@@ -29,6 +29,11 @@
                         <input type="text" name="Start_Date" class="form-control" placeholder="">
                     </fieldset>
                 </div>
+                <div class="questiongroup">
+                    <fieldset class="pl-4">
+                        <input type="text" name="access_code" class="form-control" placeholder="">
+                    </fieldset>
+                </div>
                 <div class='row px-4'>
                     <div class="col-sm-12 col-lg-3 row_participant__ID">
                         <label class=''><span class=''>bl</span>
@@ -169,16 +174,6 @@
                             <input type=date class=form-control name=ac_email readonly>
                         </label>
                     </div>
-                    <div class="col-sm-12 col-lg-3 row_participant__ID">
-                        <label class=''><span class=''>ac rem 1</span>
-                            <input type=date class=form-control name=ac_rem_1 readonly>
-                        </label>
-                    </div>
-                    <div class="col-sm-12 col-lg-3 row_participant__ID">
-                        <label class=''><span class=''>ac rem 2</span>
-                            <input type=date class=form-control name=ac_rem_2 readonly>
-                        </label>
-                    </div>
                 </div>
 
             </div>
@@ -193,25 +188,21 @@
     <script>
     	function F__ID(){
             /*VmInclude: '__HOST__/assets/js/form.01.js'*/
-            var progress="";
+            var timepoint="";
             //-------------------------------------------            
             m.default_load = m.load;
             m.load = function () {
                 m.default_load();
-                console.log("Progress: "+JSON.stringify(m.input))
-                console.log("BL: "+JSON.stringify(m.input.progress))
-                progress=m.input.progress
-                //$('#F__ID input[name=Participant]').val(m.input.record.Data.Participant)
-                //$('#F__ID input[name=Participant_uid]').val(m.input.record.Data.Participant_uid)
-
+                timepoint=m.input.timepoint;
 				$('#submit__ID').click();
             }
             //-------------------------------------------
-            m.before_submit = function (data, index) {
-                data.bl=progress;
-                return;
+            m.after_update = function (data,index) {
+                if (m.prefix == undefined) { $vm.load_module(timepoint+'-panel', '', {}); }
+                else {$vm.load_module(m.prefix + timepoint+'-panel', '', {});}
             }
-            //-------------------------------------------
+//-------------------------------------------
+            
 /* FOR UPDATING PROGRESS 
             m.after_insert = function (data,index) {
                 var records={};

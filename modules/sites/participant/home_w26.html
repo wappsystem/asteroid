@@ -1,9 +1,32 @@
 
 <div id=D__ID>
-	<div id=page__ID>
+	<div id=page__ID style="background-image: url(assets/images/bg-02.png)">
+        <div class="container">
+            <div class="cta-inner" style="background-image: url(assets/images/bg-03.png)">
+              <div class="cta-text"><img src="assets/images/logo.png" alt="SleepFix">
+                <h2>Questionnaire Portal</h2>
+                <p class="text-transparent text-lead">
+                </p>
+                <div class="btn-holder">
+                    <div class="">
+                        <input id=username__ID type=text placeholder="Username" class="" style="width:300px" autocomplete="off" />
+                    </div>
+                    <br>
+                    <div class="">
+                        <input class="" id=password__ID type="password" placeholder="Password"  style="width:300px" />
+                    </div>
+                        <br><span id="ErrMsg__ID" style='color:red'></span><br><br>
+                    <div class="">
+                        <input id=signin__ID type=button value='Sign in' class="btn btn-primary" value="Sign In" />&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--
 		<div id=panel__ID class="container-fluid" style='max-width:400px'>
 			<div class="text-center panel__ID">
-                    <!--<img style="width:100%" src="assets/images/logo_small.png">-->
+                    
                 <h2  class="text-center" >Entry to</h2>
                 <h4 class="text-center" >Questionnaire Portal</h4>
 	            <hr style='border-top:1px solid #fff;'></hr>
@@ -20,14 +43,17 @@
 	            </div>
 			</div>
 		</div>
+    -->
 	</div>
 <script>
     function F__ID(){
+        console.log("AA")
         //-------------------------------------
         var m=$vm.module_list['__MODULE__'];
         //-------------------------------------
 		$('#username__ID').val('');
         $('#password__ID').val('');
+        
 		var search=window.location.search
 		if(search.indexOf('username=')!=-1){
 			var txt=search.split('username=')[1];
@@ -50,7 +76,7 @@
             var password=$('#password__ID').val();
             $vm.request({cmd:"client-signin",table:m.Table,field:'_Password',username:username,password:password},function(res){
                 if(res.status=="np"){
-                    $('#ErrMsg__ID').text("Invalid participant login ID or password.")
+                    $('#ErrMsg__ID').text("Invalid Username or Password.")
                     return;
                 }
                 if(res.status=="ok"){
@@ -59,9 +85,10 @@
                     $vm.online_questionnaire=1;
                     $('#vm_username').text('Signed in as '+res.sys.username);
                     var x = document.getElementById("vm_signout");
-                    x.className="";
-                    console.log(JSON.stringify(res.result))
-                    $vm.load_module(m.questionnaire_panel,'',{record:res.result});
+                    x.style.display = "block"
+                    //console.log(x)
+                    //console.log(JSON.stringify(res.result))
+                    $vm.load_module("w26-panel",'',{record:res.result});
                 }
                 else{
                     $('#ErrMsg__ID').text("Invalid participant login ID or password.")
@@ -71,31 +98,12 @@
     }
 </script>
    <style>
-    #D__ID{
-        height:100%;
-        overflow:auto;
-        animation: vm_module_fadein 1.0s;
-    }
     #page__ID{
         height:100%;
         display: flex;
         align-items: center;
     }
-    .panel__ID{
-        color:#fff;
-        font-weight: normal;
-        background-color: rgba(75, 75, 75, 0.9);
-        padding: 30px 60px 30px 60px;
-        border-radius: 15px;
-    }
-    @media screen and (max-width:786px){
-        #page__ID{
-            /*display: block;*/
-        }
-    }
-    #panel__ID li{
-        cursor:pointer;
-    }
-    VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    /*VmInclude:__HOST__/assets/css/style.css*/
 </style>
 </div>

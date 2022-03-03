@@ -44,15 +44,15 @@
 		//--------------------------------------------------------
 		$('#D__ID').on('show',function(){
             var record=$vm.vm['__ID'].input.record;
-			id_list='demographic-form,psqi-bl-form,gad7-bl-form,ffs-bl-form,ess-bl-form,bc-cci-bl-form,eq-5d-bl-form,eheals-bl-form'
-			//id_list='demographic-form,gad7-bl-form,eheals-bl-form'
+            id_list='isi-w26-form,psqi-w26-form,phq-w26-form,gad7-w26-form,ffs-w26-form,ess-w26-form,bc-cci-w26-form,eq-5d-w26-form'
+			//id_list='eq-5d-w26-form'
             if(id_list==undefined){
                 alert("No questionnaire was found");
                 return;
             }
-
 			setup_panel();
 		})
+
 		//--------------------------------------------------------
 		var status=[]
 		//---------------------------------

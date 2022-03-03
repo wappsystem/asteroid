@@ -88,6 +88,7 @@
                 </div>
                 <div style="display:none">
                     <input type=text class=form-control name=_Password>
+                    <input type=text class=form-control name=List>
                 </div>
                 <div class="box" style="text-align:right">
                     <div class="box-item">
@@ -155,6 +156,10 @@
                 }
             })
             //---------------------------------------
+            m.before_submit=function(data,index){
+                data.List='demographic-form,psqi-bl-form,gad7-bl-form,ffs-bl-form,ess-bl-form,bc-cci-bl-form,eq-5d-bl-form,eheals-bl-form'
+            }
+            //---------------------------------------
             m.after_insert = function (data,index) {
                 var db=""; 
                 //console.log(JSON.stringify(index) + " - "+index.result.ops[0].UID)
@@ -164,7 +169,7 @@
                 var u="?username="+index.result.ops[0].UID+"&password="+$('#F__ID input[name=_Password').val();
                 $('#id__ID').text(index.result.ops[0].UID);
                 $('#password__ID').text($('#F__ID input[name=_Password').val());
-                var q_url=$vm.hosting_path+"/participant.html"+u+db+d+p;
+                var q_url=$vm.hosting_path+"/bl_quest.html"+u+db+d+p;
                 $('#refnum__ID').text(q_url);
                 $('#asteroind_registration__ID').attr("href",q_url)
                 $('#link__ID').show();

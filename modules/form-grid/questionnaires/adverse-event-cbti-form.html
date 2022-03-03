@@ -578,6 +578,30 @@
             /*VmInclude:__COMPONENT__/f/form.01.js*/
             /*VmInclude:__HOST__/assets/js/shared-form.js*/
             //-------------------------------------
+            m.after_insert = function (data,index) {
+                var timepoint=(index.result.ops[0].Table).split('-');
+                timepoint=timepoint[timepoint.length-1];
+                console.log(timepoint)
+                var records={};
+                jQuery.ajaxSetup({async:false});
+                $vm.request({cmd:"find-s",table:$vm.module_list['progress-data'].Table,options:{}},function(res){
+                    if(res.permission==false){
+                        alert("No permission");
+                        return;
+                    }
+                    if(res.result.length==0){
+                    }
+                    else{
+                        if(timepoint=='w3') res.result[0].Data.w3='10';
+                        else if(timepoint=='w8') res.result[0].Data.w8='10';
+                        records=res.result[0]
+                    }
+                })
+                if (m.prefix == undefined) { $vm.load_module('progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1}); }
+                else {$vm.load_module(m.prefix + 'progress-mod-form', '', {record:records,progress:'10',timepoint:timepoint,goback:1});}
+				jQuery.ajaxSetup({async:true});
+            }
+
         }
     </script>
     <style>
