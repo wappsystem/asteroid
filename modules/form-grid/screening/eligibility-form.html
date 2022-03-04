@@ -1064,7 +1064,8 @@
                 else if (current_I == 2) {
                     calc_scores();
                     //console.log("All scores: " + JSON.stringify(scores))
-                    if ((parseFloat(scores.ISI) < 10)) {
+                    if ((parseFloat(scores.ISI) < 10) ||
+                        (parseFloat(scores.ISI_1) < 3)) {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
