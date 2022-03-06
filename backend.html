@@ -31,7 +31,7 @@
         <!----------------------------------------------->
         <script app code>
             //---------------------------------------------
-            $VmAPI={};$vm.ver=[0.17,0.01]; $vm['jquery-ui-min-js']=1;
+            $VmAPI={};$vm.ver=[0.18,0.02]; $vm['jquery-ui-min-js']=1;
             $vm.flexindex=new FlexSearch({  doc: {id: "id",field: ["title","contents"]}    });
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
@@ -39,20 +39,8 @@
                 header:         {url:$vm.hosting_path+"/modules/sites/backend/header.html"},
                 footer:         {url:$vm.hosting_path+"/modules/sites/backend/footer.html"},
                 home:           {url:$vm.hosting_path+"/modules/sites/backend/home.html",router:1},
-                //auth:           {url:$vm.hosting_path+"/modules/system/auth.html"},
-                
-                //query:          {url:$vm.hosting_path+"/modules/system/query.html"},
-                //vmext:          {url:$vm.hosting_path+"/modules/system/vm-extension.html"},
-                //panel:          {url:$vm.hosting_path+"/modules/panels/panel.html"},
-
-                /*
-                jsonv:      {url:$vm.hosting_path+"/modules/system/viewer-json.html"},
-                gridv:      {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
-                gridv2:     {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
-                gridv3:     {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
-                arrayv:     {url:$vm.hosting_path+"/modules/system/viewer-array.html"},
-                */
-
+                init_and_auth:  {url:$vm.hosting_path+"/modules/system/init-and-auth.html"},
+                vmext:          {url:$vm.hosting_path+"/modules/system/vm-extension.html"},
             }
             //---------------------------------------------
             $vm.first_module='home';
@@ -168,11 +156,9 @@
             $vm.install=function(){
                 //---------------------------------------------
                 $vm.init();
-                $vm.load_component('header','header',{});
-                $vm.load_component('footer','footer',{});
-                //$vm.install_module('auth','',{},function(name,id){});
-                //$vm.install_module('query','',{},function(name,id){});
-                //$vm.install_module('vmext','',{},function(name,id){});
+                $vm.install_component('header','header',{},function(nm){ $vm.install_module('init_and_auth','',{},function(name,id){}); });
+                $vm.install_component('footer','footer',{});
+                $vm.install_module('vmext','',{},function(name,id){});
                 var install_one=function(m,t){
                     setTimeout(function (){ 
                         $.ajaxSetup({cache:true}); 
