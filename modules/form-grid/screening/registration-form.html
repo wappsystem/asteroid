@@ -195,8 +195,8 @@
                 });
                 // -------------------------------------------------
                 var param = [];
-				var url='https to email';
-				var sms_url='https to sms';
+				var url='https://prod-16.australiasoutheast.logic.azure.com:443/workflows/0b629b773bb041b4a7d3c32e306f26ea/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OeUNihtrWSKL8eSpsFgINO9DVoWBy5l0C4RmJYACOZE';
+				var sms_url='https://prod-03.australiasoutheast.logic.azure.com:443/workflows/eed8c7b103234b02a09a703cc6f501f2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Z-qKIOUSRbMY-i6_BS32lbZy30kcoPFAZPfh15uGdIE';
 				param.push(data.email); //0
 				param.push(data.first_name); //1
 				param.push(q_url); //2
@@ -228,12 +228,11 @@
                             $vm.alert(url + ", 404 (Not found)");
                         }
                     }
-                /*
+                
                     xmlHttp.open("POST", url, true); // true for asynchronous
                     xmlHttp.setRequestHeader("Content-Type", "application/json");
                     xmlHttp.send(JSON.stringify(data));
-                */
-               alert("Registration email sent" +JSON.stringify(data))
+                    //alert("Registration email sent" +JSON.stringify(data))
                 }
                 //------------------------------------
                 //SMS alert

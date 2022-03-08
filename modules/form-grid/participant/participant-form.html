@@ -100,6 +100,14 @@
                             //if(index.I3=="Control") data.Start_Date=index.I2;
                         }
                     });
+                    var tb = $vm.module_list["access-code-data"].Table;
+                    var query={UID:index.I1}
+                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                        if (res.result.length != 0) {
+                            //console.log(JSON.stringify(res.result[0].Data.Group))
+                            data.access_code=res.result[0].Data.access_code;
+                        }
+                    });
                 jQuery.ajaxSetup({ async: true });
 			}
 			//-------------------------------------

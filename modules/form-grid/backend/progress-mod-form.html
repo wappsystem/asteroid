@@ -207,7 +207,7 @@
             m.after_insert = function (data,index) {
                 var records={};
                 jQuery.ajaxSetup({async:false});
-                $vm.request({cmd:"find-s",table:$vm.module_list['progress-data'].Table,options:{}},function(res){
+                $vm.request({cmd:"find-s",table:$vm.module_list['progress-mod-form'].Table,options:{}},function(res){
                     if(res.permission==false){
                         alert("No permission");
                         return;
