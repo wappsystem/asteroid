@@ -59,7 +59,7 @@
                                 <input type="radio" name="BC_CCI_1" value="3">
                                 <span class="checkmark no-dot">3</span></label>
                           </fieldset>
-                          <label id=ess_sel_1>&nbsp;</label>
+                          <label id=bc_cci_sel_1>&nbsp;</label>
                      </div>
       		      </div>
                   <div class="form-group">
@@ -79,7 +79,7 @@
                                <input type="radio" name="BC_CCI_2" value="3">
                                <span class="checkmark no-dot">3</span></label>
                          </fieldset>
-                         <label id=ess_sel_2>&nbsp;</label>
+                         <label id=bc_cci_sel_2>&nbsp;</label>
                     </div>
                   </div>
                   <div class="form-group">
@@ -99,7 +99,7 @@
                               <input type="radio" name="BC_CCI_3" value="3">
                               <span class="checkmark no-dot">3</span></label>
                         </fieldset>
-                        <label id=ess_sel_3>&nbsp;</label>
+                        <label id=bc_cci_sel_3>&nbsp;</label>
                      </div>
                   </div>
                   <div class="form-group">
@@ -119,7 +119,7 @@
                                  <input type="radio" name="BC_CCI_4" value="3">
                                  <span class="checkmark no-dot">3</span></label>
                            </fieldset>
-                           <label id=ess_sel_4>&nbsp;</label>
+                           <label id=bc_cci_sel_4>&nbsp;</label>
                       </div>
                   </div>
                   <div class="form-group">
@@ -139,7 +139,7 @@
                                 <input type="radio" name="BC_CCI_5" value="3">
                                 <span class="checkmark no-dot">3</span></label>
                           </fieldset>
-                          <label id=ess_sel_5>&nbsp;</label>
+                          <label id=bc_cci_sel_5>&nbsp;</label>
                      </div>
                   </div>
                   <div class="form-group">
@@ -159,7 +159,7 @@
                                <input type="radio" name="BC_CCI_6" value="3">
                                <span class="checkmark no-dot">3</span></label>
                          </fieldset>
-                         <label id=ess_sel_6>&nbsp;</label>
+                         <label id=bc_cci_sel_6>&nbsp;</label>
                     </div>
                   </div>
                   <div class="box" style="text-align:right">
@@ -215,22 +215,22 @@
           }
           //-------------------------------------
          var set_selected_text=function(i){
-             $("#ess_sel_"+i+"").css('padding-top','10px').css('color','#EA7859');
+             $("#bc_cci_sel_"+i+"").css('padding-top','10px').css('color','#EA7859');
              switch ($("#D__ID input[name=BC_CCI_"+i+"]:checked").val()) {
                  case '0':
-                     $("#ess_sel_"+i+"").text("Not at all");
+                     $("#bc_cci_sel_"+i+"").text("Not at all");
                  break;
                  case '1':
-                     $("#ess_sel_"+i+"").text("Some");
+                     $("#bc_cci_sel_"+i+"").text("Some");
                  break;
                  case '2':
-                     $("#ess_sel_"+i+"").text("Quite a bit");
+                     $("#bc_cci_sel_"+i+"").text("Quite a bit");
                  break;
                  case '3':
-                     $("#ess_sel_"+i+"").text("Very much");
+                     $("#bc_cci_sel_"+i+"").text("Very much");
                  break;
                  default:
-                    $("#ess_sel_"+i+"").text("");
+                    $("#bc_cci_sel_"+i+"").text("");
                 break;
              }
          }
