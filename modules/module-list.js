@@ -58,10 +58,10 @@
     m[p+"address-data"] ={url:H+"/form-grid/questionnaires/address-data.html",Table:"asteroid-partb-address",form_module:"address-form", task_name:"Address for sending Fitbit" };
     m[p+"address-form"] ={url:H+"/form-grid/questionnaires/address-form.html",Table:"asteroid-partb-address", task_name:"Address for sending Fitbit" };
 
-    /* 
+     
     m[p+"isi-bl-data"]      ={url:H+"/form-grid/questionnaires/isi-bl-data.html",Table:"asteroid-partb-screening",form_module:"isi-bl-form", task_name:"Baseline - Insomnia Severity Index" };
     m[p+"isi-bl-form"]      ={url:H+"/form-grid/questionnaires/isi-form.html",Table:"asteroid-partb-screening", task_name:"Baseline - Insomnia Severity Index" };
-*/
+
     m[p+"psqi-bl-data"]      ={url:H+"/form-grid/questionnaires/psqi-data.html",Table:"asteroid-partb-psqi-bl",form_module:"psqi-bl-form", task_name:"Baseline - Pittsburgh Sleep Quality Index" };
     m[p+"psqi-bl-form"]      ={url:H+"/form-grid/questionnaires/psqi-form.html",Table:"asteroid-partb-psqi-bl", task_name:"Baseline - Pittsburgh Sleep Quality Index" };
     m[p+"phq-bl-data"]      ={url:H+"/form-grid/questionnaires/phq-data.html",Table:"asteroid-partb-phq-bl",form_module:"phq-bl-form", task_name:"Baseline - Patient Health Questionnaire" };
@@ -153,7 +153,7 @@
 
     if(window.location.toString().indexOf('tb=demo')!=-1){
         for(p in $vm.module_list){
-            $vm.module_list[p].Table=""+$vm.module_list[p].Table;
+            $vm.module_list[p].Table="demo-"+$vm.module_list[p].Table;
         }
     }
 
