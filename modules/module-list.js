@@ -33,6 +33,11 @@
     m[p+"oq-w16"] ={url:I+"/w16_quest_ihs.html"},
     m[p+"oq-w26"] ={url:I+"/w26_quest_bwj.html"},
     m[p+"oq"] ={url:I+"/participant.html"},
+    m[p+"shm1-w0"] ={url:I+"/nfuo.html"},
+    m[p+"shm2-w3"] ={url:I+"/ktpa.html"},
+    m[p+"shm3-w5"] ={url:I+"/jvqs.html"},
+
+
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
     m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"asteroid-partb-screening",router:1 };
     m[p+"bl-panel"]     ={url:H+"/panels/bl_quest.html"};

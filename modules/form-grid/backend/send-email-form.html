@@ -89,7 +89,7 @@
                     case 'w0_email':
                         if(group=='Control'){
                             //$vm.alert('Send Sleep Health Education Module 1 Email')
-                            q_url='Sleep Health Education Module 1 Email';
+                            q_url=$vm.module_list['shm1-w0'].url;
                             url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/967093c2ea954c84af95649edb650875/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=NSHciFYI-UA0ssd0GvvY1l-e5_u-nikQVGXwg3tfdWQ';
     					 	sms_url='https://prod-23.australiasoutheast.logic.azure.com:443/workflows/d8ef997811084931a0e7000b6475cb5e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=CQtU5SIPDLQxELJJewDrDIiyCMjjDMfsLu4KMvAOPpk';
                         }
@@ -99,6 +99,7 @@
                     case 'w3_email':
                         if(group=='Control'){
                             //$vm.alert('Send Sleep Health Education Module 2 Email')
+                            q_url=$vm.module_list['shm2-w3'].url;
                             url='https://prod-13.australiasoutheast.logic.azure.com:443/workflows/b43204cc935f4443b21a6809f6b9811d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qifncgiTooOZUqOBuE-AP3z6TTRCaYaAWKYLEE6DwgY'
                             sms_url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/0ac176f9a6074d2780b8945722755952/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0kNfJJt8xwmSLjeTc9WuTiMDttnAFF4HT7sKjJGMPYc'
                         }
@@ -132,6 +133,7 @@
                     case 'w5_email':
                         if(group=='Control'){
                             //$vm.alert('Send Sleep Health Education Module 3 Email')
+                            q_url=$vm.module_list['shm3-w5'].url;
                             url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/c5eac82f5f4d4bd6b8a0a90919211a98/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lNyBk_m1vZ2pmwLS6fsjERlBDn62vq2cRo9_RmOQU9M'
                             sms_url='https://prod-11.australiasoutheast.logic.azure.com:443/workflows/785282ae03894484a54d90fef64bf485/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=jCFwWw_0s4j3gzHHpyEAFSILuAzw5dhdJP7AxpzQp5g'
                         }
