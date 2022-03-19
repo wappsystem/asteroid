@@ -264,12 +264,13 @@
                     break;
                     
 				}
+                console.log("DATA: "+JSON.stringify(data))
 				param.push(data.email); //0
 				param.push(data.first_name); //1
 				param.push(q_url); //2
 				param.push(data.access_code); //3
 				param.push(data.phone) //4
-				param.push(data.sms) //5
+				param.push(data.contact) //5
 				param.push(url) //6
 				param.push(sms_url) //7
 				//$vm.alert('Send Email Disabled Email:'+param[0]+' First Name:'+param[1]+' Access Code:'+param[3]+' Phone:'+param[4]+' SMS:'+param[5]); 
@@ -284,29 +285,31 @@
             var send_email = function (param) {
                 var url = param[6]
                 var sms_url = param[7]
-                var data = {
-                    "emailaddress": "" + param[0] + "",
-                    "first_name": "" + param[1] + "",
-                    "link": "" + param[2] + "",
-                    "code": "" + param[3] + ""
+                if(param[5]=='2' || param[5]=='3'){
+                    var data = {
+                        "emailaddress": "" + param[0] + "",
+                        "first_name": "" + param[1] + "",
+                        "link": "" + param[2] + "",
+                        "code": "" + param[3] + ""
+                    }
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                        }
+                        else if (this.readyState == 4 && this.status == 403) {
+                        }
+                        if (this.status == 404) {
+                            $vm.alert(url + ", 404 (Not found)");
+                        }
+                    }
+                    xmlHttp.open("POST", url, true); // true for asynchronous
+                    xmlHttp.setRequestHeader("Content-Type", "application/json");
+                    xmlHttp.send(JSON.stringify(data));
                 }
-                var xmlHttp = new XMLHttpRequest();
-                xmlHttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                    }
-                    else if (this.readyState == 4 && this.status == 403) {
-                    }
-                    if (this.status == 404) {
-                        $vm.alert(url + ", 404 (Not found)");
-                    }
-                }
-                xmlHttp.open("POST", url, true); // true for asynchronous
-                xmlHttp.setRequestHeader("Content-Type", "application/json");
-                xmlHttp.send(JSON.stringify(data));
                 //------------------------------------
                 //SMS alert
 				//------------------------------------
-                if(param[5]=='on'){
+                if(param[5]=='1' || param[5]=='3'){
                     var sms_data = {
                         "emailaddress": "" + param[4].replace(/-/g,'') + "@e2s.directsms.com.au",
                         "first_name": "" + param[1] + "",
@@ -326,7 +329,7 @@
                     sms_xmlHttp.open("POST", sms_url, true); // true for asynchronous
                     sms_xmlHttp.setRequestHeader("Content-Type", "application/json");
                     sms_xmlHttp.send(JSON.stringify(sms_data));                                        
-				}
+				}              
 			}
 			//-------------------------------------
             var get_now_date = function () {
