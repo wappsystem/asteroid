@@ -31,14 +31,14 @@
         <!----------------------------------------------->
         <script app code>
             //---------------------------------------------
-            $VmAPI={};$vm.ver=[0.25,0.02]; $vm['jquery-ui-min-js']=1;
+            $VmAPI={};$vm.ver=[0.01,0.01]; $vm['jquery-ui-min-js']=1;
             $vm.flexindex=new FlexSearch({  doc: {id: "id",field: ["title","contents"]}    });
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
             $vm.module_list={
                 header:         {url:$vm.hosting_path+"/modules/sites/screening/header.html"},
                 footer:         {url:$vm.hosting_path+"/modules/sites/screening/footer.html"},
-                screening:      {url:$vm.hosting_path+"/modules/form-grid/screening/eligibility-form.html",Table:"asteroid-partb-screening", title:'Asteroid Study - Screening', questionnaires:"$H/m/oq-panel.html"},
+                screening:      {url:$vm.hosting_path+"/modules/form-grid/screening/eligibility-parta-form.html",Table:"asteroid-partb-screening", title:'Asteroid Study - Screening', questionnaires:"$H/m/oq-panel.html"},
                 
                 /*
                 auth:           {url:$vm.hosting_path+"/modules/system/auth.html"},
