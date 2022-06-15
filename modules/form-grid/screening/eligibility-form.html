@@ -54,6 +54,26 @@
                             </fieldset>
                         </div>
                     </div>
+                    <div id="q_smartphone__ID" style="display:none">
+                        <div class="form-group box">
+                            <div class="row">
+                                <div class="col-sm control-group">
+                                    <h3>3a. What type of smartphone do you have?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="questiongroup">
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="smartphone_type" value="ios" required>
+                                        <span class="checkmark"></span>iOS (iPhone)</label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="smartphone_type" value="android">
+                                        <span class="checkmark"></span>Android</label>
+                                </fieldset>
+                            </div>
+                        </div>    
+                    </div>
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
@@ -884,6 +904,8 @@
                 $('#night_terrors__ID').removeAttr('required');
                 $('#act_out__ID').removeAttr('required');
                 $('#nightmares__ID').removeAttr('required');
+                $("#D__ID input[name=smartphone_type]").removeAttr('required');
+
                 show_section(1);
                 //console.log(JSON.stringify(m))
             });
@@ -969,6 +991,17 @@
                 }
             });
             //---------------------------------------
+            $("#D__ID input[name=smartphone]").on('change', function () {
+                if($("#D__ID input[name=smartphone]:checked").val()=='Y'){
+                    $('#q_smartphone__ID').show(); 
+                    $("#D__ID input[name=smartphone_type]").prop('required','true');
+                }
+                else{
+                    $('#q_smartphone__ID').hide(); 
+                    $("#D__ID input[name=smartphone_type]").removeAttr('required');
+                }
+            });
+            //---------------------------------------
             $("#D__ID input[name=PHQ_9]").on('change', function () {
                 if ($("#D__ID input[name=PHQ_9]:checked").val() != '0') {
                     $('#phq9__ID').show();
@@ -1044,16 +1077,19 @@
                         $("input[name='medications']:checked").val() == 'Y' ||
                         $("input[name='heavy_machinery']:checked").val() == 'Y' ||
                         $("input[name='cbt']:checked").val() == 'Y' ||
-                        $("input[name='PHQ_9']:checked").val() != '0')
+                        $("input[name='PHQ_9']:checked").val() != '0'  || 
+                        $("input[name='smartphone_type']:checked").val()!= 'ios' )
                         {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { 
                             if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
+                            else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligiosb', '', {});
                             else $vm.load_module('not_elig1', '', {});
                             }
                         else{ 
                             if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
+                            else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module(m.prefix + 'not_eligiosb', '', {});
                             else $vm.load_module(m.prefix + 'not_elig1', '', {})
                         } 
                     }
