@@ -73,6 +73,16 @@
                                 </fieldset>
                             </div>
                         </div>    
+                        <div id="q_smartphone_text__ID" style="display:none">
+                            <div class="form-group box" style="background-color:khaki" >
+                                <div class="row">
+                                    <div class="col-sm control-group">
+                                        <h3>You are not eligible for this study at this point but if you would like to be considered for our future android release, please email your contact details to woolcock.asteroid@sydney.edu.au
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>    
                     </div>
                     <div class="form-group box">
                         <div class="row">
@@ -999,6 +1009,15 @@
                 else{
                     $('#q_smartphone__ID').hide(); 
                     $("#D__ID input[name=smartphone_type]").removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#D__ID input[name=smartphone_type]").on('change', function () {
+                if($("#D__ID input[name=smartphone_type]:checked").val()=='android'){
+                    $('#q_smartphone_text__ID').show(); 
+                }
+                else{
+                    $('#q_smartphone_text__ID').hide(); 
                 }
             });
             //---------------------------------------
