@@ -879,6 +879,7 @@
             //---------------------------------------
             var N = 3;
             var current_I = 1;
+            var registration_ready=false;
             //---------------------------------------
             m.before_submit = function (data, index) {
                 data.ISI = scores.ISI;
@@ -1131,30 +1132,18 @@
                     }
                 }
                 else if (current_I == 3) {
-                    if (($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='sleep_attacks']:checked").val() =='Y' ) ||
-                    ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='muscle_weakness']:checked").val() =='Y' ) ||
-                    ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='hallucinations']:checked").val() =='Y' ) ||
-                    ($("input[name='fall_asleep']:checked").val() == 'Y' && $("input[name='paralyzed']:checked").val() =='Y' ) ||
-                    ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='stop_breathing']:checked").val() =='Y' ) ||
-                    ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='gasping']:checked").val() =='Y' ) ||
-                    ($("input[name='heavy_snorer']:checked").val() == 'Y' && $("input[name='sleepy']:checked").val() =='Y' ) ||
-                    ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='muscle_jerks']:checked").val() =='Y' ) ||
-                    ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='wake_leg_jerk']:checked").val() =='Y' ) ||
-                    ($("input[name='legs_twitch']:checked").val() == 'Y' && $("input[name='pace_around']:checked").val() =='Y' ) ||
-                    ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='stay_up_late']:checked").val() =='Y' ) ||
-                    ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='sleep_longer']:checked").val() =='Y' ) ||
-                    ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='bed_early']:checked").val() =='Y' ) ||
-                    ($("input[name='wrong_times']:checked").val() == 'Y' && $("input[name='wake_early']:checked").val() =='Y' ) ||
-                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='sleepwalk']:checked").val() =='Y' ) ||
-                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='night_terrors']:checked").val() =='Y' ) ||
-                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='act_out']:checked").val() =='Y' ) ||
-                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' && $("input[name='nightmares']:checked").val() =='Y' )) {
+                    if (($("input[name='fall_asleep']:checked").val() == 'Y' ) ||
+                    ($("input[name='heavy_snorer']:checked").val() == 'Y' ) ||
+                    ($("input[name='legs_twitch']:checked").val() == 'Y' ) ||
+                    ($("input[name='wrong_times']:checked").val() == 'Y' ) ||
+                    ($("input[name='unusual_behaviours']:checked").val() == 'Y' )){
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
                         else $vm.load_module(m.prefix + 'not_elig1', '', {});
                     }
                     else {
+                        registration_ready=true
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                     }
@@ -1164,7 +1153,7 @@
             //--------------------------------
             m.after_insert = function (data,index) {
                 console.log(JSON.stringify(index) + " - "+index.result.ops[0]._id)
-                if(data.unusual_behaviours!=undefined){
+                if(registration_ready){
                     if (m.prefix == undefined) { $vm.load_module('registration-form', '', {rec_id:index.result.ops[0]._id}); }
                     else $vm.load_module(m.prefix + 'registration-form', '', {screen_data:index.result.ops[0].Data,rec_id:index.result.ops[0]._id});
                 }
