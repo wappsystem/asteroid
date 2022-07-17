@@ -42,7 +42,8 @@
 
 
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
-    m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"asteroid-partb-screening",router:1 };
+    m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-enrolled-data.html",Table:"asteroid-partb-screening",router:1 };
+    m[p+"screening-all-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"asteroid-partb-screening",router:1 };
     m[p+"bl-panel"]     ={url:H+"/panels/bl_quest.html"};
     m[p+"w0-panel"]     ={url:H+"/panels/w0_quest.html"};
     m[p+"w3-panel"]     ={url:H+"/panels/w3_quest.html"};
