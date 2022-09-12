@@ -120,8 +120,8 @@
     padding-right: 25px
 }
 #D__ID .btn-outline-light:hover {
-    color: #13B51F;*/
-}
+    color: #13B51F;
+}*/
 #D__ID p.note {
     font-family: 'Asap';
     font-weight: lighter;
@@ -304,35 +304,35 @@
 }
 @font-face {
     font-family: Asap;
-    src: url(../assets/fonts/Asap-Medium.woff2) format("woff2"), url(../assets/fonts/Asap-Medium.woff) format("woff");
+    src: url(assets/fonts/Asap-Medium.woff2) format("woff2"), url(assets/fonts/Asap-Medium.woff) format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: Asap;
-    src: url(../assets/fonts/Asap-Bold.woff2) format("woff2"), url(../assets/fonts/Asap-Bold.woff) format("woff");
+    src: url(assets/fonts/Asap-Bold.woff2) format("woff2"), url(assets/fonts/Asap-Bold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: Asap;
-    src: url(../assets/fonts/Asap-Regular.woff2) format("woff2"), url(../assets/fonts/Asap-Regular.woff) format("woff");
+    src: url(assets/fonts/Asap-Regular.woff2) format("woff2"), url(assets/fonts/Asap-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: Asap;
-    src: url(../assets/fonts/Asap-SemiBold.woff2) format("woff2"), url(../assets/fonts/Asap-SemiBold.woff) format("woff");
+    src: url(assets/fonts/Asap-SemiBold.woff2) format("woff2"), url(assets/fonts/Asap-SemiBold.woff) format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: Tiempos Headline;
-    src: url(../assets/fonts/TiemposHeadline-Bold.woff2) format("woff2"), url(../assets/fonts/TiemposHeadline-Bold.woff) format("woff");
+    src: url(assets/fonts/TiemposHeadline-Bold.woff2) format("woff2"), url(assets/fonts/TiemposHeadline-Bold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
