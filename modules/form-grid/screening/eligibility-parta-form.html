@@ -54,7 +54,7 @@
                             </fieldset>
                         </div>
                     </div>
-                    <div id="q_smartphone__ID" style="display:none">
+                    <!--<div id="q_smartphone__ID" style="display:none">
                         <div class="form-group box">
                             <div class="row">
                                 <div class="col-sm control-group">
@@ -73,7 +73,7 @@
                                 </fieldset>
                             </div>
                         </div>    
-                    </div>
+                    </div>-->
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
@@ -142,7 +142,7 @@
                             </fieldset>
                         </div>
                     </div>
-                    <div class="form-group box">
+                    <!--<div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
                                 <h3>7. Have you been diagnosed with any one or more of the following sleep disorders?
@@ -184,11 +184,11 @@
                                     <span class="checkmark"></span>No </label>
                             </fieldset>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>9. Does your job require you to regularly drive or operate heavy machinery?
+                                <h3>7. Does your job require you to regularly drive or operate heavy machinery?
                                 </h3>
                             </div>
                         </div>
@@ -206,7 +206,7 @@
                     <div class="form-group box">
                         <div class="row">
                             <div class="col-sm control-group">
-                                <h3>10. Are you currently receiving or have previously received (within the last 12
+                                <h3>8. Are you currently receiving or have previously received (within the last 12
                                     months) psychotherapy for insomnia including Cognitive Behavioural Therapy (CBT)?
                                 </h3>
                             </div>
@@ -226,7 +226,7 @@
                         <fieldset class="subquestions">
                             <h4>Over the last <u>2 weeks</u>, how often have you been bothered by the following problem?</h4>
                         </fieldset>
-                        <h3>11. Thoughts that you would be better off dead or of hurting yourself in some way</h3>
+                        <h3>9. Thoughts that you would be better off dead or of hurting yourself in some way</h3>
                         <div class="questiongroup">
                             <fieldset class="subquestions">
                                 <label class="radiobuttons">Not at all
@@ -852,6 +852,12 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group box">
+                        <h3>Please add any current medications:</h3>
+                        <fieldset class="pl-4">
+                            <textarea name="current_medication"></textarea>
+                        </fieldset>
+                    </div>
                     <div class="box" style="text-align:right">
                         <div class="box-item">
                             <button type="submit" d=1 class="btn btn-primary btn-lg">Submit</button>
@@ -906,7 +912,7 @@
                 $('#night_terrors__ID').removeAttr('required');
                 $('#act_out__ID').removeAttr('required');
                 $('#nightmares__ID').removeAttr('required');
-                $("#D__ID input[name=smartphone_type]").removeAttr('required');
+                //$("#D__ID input[name=smartphone_type]").removeAttr('required');
                 show_section(1);
                 //console.log(JSON.stringify(m))
             });
@@ -992,7 +998,7 @@
                 }
             });
             //---------------------------------------
-            $("#D__ID input[name=smartphone]").on('change', function () {
+            /*$("#D__ID input[name=smartphone]").on('change', function () {
                 if($("#D__ID input[name=smartphone]:checked").val()=='Y'){
                     $('#q_smartphone__ID').show(); 
                     $("#D__ID input[name=smartphone_type]").prop('required','true');
@@ -1001,7 +1007,7 @@
                     $('#q_smartphone__ID').hide(); 
                     $("#D__ID input[name=smartphone_type]").removeAttr('required');
                 }
-            });
+            });*/
             //---------------------------------------
             $("#D__ID input[name=PHQ_9]").on('change', function () {
                 if ($("#D__ID input[name=PHQ_9]:checked").val() != '0') {
@@ -1074,23 +1080,23 @@
                         $("input[name='shiftworker']:checked").val() != 'N' ||
                         $("input[name='travel2hours']:checked").val() == 'Y' ||
                         $("input[name='disorders']:checked").val() == 'Y' ||
-                        $("input[name='sleep_disorders']:checked").val() == 'Y' ||
-                        $("input[name='medications']:checked").val() == 'Y' ||
+                        //$("input[name='sleep_disorders']:checked").val() == 'Y' ||
+                        //$("input[name='medications']:checked").val() == 'Y' ||
                         $("input[name='heavy_machinery']:checked").val() == 'Y' ||
                         $("input[name='cbt']:checked").val() == 'Y' ||
-                        $("input[name='PHQ_9']:checked").val() != '0' || 
-                        $("input[name='smartphone_type']:checked").val()!= 'ios' )
+                        $("input[name='PHQ_9']:checked").val() != '0')
+                        //$("input[name='smartphone_type']:checked").val()!= 'ios' )
                         {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if (m.prefix == undefined) { 
                             if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
-                            else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligios', '', {});
+                            //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligios', '', {});
                             else $vm.load_module('not_elig1', '', {});
                             }
                         else{ 
                             if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module(m.prefix + 'not_eligphq9', '', {});
-                            else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module(m.prefix + 'not_eligios', '', {});
+                            //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module(m.prefix + 'not_eligios', '', {});
                             else $vm.load_module(m.prefix + 'not_elig1', '', {})
                         } 
                     }
