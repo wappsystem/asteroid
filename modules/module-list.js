@@ -16,7 +16,7 @@
 
     m[p+"participant-data"] ={url:H+"/form-grid/participant/participant-data.html",Table:"asteroid-partb-participant"
                             ,form_module:"participant-form",
-                            child_panel:"panel-child",
+                            child_panel:"backend-child",
                             online_questionnaire_bl:"oq-bl",
                             online_questionnaire_w0:"oq-w0",
                             online_questionnaire_w3:"oq-w3",
@@ -40,7 +40,7 @@
     m[p+"shm2-w3"] ={url:I+"/ktpa.html"},
     m[p+"shm3-w5"] ={url:I+"/jvqs.html"},
 
-
+    m[p+"backend-child"]    ={url:H+"/panels/backend-child.html", };
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
     m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-enrolled-data.html",Table:"asteroid-partb-screening",router:1 };
     m[p+"screening-all-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"asteroid-partb-screening",router:1 };
