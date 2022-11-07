@@ -453,7 +453,7 @@
             }
             //-------------------------------------
             m.after_insert = function (data,index) {
-                var timepoint=(index.result.ops[0].Table).split('-');
+                var timepoint=(index.nr.Table).split('-');
                 timepoint=timepoint[timepoint.length-1];
                 console.log(timepoint)
                 var records={};
