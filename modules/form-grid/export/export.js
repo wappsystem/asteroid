@@ -4,14 +4,41 @@ var all_data=[];
 var NN=0
 var bi_txt=[];
 var table_check=[];
+var part_query="";
+var part_query2="";
 //--------------------------------------------------------
-$vm.module_list["__MODULE__"].show=function(){
+$('#participant_status__ID').on('change', function(){
+	console.log($('#participant_status__ID').val());
+	var part_sel=$('#participant_status__ID').val()
+	switch(part_sel){
+		 case '0': part_query="";part_query2="";
+		 break;
+		 case '1': part_query="dBBTi with Fitbit";part_query2="Digital sleep health education"; //"{$or:[{"Data.Group":{$eq: 'dBBTi with Fitbit'}},{"Data.Group":{$eq: 'Digital sleep health education'}}]};
+		 break;
+		 case '2': part_query="dBBTi with Fitbit"; part_query2="dBBTi with Fitbit";//{"Data.Group": {"$eq" : "dBBTi with Fitbit"}};
+		 break;
+		 case '3': part_query="Digital sleep health education"; part_query2="Digital sleep health education";//{"Data.Group": {"$eq" : "Digital sleep health education"}};
+		 break;
+	}
+})
+//--------------------------------------------------------
+$("#D__ID").on('show', function(){
+	update_list();
+	var part_sel=$('#participant_status__ID').val()
+	switch(part_sel){
+		 case '0': part_query="";part_query2="";
+		 break;
+		 case '1': part_query="dBBTi with Fitbit";part_query2="Digital sleep health education"; //"{$or:[{"Data.Group":{$eq: 'dBBTi with Fitbit'}},{"Data.Group":{$eq: 'Digital sleep health education'}}]};
+		 break;
+		 case '2': part_query="dBBTi with Fitbit"; part_query2="dBBTi with Fitbit";//{"Data.Group": {"$eq" : "dBBTi with Fitbit"}};
+		 break;
+		 case '3': part_query="Digital sleep health education"; part_query2="Digital sleep health education";//{"Data.Group": {"$eq" : "Digital sleep health education"}};
+		 break;
+	}
+})
+//--------------------
+var update_list = function(){
 	export_list=[];
-	document.title="Export Setup | "+$vm.default_title;
-	console.log($vm.default_title)
-	$("meta[name='description']").attr("content","Export Setup");
-	//Get fields to export from each record
-	//console.log("Start")
 	var table=$vm.module_list['export-form'].Table;
 	$vm.request({cmd:'find',table:table},function(res){
 		if(res.status=='np'){
@@ -51,6 +78,7 @@ $vm.module_list["__MODULE__"].show=function(){
                     else if($vm.module_list[href]!=undefined) window.open($vm.module_list[href].url);
                     else alert("The '"+ href +"' is not defined in the module list");
                 }
+				update_list();
             })
             //--------------------------------------------------------
             $('#panel__ID a').each(function(){
@@ -251,8 +279,12 @@ var move_to_local_storage=function(tb,exp,count,$a){
 	console.log("table: "+tb+ " - "+exp)
 	if(tb!=undefined){
 		if(exp){
+			var query="";
 			//Export and store in local memory
-			var req={cmd:"export",table:tb,query:""}
+			if(tb.indexOf("participant")>=0){
+				//query=part_query;
+			}
+			var req={cmd:"export",table:tb,query:query}
 			open_model__ID();
 			$vm.request(req,function(N,i,txt){
 				//console.log(i+"/"+N);
@@ -443,7 +475,7 @@ var prepare_output=function(data){
 			//console.log("ALL part: "+JSON.stringify(participant_data))
 			var tmp=JSON.stringify(output_data).replace(/"off"/g,'0').replace(/"on"/g,'1') //.replace(',"":""','');
 			output_data=JSON.parse(tmp);
-			tmp=JSON.stringify(participant_data).replace(/"off"/g,'0').replace(/"on"/g,'1') //.replace(',"":""','');
+			tmp=JSON.stringify(participant_data).replace(/"off"/g,'0').replace(/"oprepare_outputn"/g,'1') //.replace(',"":""','');
 			participant_data=JSON.parse(tmp);
 			//Add a number "X_" for all labels apart from particpant and first records, so we don't have duplicated lables
 			if(j>0){
@@ -483,9 +515,11 @@ var combine_output=function(output,participant){
 	var final=[];
 	//Combine all reords
 	for(var j=0;j<participant[0].length;j++){
-		//var enrolled=false;
-		//if(participant[0][j].Randomisation_Number!='') enrolled=true;
-		//if((enrolled && enrolled_only) || (!enrolled_only) ){
+		var enrolled=false;
+		if(participant[0][j].Group==part_query || participant[0][j].Group==part_query2) enrolled=true;
+		if(part_query=="") enrolled=true;
+		console.log(participant[0][j].Group+'    '+part_query+'    '+part_query2+'    '+enrolled)
+		if((enrolled) ){
 			all=JSON.stringify(participant[0][j]);
 			for(var i=0;i<output.length;i++){
 				if(output[i][j]!=undefined ){
@@ -498,7 +532,7 @@ var combine_output=function(output,participant){
 			}
 			all=all.replace(/}{/g,',')
 			final.push(JSON.parse(all))
-		//}
+		}
 	}
 	//console.log(JSON.stringify(final));
 	$vm.download_csv(output_file_name+".csv",final);

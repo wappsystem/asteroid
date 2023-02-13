@@ -404,7 +404,7 @@ m.handleFileSelect=function(evt){
 if(document.getElementById('Import_f__ID')!=null) document.getElementById('Import_f__ID').addEventListener('change', m.handleFileSelect,false);
 //---------------------------------------------
 $('#export_all__ID').on('click',function(){
-    console.log(m)
+    console.log(export_fields +" - "+m.Table)
     var prefix=""; if(m.prefix!=undefined) prefix=m.prefix;
     $vm.load_module(prefix+"export-form",'',{tbl:m.Table,title:m.task_name,ex_flds:export_fields,goback:1});
 })

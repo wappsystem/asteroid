@@ -23,15 +23,18 @@
                             online_questionnaire_w8:"oq-w8",
                             online_questionnaire_w16:"oq-w16",
                             online_questionnaire_w26:"oq-w26",
-                            
+                            task_name:"Participant",
                             
     };                   
-    m[p+"panel-export-screening-all"]  ={url:H+"/form-grid/export/panel-export-screening-all.html",router:1},
+    m[p+"panel-export-registration"]  ={url:H+"/form-grid/export/panel-export-registration.html"},
+    m[p+"panel-export-week-8"]  ={url:H+"/form-grid/export/panel-export-week-8.html"},
+    m[p+"panel-export-week-16"]  ={url:H+"/form-grid/export/panel-export-week-16.html"},
+    m[p+"panel-export-week-26"]  ={url:H+"/form-grid/export/panel-export-week-26.html"},
     m[p+"export-data"]   ={url:H+"/form-grid/export/export-data.html",Table:"asteroid-export",form_module:"export-form"},
     m[p+"export-form"]   ={url:H+"/form-grid/export/export-form.html",Table:"asteroid-export"},
 
     m[p+"participant-form"] ={url:H+"/form-grid/participant/participant-form.html",Table:"asteroid-partb-participant"},
-    m[p+"notes-data"]       ={url:H+"/form-grid/questionnaires/notes-data.html",Table:"asteroid-partb-notes",form_module:"notes-form",router:1},
+    m[p+"notes-data"]       ={url:H+"/form-grid/questionnaires/notes-data.html",Table:"asteroid-partb-notes",form_module:"notes-form"},
     m[p+"notes-form"]       ={url:H+"/form-grid/questionnaires/notes-form.html",Table:"asteroid-partb-notes"},
     m[p+"oq-bl"] ={url:I+"/bl_quest.html"},
     m[p+"oq-w0"] ={url:I+"/w0_quest_utd.html"},
@@ -46,8 +49,8 @@
 
     m[p+"backend-child"]    ={url:H+"/panels/backend-child.html", };
     m[p+"backend-panel"]    ={url:H+"/panels/backend-main.html", };
-    m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-enrolled-data.html",Table:"asteroid-partb-screening",router:1 };
-    m[p+"screening-all-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"asteroid-partb-screening",router:1 };
+    m[p+"screening-data"]   ={url:H+"/form-grid/screening/eligibility-enrolled-data.html",Table:"asteroid-partb-screening" };
+    m[p+"screening-all-data"]   ={url:H+"/form-grid/screening/eligibility-data.html",Table:"asteroid-partb-screening"};
     m[p+"bl-panel"]     ={url:H+"/panels/bl_quest.html"};
     m[p+"w0-panel"]     ={url:H+"/panels/w0_quest.html"};
     m[p+"w3-panel"]     ={url:H+"/panels/w3_quest.html"};

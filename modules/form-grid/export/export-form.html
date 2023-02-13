@@ -22,8 +22,12 @@
 									<button type="button" style='cursor: pointer;' id=load_all__ID>Load all field names</button>
 								</div>
 							</div>
-							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
-							<button type="submit" id="delete__ID" class="btn btn-primary btn-lg">Delete</button>
+							<div class="box" style="text-align:right">
+								<div class="box-item">
+									<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+									<button type="submit" id="delete__ID" class="btn btn-primary btn-lg">Delete</button>
+								</div>
+							</div>	
 						</div>
 					</form>
 				</div>
@@ -46,6 +50,7 @@
 					$('#title__ID').html(m.input.title)
 					$('#F__ID input[name=Table_name').val(tbname)
 					//var tbname=$vm.module_list[m.input.link].Table;
+					console.log(tbname)
 					m.query={'Data.Table_name':tbname}
 					m.request_data()
 				}
@@ -98,6 +103,7 @@
 			max-width: 800px;
 		}
 
-		/*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
-	</style>
+    /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    /*VmInclude:__HOST__/assets/css/style.css*/
+</style>
 </div>

@@ -2,34 +2,42 @@
     <div>
         <div id=toolbar__ID class="navbar navbar-default">
         	<form class="form-inline">
-        		<button type=button id=count__ID class='btn btn-secondary'>Export All</button> <a class="small font-italic text-muted mt-1"><br>Exports all data based on the setup below into a combind cvs file</a>
+        		<button type=button id=count__ID class='btn btn-secondary'>Export All</button>
+				<label><span class="">Participants&nbsp;</span>
+					<select id="participant_status__ID" class=form-control>
+						<option value="1" selected>Randomised</option>
+						<option value="2">dBBTi with Fitbit</option>
+						<option value="3">Digital sleep health education</option>
+					</select>
+				</label><br>
+				<a class="small font-italic text-muted mt-1"><br>Exports all data based on the setup below into a combind cvs file</a>
         	</form>
         	<span id=elapsed__ID style='float:right'></span>
 		</div>
         <section id=panel__ID>
-			<h3>Asteroid Screening All</h3>
-			<span>Select what to export by clicking on each form links. <br>
-				It will take you to "data grid view". Click on  <button type=button class="btn btn-secondary" title='Specify fileds for Export All'><i class="fas fa-file-export" ></i></button> to select fields.</span><br>
-				 Current fields are listed below<br><br>
+			<h3>Week 26 Export Export</h3>
+			<span>Select the fields to export by clicking on each form links,<br> or directly in the "grid" view of each form  via this symbole <i class="fas fa-file-export" ></i></span><br>
+			<br>
         	<div class='nav__ID'>
         		<ul>
-					<li title="Manage participant - Add new. Data entry for single participant. Setup questionnaires."><a href=?/screening-all-data>Screening Data (All)</a></li>
-					<p id=participant-data__ID class="small font-italic text-muted mt-1">Not properly assigned. Order not controlled. Fields based on lasted entered record.</p>
+					<li title="Manage participant - Add new. Data entry for single participant. Setup questionnaires."><a href=?/participant-data>Participants</a></li>
+					<p id=participant-data__ID class="small font-italic text-muted mt-1">No setup found. To get the correct export make sure you do the setup.</p>
 				</ul>
+        	VmInclude:__CURRENT_PATH__/panel-export-week-26-task.html
         </section>
 	</div>
 	VmInclude:__COMPONENT__/m/model.01.html
     <script>
         function F__ID(){
 			//-------------------------------------
-			var output_file_name="Asteroid Screening All";
+			var output_file_name="Asteroid Week 26 Export";
+			var enrolled_only=false;
 			VmInclude: __CURRENT_PATH__/export.js
 			//-------------------------------------
 		}
     </script>
     <style>
         #toolbar__ID{
-			font-family: 'Outfit';
     		background-color:#ccc;
     		margin-bottom:0px;
     		overflow:hidden;
@@ -53,7 +61,6 @@
     		animation: vm_module_fadein 1.0s;
     	}
         #panel__ID{
-            font-family: 'Outfit';
     		padding:20px 0 0 20px;
     	}
     	#panel__ID a {
