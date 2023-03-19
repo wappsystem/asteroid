@@ -927,7 +927,7 @@
             //---------------------------------------
             $('#D__ID').on('load', function () {
                 notelig=0;
-                captcha_func();
+                //captcha_func();
                 //$('#header').css('opacity', '1');
                 $('#s4q1__ID').hide();
                 $('#phq9__ID').hide();
@@ -1086,7 +1086,7 @@
                     $(window).scrollTop(0);
                 }
                 else{
-                    $("#captcha__ID").show(); 
+                    //$("#captcha__ID").show(); 
                 }
             }
             //-------------------------------------
@@ -1138,8 +1138,10 @@
                         //$("input[name='smartphone_type']:checked").val()!= 'ios' )
                         {
                             notelig=current_I;
-                            $('#S' + current_I + '__ID').hide();
-                            $("#captcha__ID").show();
+                            $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                            $('#S' + current_I + '__ID').hide();
+//                            $("#captcha__ID").show();
                     }
                     else {
                         show_section(current_I + 1);
@@ -1151,9 +1153,11 @@
                     if ((parseFloat(scores.ISI) < 10) ||
                         (parseFloat(scores.ISI_1) < 3)) {
                             notelig=current_I;
-                            $('#S' + current_I + '__ID').hide();
-                            $("#captcha__ID").show();
-                            $('#next2__ID').text("Submit");
+                            $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                            $('#S' + current_I + '__ID').hide();
+//                            $("#captcha__ID").show();
+//                            $('#next2__ID').text("Submit");
                     }
                     else {
                         show_section(current_I + 1);
@@ -1166,14 +1170,18 @@
                     ($("input[name='wrong_times']:checked").val() == 'Y') ||
                     ($("input[name='unusual_behaviours']:checked").val() == 'Y')) {
                         notelig=current_I;
-                        $('#S' + current_I + '__ID').hide();
-                        $("#captcha__ID").show();
+                        $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                        $('#S' + current_I + '__ID').hide();
+//                        $("#captcha__ID").show();
                     }
                     else {
                         registration_ready=true
                             notelig=current_I;
-                            $('#S' + current_I + '__ID').hide();
-                            $("#captcha__ID").show();
+                            $('#F__ID *').removeAttr('disabled');
+                            old_submit(event);
+//                            $('#S' + current_I + '__ID').hide();
+//                            $("#captcha__ID").show();
                     }
                 }
                 else show_section(current_I + 1);
@@ -1181,19 +1189,19 @@
             //--------------------------------
             m.after_insert = function (data,res) {
                 console.log(JSON.stringify(res) + " - "+notelig)
-                if(registration_ready && notelig>0 && res.status!="captcha-error"){
+                if(registration_ready && notelig>0){
                     if (m.prefix == undefined) { $vm.load_module('registration-parta-form', '', {rec_id:res.nr._id}); }
                     else $vm.load_module(m.prefix + 'registration-parta-form', '', {screen_data:res.nr.Data,rec_id:res.nr._id});
                 }
-                else if(notelig==3 && res.status!="captcha-error"){
+                else if(notelig==3){
                     if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
                     else $vm.load_module(m.prefix + 'not_elig1', '', {});
                 }
-                else if(notelig==2 && res.status!="captcha-error"){
+                else if(notelig==2){
                     if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
                     else $vm.load_module(m.prefix + 'not_elig1', '', {});
                 }
-                else if(notelig==1 && res.status!="captcha-error"){
+                else if(notelig==1){
                     if (m.prefix == undefined) { 
                         if($("input[name='PHQ_9']:checked").val() != '0') $vm.load_module('not_eligphq9', '', {});
                         //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module('not_eligiosb', '', {});
@@ -1204,11 +1212,6 @@
                         //else if($("input[name='smartphone_type']:checked").val() != 'ios') $vm.load_module(m.prefix + 'not_eligiosb', '', {});
                         else $vm.load_module(m.prefix + 'not_elig1', '', {})
                     }
-                }
-                else{
-                    captcha_func();
-                    $("#captcha_error__ID").show()
-                    $('#D__ID input[name=_captcha_code]').val('');
                 }
             }
             //--------------------------------
