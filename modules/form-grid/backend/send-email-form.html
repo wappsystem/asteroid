@@ -102,9 +102,9 @@
                         if(group=='Digital sleep health education'){
                             //$vm.alert('Send Sleep Health Education Module 2 Email')
                             q_url=$vm.module_list['shm2-w3'].url;
-                           url='https://prod-04.australiasoutheast.logic.azure.com/workflows/17520d4e7c024690a6edbdeda8942ce4/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=TuVOvqZNerCEMLiEWQDQJ0XRGnJphj275MOVqs9j8Ag'
+                           url='https://prod-14.australiasoutheast.logic.azure.com/workflows/d75693fe76f84761b31f7e57f578192e/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=rdKP3wgXLodmnaeCi9rtGTmdHvNhkG6wYHHWmtnMRXU'
 				//url='https://prod-13.australiasoutheast.logic.azure.com:443/workflows/b43204cc935f4443b21a6809f6b9811d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qifncgiTooOZUqOBuE-AP3z6TTRCaYaAWKYLEE6DwgY'
-                            sms_url='https://prod-14.australiasoutheast.logic.azure.com/workflows/eb62586090964d55a312650ebd859deb/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=icC5VdY7Hnj8amQ24kGvTMDklgP51s2inEw76vA4AME'
+                            sms_url='https://prod-22.australiasoutheast.logic.azure.com/workflows/df1a9d95bc794f029961c5fbd29eb9fe/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=02PZfAMA6bDRrbDjlivClAvTUI2NkaNBhVB217ALqws'
 				//sms_url='https://prod-31.australiasoutheast.logic.azure.com:443/workflows/0ac176f9a6074d2780b8945722755952/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0kNfJJt8xwmSLjeTc9WuTiMDttnAFF4HT7sKjJGMPYc'
                         }
                         else{
@@ -122,8 +122,10 @@
                         else{
                             q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
                             //$vm.alert('Send Reminder 1 Adverse event check-in link: '+q_url)
-                            url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/7289c890ba77415984238b00877c3725/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=M3QO3yY8OA_63GFyWaBY57QTur3Z-Tib3qDmMxnekAg';
-    					 	sms_url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/02e5fbe56ec74222b53e04d456f39f1f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=7szIvPoqpMA9222G-TVF3_17JYJ7_SQjZ-K9awuXuKA';
+                            url='https://prod-02.australiasoutheast.logic.azure.com/workflows/d9463f236e0e426c940636f3b5af951b/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=kl-H1bmWF-enSCxPTUG-ezuIYvk8F5BLCSCh0X-0nt4'
+				//url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/7289c890ba77415984238b00877c3725/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=M3QO3yY8OA_63GFyWaBY57QTur3Z-Tib3qDmMxnekAg';
+    				sms_url='https://prod-01.australiasoutheast.logic.azure.com/workflows/f5f499db84614921967a9fdedfca9eea/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=3PP2hZ1pxwssqyKTgIqGQIycgpYmmuC2rmbpYeys6YU'
+				//sms_url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/02e5fbe56ec74222b53e04d456f39f1f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=7szIvPoqpMA9222G-TVF3_17JYJ7_SQjZ-K9awuXuKA';
                         }
                     break;
                     case 'w3_rem_2':
@@ -132,16 +134,20 @@
                         else{
                             q_url=$vm.module_list['oq-w3'].url+u+db+d+p;
                             //$vm.alert('Send Reminder 2 Adverse event check-in link: '+q_url)
-                            url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/ea7677884cc144b98330aa9566b98611/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5L4OZ9qU2PFBy2Dt-IC5TXqwbIVA0Y0s6j1ZrNjCKWA';
-    					 	sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/a53471b0273e46deb23cd5697beaed42/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wgz6wO8mPSgkcQqBO1UvaYPd3CcyIxxr5A-qTvI2uQ4';
+                            url='https://prod-12.australiasoutheast.logic.azure.com/workflows/1c403be12a1a4cbfbfc4d17465de1846/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=zsWHKwgT13n0tUvHl1Tdn2T8xocayN9gG5-N7-yRtnQ'
+				//url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/ea7677884cc144b98330aa9566b98611/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5L4OZ9qU2PFBy2Dt-IC5TXqwbIVA0Y0s6j1ZrNjCKWA';
+    		sms_url='https://prod-18.australiasoutheast.logic.azure.com/workflows/dc034dc82ea3485cb2d8a8362e6877da/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=3_urtr63TI_NvtQKUyW0JEo_JD8uAbdITftCBbTN0kQ'
+				//sms_url='https://prod-21.australiasoutheast.logic.azure.com:443/workflows/a53471b0273e46deb23cd5697beaed42/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=wgz6wO8mPSgkcQqBO1UvaYPd3CcyIxxr5A-qTvI2uQ4';
                         }
                     break;
                     case 'w5_email':
                         if(group=='Digital sleep health education'){
                             //$vm.alert('Send Sleep Health Education Module 3 Email')
                             q_url=$vm.module_list['shm3-w5'].url;
-                            url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/c5eac82f5f4d4bd6b8a0a90919211a98/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lNyBk_m1vZ2pmwLS6fsjERlBDn62vq2cRo9_RmOQU9M'
-                            sms_url='https://prod-11.australiasoutheast.logic.azure.com:443/workflows/785282ae03894484a54d90fef64bf485/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=jCFwWw_0s4j3gzHHpyEAFSILuAzw5dhdJP7AxpzQp5g'
+                            url='https://prod-18.australiasoutheast.logic.azure.com/workflows/e817678e803a4bdd8cbc4e1badf65447/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=oNEoGtFVWfpzAnaGZ_pu53juylnsYyEfNfcNmpqOTlo'
+				//url='https://prod-20.australiasoutheast.logic.azure.com:443/workflows/c5eac82f5f4d4bd6b8a0a90919211a98/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=lNyBk_m1vZ2pmwLS6fsjERlBDn62vq2cRo9_RmOQU9M'
+                            sms_url='https://prod-10.australiasoutheast.logic.azure.com/workflows/c67959852c2241ec884af415a53935ad/triggers/manual/paths/invoke?api-version=2016-06-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=hzDvc9_s61JOK1Wf3wKQFQE5mg9PUs5a98lcLZPn3SI'
+				//sms_url='https://prod-11.australiasoutheast.logic.azure.com:443/workflows/785282ae03894484a54d90fef64bf485/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=jCFwWw_0s4j3gzHHpyEAFSILuAzw5dhdJP7AxpzQp5g'
                         }
                         else{
                         }
