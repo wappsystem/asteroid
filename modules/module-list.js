@@ -160,6 +160,7 @@
     m[p+"registration-parta-form"]      ={url:H+"/form-grid/screening/registration-parta-form.html",Table:"asteroid-partb-participant",Table2:"asteroid-partb-screening", task_name:"Participant" };
     
     m[p+"randomisation-check-data"]      ={url:H+"/form-grid/backend/randomisation-check-data.html",   Table:"asteroid-partb-progress",task_name:"Randomisation Check"};
+    m[p+"progress-new-data"]      ={url:H+"/form-grid/backend/progress-new-data.html",   Table:"asteroid-partb-progress",task_name:"Progress New Data"};
     m[p+"progress-new-form"]      ={url:H+"/form-grid/backend/progress-new-form.html",   Table:"asteroid-partb-progress",task_name:"Progress form"};
     m[p+"progress-mod-form"]      ={url:H+"/form-grid/backend/progress-mod-form.html",   Table:"asteroid-partb-progress",task_name:"Progress form"};
  
