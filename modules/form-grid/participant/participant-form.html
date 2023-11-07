@@ -58,10 +58,11 @@
 			//-------------------------------------
 			/*VmInclude: __HOST__/assets/js/form.01.js*/
 			//-------------------------------------
+            var new_rd=false;
 			var load = m.load;
 			m.load = function () {
 				load();
-				if (m.input.record == undefined) {
+                if (m.input.record == undefined) {
 					$('.row_participant__ID').hide()
 					$('#F__ID input[name=_Password').val($vm.vm_password(8, false));
 				}
@@ -69,6 +70,7 @@
 					$('.row_participant__ID').show()
 					$('#record__ID').val(m.input.record.UID)
 				}
+                new_rd=false;
 			}
 			//-------------------------------------
 			$('#F__ID input[name=Randomisation_Number]').on('click', function () {
@@ -86,34 +88,39 @@
 						max_I1++;
 						$('#F__ID input[name=Randomisation_Number').val(max_I1);
 						$('#F__ID input[name=Randomised_by').val($vm.user_name);
+                        new_rd=true;
 					})
 				}
 			})
 			//-------------------------------------
 			m.before_submit = function (data, index) {
-				var I1 = $('#F__ID input[name=Randomisation_Number').val(); if (I1 != '' && I1 != '-') index.I1 = parseInt(I1);
-				var nd=new Date()
-				index.I2=nd.getFullYear()+"-"+$vm.pad(nd.getMonth()+1,2)+"-"+$vm.pad(nd.getDate(),2);
-                jQuery.ajaxSetup({ async: false });
-                    var tb = $vm.module_list["randomisation-table-data"].Table;
-                    var query={UID:index.I1}
-                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
-                        if (res.result.length != 0) {
-                            //console.log(JSON.stringify(res.result[0].Data.Group))
-                            data.Group=res.result[0].Data.Group;
-                            index.I3=res.result[0].Data.Group;
-                            //if(index.I3=="Control") data.Start_Date=index.I2;
-                        }
-                    });
-                    var tb = $vm.module_list["access-code-data"].Table;
-                    var query={UID:index.I1}
-                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
-                        if (res.result.length != 0) {
-                            //console.log(JSON.stringify(res.result[0].Data.Group))
-                            data.access_code=res.result[0].Data.access_code;
-                        }
-                    });
-                jQuery.ajaxSetup({ async: true });
+                if(new_rd){
+                    console.log("new randomisation")
+                    var I1 = $('#F__ID input[name=Randomisation_Number').val(); 
+                    if (I1 != '' && I1 != '-') index.I1 = parseInt(I1);
+                    var nd=new Date()
+                    index.I2=nd.getFullYear()+"-"+$vm.pad(nd.getMonth()+1,2)+"-"+$vm.pad(nd.getDate(),2);
+                    jQuery.ajaxSetup({ async: false });
+                        var tb = $vm.module_list["randomisation-table-data"].Table;
+                        var query={UID:index.I1}
+                        $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                            if (res.result.length != 0) {
+                                //console.log(JSON.stringify(res.result[0].Data.Group))
+                                data.Group=res.result[0].Data.Group;
+                                index.I3=res.result[0].Data.Group;
+                                //if(index.I3=="Control") data.Start_Date=index.I2;
+                            }
+                        });
+                        var tb = $vm.module_list["access-code-data"].Table;
+                        var query={UID:index.I1}
+                        $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                            if (res.result.length != 0) {
+                                //console.log(JSON.stringify(res.result[0].Data.Group))
+                                data.access_code=res.result[0].Data.access_code;
+                            }
+                        });
+                    jQuery.ajaxSetup({ async: true });
+                }
 			}
 			//-------------------------------------
             m.after_update = function (data,index) {
