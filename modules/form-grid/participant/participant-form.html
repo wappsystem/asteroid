@@ -92,6 +92,7 @@
 					})
 				}
 			})
+            /*
 			//-------------------------------------
 			m.before_submit = function (data, index) {
                 if(new_rd){
@@ -123,6 +124,56 @@
                 }
 			}
 			//-------------------------------------
+            */
+            //-------------------------------------
+			m.before_submit = function (data, index) {
+                if(new_rd) {
+                    jQuery.ajaxSetup({ async: false });
+                    console.log("find max")
+                    $vm.request({ cmd: "find", table: m.Table, sort: { I1: -1 }, skip: 0, limit: 1 }, function (res) {
+						if (res.sys.permission == false) {
+							$vm.alert("No permission. Private database table, ask the table's owner for permissions.");
+							return;
+						}
+						var max_I1 = 0;
+						if (res.result.length > 0) {
+							if (res.result[0].I1 !== undefined) max_I1 = res.result[0].I1
+						}
+						max_I1++;
+                        console.log(max_I1.toString())
+						//$('#F__ID input[name=Randomisation_Number').val(max_I1.toString());
+                        data.Randomisation_Number=max_I1.toString()
+						//$('#F__ID input[name=Randomised_by').val($vm.user_name);
+                        data.Randomised_by=$vm.user_name
+                        new_rd=true;
+					})
+                    console.log("new randomisation")
+                    var I1 = data.Randomisation_Number
+                    if (I1 != '' && I1 != '-') index.I1 = parseInt(I1);
+                    var nd=new Date()
+                    index.I2=nd.getFullYear()+"-"+$vm.pad(nd.getMonth()+1,2)+"-"+$vm.pad(nd.getDate(),2);                
+                    var tb = $vm.module_list["randomisation-table-data"].Table;
+                    var query={UID:index.I1}
+                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                        if (res.result.length != 0) {
+                            //console.log(JSON.stringify(res.result[0].Data.Group))
+                            data.Group=res.result[0].Data.Group;
+                            index.I3=res.result[0].Data.Group;
+                            //if(index.I3=="Control") data.Start_Date=index.I2;
+                        }
+                    });
+                    var tb = $vm.module_list["access-code-data"].Table;
+                    var query={UID:index.I1}
+                    $vm.request({ cmd: "find", table: tb,query:query, limit:1 }, function (res) {
+                        if (res.result.length != 0) {
+                            //console.log(JSON.stringify(res.result[0].Data.Group))
+                            data.access_code=res.result[0].Data.access_code;
+                        }
+                    });
+                    jQuery.ajaxSetup({ async: true });
+                }
+			}
+            //-------------------------------------
             m.after_update = function (data,index) {
                 //console.log('Data: '+JSON.stringify(data));
                 //console.log(index.result.UID)
